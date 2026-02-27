@@ -1,0 +1,78 @@
+[
+  {
+    "id": "MC-001",
+    "title": "Configurer Telegram groupes",
+    "description": "Le bot @OpenClawBidi_bot fonctionne en DM mais pas dans les groupes Telegram. Diagnostiquer et corriger.",
+    "status": "backlog",
+    "priority": "high",
+    "subtasks": [
+      { "id": "sub_001", "title": "Diagnostiquer le problème d'offset Telegram", "done": false },
+      { "id": "sub_002", "title": "Tester la réception dans le groupe", "done": false }
+    ],
+    "dod": "Le bot répond dans les groupes Telegram configurés",
+    "comments": [],
+    "createdAt": "2026-02-27T11:30:00Z"
+  },
+  {
+    "id": "MC-002",
+    "title": "Activer Screen Sharing sur Mac mini",
+    "description": "Activer le partage d'écran pour accès VNC distant. Nécessite sudo.",
+    "status": "backlog",
+    "priority": "medium",
+    "subtasks": [
+      { "id": "sub_001", "title": "Activer dans Réglages Système", "done": false }
+    ],
+    "dod": "VNC accessible depuis le réseau local",
+    "comments": [],
+    "createdAt": "2026-02-27T11:30:00Z"
+  },
+  {
+    "id": "MC-003",
+    "title": "Setup complet Google OAuth (gog)",
+    "description": "L'auth OAuth gog est faite. Vérifier que Calendar, Drive, Sheets fonctionnent.",
+    "status": "done",
+    "priority": "high",
+    "subtasks": [
+      { "id": "sub_001", "title": "Ajouter testeur OAuth", "done": true },
+      { "id": "sub_002", "title": "Compléter auth flow", "done": true },
+      { "id": "sub_003", "title": "Tester Gmail via gog", "done": true }
+    ],
+    "dod": "gog auth list montre le compte avec tous les services",
+    "comments": ["Complété le 27/02/2026"],
+    "createdAt": "2026-02-27T10:40:00Z",
+    "completedAt": "2026-02-27T11:05:00Z"
+  },
+  {
+    "id": "MC-004",
+    "title": "Vault Keychain macOS",
+    "description": "Stocker tous les credentials dans le Keychain natif macOS.",
+    "status": "done",
+    "priority": "high",
+    "subtasks": [
+      { "id": "sub_001", "title": "GitHub token", "done": true },
+      { "id": "sub_002", "title": "Vercel token", "done": true },
+      { "id": "sub_003", "title": "Gmail app password", "done": true },
+      { "id": "sub_004", "title": "Notion token", "done": true }
+    ],
+    "dod": "Tous les credentials dans le Keychain, rien en clair",
+    "comments": ["Convention: account=openclaw, service=nom-du-service"],
+    "createdAt": "2026-02-27T10:38:00Z",
+    "completedAt": "2026-02-27T11:08:00Z"
+  },
+  {
+    "id": "MC-005",
+    "title": "Réparer mémoire sémantique",
+    "description": "Embeddings OpenAI en quota épuisé. Switcher sur Gemini.",
+    "status": "done",
+    "priority": "high",
+    "subtasks": [
+      { "id": "sub_001", "title": "Diagnostiquer le problème", "done": true },
+      { "id": "sub_002", "title": "Switcher provider vers Gemini", "done": true },
+      { "id": "sub_003", "title": "Reindexer 26 fichiers", "done": true }
+    ],
+    "dod": "memory_search fonctionne, 26/26 fichiers indexés",
+    "comments": ["Switché sur gemini-embedding-001, 62 chunks indexés"],
+    "createdAt": "2026-02-27T11:08:00Z",
+    "completedAt": "2026-02-27T11:14:00Z"
+  }
+]
