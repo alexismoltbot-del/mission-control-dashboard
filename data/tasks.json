@@ -2,12 +2,13 @@
   {
     "id": "MC-001",
     "title": "Configurer Telegram groupes",
-    "description": "Le bot @OpenClawBidi_bot fonctionne en DM mais pas dans les groupes Telegram. Diagnostiquer et corriger.",
+    "description": "Le bot @OpenClawBidi_bot fonctionne en DM mais pas dans les groupes Telegram. Diagnostiquer et corriger le problème d'offset Telegram.",
     "status": "backlog",
     "priority": "high",
     "subtasks": [
       { "id": "sub_001", "title": "Diagnostiquer le problème d'offset Telegram", "done": false },
-      { "id": "sub_002", "title": "Tester la réception dans le groupe", "done": false }
+      { "id": "sub_002", "title": "Tester la réception dans le groupe", "done": false },
+      { "id": "sub_003", "title": "Valider les mentions @OpenClawBidi_bot", "done": false }
     ],
     "dod": "Le bot répond dans les groupes Telegram configurés",
     "comments": [],
@@ -16,15 +17,47 @@
   {
     "id": "MC-002",
     "title": "Activer Screen Sharing sur Mac mini",
-    "description": "Activer le partage d'écran pour accès VNC distant. Nécessite sudo.",
+    "description": "Activer le partage d'écran pour accès VNC distant. Nécessite sudo ou config manuelle.",
     "status": "backlog",
     "priority": "medium",
     "subtasks": [
-      { "id": "sub_001", "title": "Activer dans Réglages Système", "done": false }
+      { "id": "sub_001", "title": "Activer dans Réglages Système", "done": false },
+      { "id": "sub_002", "title": "Tester connexion VNC", "done": false }
     ],
     "dod": "VNC accessible depuis le réseau local",
     "comments": [],
     "createdAt": "2026-02-27T11:30:00Z"
+  },
+  {
+    "id": "MC-006",
+    "title": "Prospects Clawdbot PME",
+    "description": "Contacter et convertir les premiers prospects pour Clawdbot Services (800€ setup + 300€/mois). Objectif: 5 clients payants.",
+    "status": "backlog",
+    "priority": "high",
+    "subtasks": [
+      { "id": "sub_001", "title": "Relancer Regis Flagel (Onze Crêperies)", "done": false },
+      { "id": "sub_002", "title": "Organiser RDV Jules", "done": false },
+      { "id": "sub_003", "title": "Contacter Jean Valfort (Panorama Groupe)", "done": false },
+      { "id": "sub_004", "title": "Pitch Alexandre de Moliner (Okaveo)", "done": false }
+    ],
+    "dod": "5 clients Clawdbot confirmés et payés",
+    "comments": [],
+    "createdAt": "2026-02-27T22:20:00Z"
+  },
+  {
+    "id": "MC-007",
+    "title": "Monétiser FiscalGPT",
+    "description": "1000+ questions posées via LinkedIn mais pas encore de paywall. Implémenter la monétisation.",
+    "status": "backlog",
+    "priority": "medium",
+    "subtasks": [
+      { "id": "sub_001", "title": "Définir pricing model (freemium vs paywall)", "done": false },
+      { "id": "sub_002", "title": "Implémenter système de paiement", "done": false },
+      { "id": "sub_003", "title": "A/B test pricing", "done": false }
+    ],
+    "dod": "Premier CA généré par FiscalGPT",
+    "comments": [],
+    "createdAt": "2026-02-27T22:20:00Z"
   },
   {
     "id": "MC-003",
@@ -38,7 +71,7 @@
       { "id": "sub_003", "title": "Tester Gmail via gog", "done": true }
     ],
     "dod": "gog auth list montre le compte avec tous les services",
-    "comments": ["Complété le 27/02/2026"],
+    "comments": ["Complété le 27/02/2026 - tous services actifs"],
     "createdAt": "2026-02-27T10:40:00Z",
     "completedAt": "2026-02-27T11:05:00Z"
   },
