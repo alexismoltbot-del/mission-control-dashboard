@@ -3169,46 +3169,76 @@
             lastUpdated: new Date().toISOString()
         };
         async function loadTasksFromGitHub() {
-            if (!STATE.token) {
-                console.log('No token, using fallback data');
-                STATE.data = JSON.parse(JSON.stringify(FALLBACK_DATA));
-                return;
-            }
-
             STATE.isLoading = true;
-            showToast('success', '📥 Loading tasks from GitHub...');
+            showToast('success', '📥 Loading tasks...');
 
             try {
-                const response = await fetch(
-                    `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/${CONFIG.tasksFile}`,
-                    {
-                        headers: {
-                            'Authorization': `token ${STATE.token}`,
-                            'Accept': 'application/vnd.github.v3+json'
-                        }
+                // Always try raw.githubusercontent.com first (no token needed for public repos)
+                const rawUrl = `https://raw.githubusercontent.com/${CONFIG.owner}/${CONFIG.repo}/main/${CONFIG.tasksFile}`;
+                const rawResponse = await fetch(rawUrl + '?t=' + Date.now());
+
+                if (rawResponse.ok) {
+                    const data = await rawResponse.json();
+                    STATE.data = data;
+                    STATE.originalData = JSON.parse(JSON.stringify(data));
+
+                    // If token available, also fetch SHA (needed for writes)
+                    if (STATE.token) {
+                        try {
+                            const metaResponse = await fetch(
+                                `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/${CONFIG.tasksFile}`,
+                                { headers: { 'Authorization': `token ${STATE.token}`, 'Accept': 'application/vnd.github.v3+json' } }
+                            );
+                            if (metaResponse.ok) {
+                                const metaData = await metaResponse.json();
+                                STATE.fileSha = metaData.sha;
+                            }
+                        } catch(e) { /* SHA fetch failed, writes may not work */ }
                     }
-                );
 
-                if (!response.ok) {
-                    throw new Error('Could not load tasks file');
+                    const taskCount = Array.isArray(data) ? data.length : (data.tasks ? data.tasks.length : '?');
+                    showToast('success', `✓ ${taskCount} tasks loaded`);
+                    STATE.isLoading = false;
+                    renderAll();
+                    return;
                 }
+            } catch (rawError) {
+                console.log('Raw fetch failed, trying API...', rawError);
+            }
 
-                const fileData = await response.json();
-                // UTF-8 safe base64 decode
-                const bytes = Uint8Array.from(atob(fileData.content), c => c.charCodeAt(0));
-                const content = new TextDecoder().decode(bytes);
-                const data = JSON.parse(content);
+            // Fallback: API with token
+            if (STATE.token) {
+                try {
+                    const response = await fetch(
+                        `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/${CONFIG.tasksFile}`,
+                        {
+                            headers: {
+                                'Authorization': `token ${STATE.token}`,
+                                'Accept': 'application/vnd.github.v3+json'
+                            }
+                        }
+                    );
 
-                STATE.data = data;
-                STATE.originalData = JSON.parse(JSON.stringify(data));
-                STATE.fileSha = fileData.sha;  // Needed for updates
+                    if (!response.ok) throw new Error('Could not load tasks file');
 
-                console.log('Loaded tasks from GitHub:', data.tasks.length, 'tasks');
-                showToast('success', `✓ Loaded ${data.tasks.length} tasks from GitHub`);
+                    const fileData = await response.json();
+                    const bytes = Uint8Array.from(atob(fileData.content), c => c.charCodeAt(0));
+                    const content = new TextDecoder().decode(bytes);
+                    const data = JSON.parse(content);
 
-            } catch (error) {
-                console.error('Error loading from GitHub:', error);
-                showToast('error', 'Could not load from GitHub, using cached data');
+                    STATE.data = data;
+                    STATE.originalData = JSON.parse(JSON.stringify(data));
+                    STATE.fileSha = fileData.sha;
+
+                    const taskCount = Array.isArray(data) ? data.length : (data.tasks ? data.tasks.length : '?');
+                    showToast('success', `✓ ${taskCount} tasks loaded from GitHub`);
+                } catch (error) {
+                    console.error('Error loading from GitHub:', error);
+                    showToast('error', 'Could not load tasks, using fallback data');
+                    STATE.data = JSON.parse(JSON.stringify(FALLBACK_DATA));
+                }
+            } else {
+                showToast('error', 'Could not load tasks (connect GitHub for writes)');
                 STATE.data = JSON.parse(JSON.stringify(FALLBACK_DATA));
             }
 
