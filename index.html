@@ -3181,7 +3181,15 @@
                     let data = await rawResponse.json();
                     // Normalize: if raw array, wrap in expected structure
                     if (Array.isArray(data)) {
-                        data = { tasks: data, activities: [], projects: [] };
+                        const normalizedTasks = data.map(t => ({
+                            tags: [],
+                            description: '',
+                            project: null,
+                            comments: [],
+                            subtasks: [],
+                            ...t
+                        }));
+                        data = { tasks: normalizedTasks, activities: [], projects: [] };
                     }
                     STATE.data = data;
                     STATE.originalData = JSON.parse(JSON.stringify(data));
