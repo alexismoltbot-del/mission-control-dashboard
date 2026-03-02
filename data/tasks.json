@@ -2,13 +2,24 @@
   {
     "id": "MC-001",
     "title": "Configurer Telegram groupes",
-    "description": "Le bot @OpenClawBidi_bot fonctionne en DM mais pas dans les groupes Telegram. Diagnostiquer et corriger le problème d'offset Telegram.",
     "status": "backlog",
     "priority": "high",
     "subtasks": [
-      { "id": "sub_001", "title": "Diagnostiquer le problème d'offset Telegram", "done": false },
-      { "id": "sub_002", "title": "Tester la réception dans le groupe", "done": false },
-      { "id": "sub_003", "title": "Valider les mentions @OpenClawBidi_bot", "done": false }
+      {
+        "id": "sub_001",
+        "title": "Diagnostiquer le problème d'offset Telegram",
+        "done": false
+      },
+      {
+        "id": "sub_002",
+        "title": "Tester la réception dans le groupe",
+        "done": false
+      },
+      {
+        "id": "sub_003",
+        "title": "Valider les mentions @OpenClawBidi_bot",
+        "done": false
+      }
     ],
     "dod": "Le bot répond dans les groupes Telegram configurés",
     "comments": [],
@@ -17,13 +28,9 @@
   {
     "id": "MC-002",
     "title": "Activer Screen Sharing sur Mac mini",
-    "description": "Activer le partage d'écran pour accès VNC distant. Nécessite sudo ou config manuelle.",
     "status": "backlog",
     "priority": "medium",
-    "subtasks": [
-      { "id": "sub_001", "title": "Activer dans Réglages Système", "done": false },
-      { "id": "sub_002", "title": "Tester connexion VNC", "done": false }
-    ],
+    "subtasks": [],
     "dod": "VNC accessible depuis le réseau local",
     "comments": [],
     "createdAt": "2026-02-27T11:30:00Z"
@@ -31,14 +38,29 @@
   {
     "id": "MC-006",
     "title": "Prospects Clawdbot PME",
-    "description": "Contacter et convertir les premiers prospects pour Clawdbot Services (800€ setup + 300€/mois). Objectif: 5 clients payants.",
     "status": "backlog",
     "priority": "high",
     "subtasks": [
-      { "id": "sub_001", "title": "Relancer Regis Flagel (Onze Crêperies)", "done": false },
-      { "id": "sub_002", "title": "Organiser RDV Jules", "done": false },
-      { "id": "sub_003", "title": "Contacter Jean Valfort (Panorama Groupe)", "done": false },
-      { "id": "sub_004", "title": "Pitch Alexandre de Moliner (Okaveo)", "done": false }
+      {
+        "id": "sub_001",
+        "title": "Relancer Regis Flagel",
+        "done": false
+      },
+      {
+        "id": "sub_002",
+        "title": "Organiser RDV Jules",
+        "done": false
+      },
+      {
+        "id": "sub_003",
+        "title": "Contacter Jean Valfort",
+        "done": false
+      },
+      {
+        "id": "sub_004",
+        "title": "Pitch Alexandre de Moliner",
+        "done": false
+      }
     ],
     "dod": "5 clients Clawdbot confirmés et payés",
     "comments": [],
@@ -47,14 +69,9 @@
   {
     "id": "MC-007",
     "title": "Monétiser FiscalGPT",
-    "description": "1000+ questions posées via LinkedIn mais pas encore de paywall. Implémenter la monétisation.",
     "status": "backlog",
     "priority": "medium",
-    "subtasks": [
-      { "id": "sub_001", "title": "Définir pricing model (freemium vs paywall)", "done": false },
-      { "id": "sub_002", "title": "Implémenter système de paiement", "done": false },
-      { "id": "sub_003", "title": "A/B test pricing", "done": false }
-    ],
+    "subtasks": [],
     "dod": "Premier CA généré par FiscalGPT",
     "comments": [],
     "createdAt": "2026-02-27T22:20:00Z"
@@ -62,50 +79,593 @@
   {
     "id": "MC-003",
     "title": "Setup complet Google OAuth (gog)",
-    "description": "L'auth OAuth gog est faite. Vérifier que Calendar, Drive, Sheets fonctionnent.",
     "status": "done",
     "priority": "high",
-    "subtasks": [
-      { "id": "sub_001", "title": "Ajouter testeur OAuth", "done": true },
-      { "id": "sub_002", "title": "Compléter auth flow", "done": true },
-      { "id": "sub_003", "title": "Tester Gmail via gog", "done": true }
-    ],
+    "subtasks": [],
     "dod": "gog auth list montre le compte avec tous les services",
-    "comments": ["Complété le 27/02/2026 - tous services actifs"],
+    "comments": [
+      "Complété le 27/02/2026"
+    ],
     "createdAt": "2026-02-27T10:40:00Z",
     "completedAt": "2026-02-27T11:05:00Z"
   },
   {
     "id": "MC-004",
     "title": "Vault Keychain macOS",
-    "description": "Stocker tous les credentials dans le Keychain natif macOS.",
     "status": "done",
     "priority": "high",
-    "subtasks": [
-      { "id": "sub_001", "title": "GitHub token", "done": true },
-      { "id": "sub_002", "title": "Vercel token", "done": true },
-      { "id": "sub_003", "title": "Gmail app password", "done": true },
-      { "id": "sub_004", "title": "Notion token", "done": true }
-    ],
-    "dod": "Tous les credentials dans le Keychain, rien en clair",
-    "comments": ["Convention: account=openclaw, service=nom-du-service"],
+    "subtasks": [],
+    "dod": "Tous les credentials dans le Keychain",
+    "comments": [],
     "createdAt": "2026-02-27T10:38:00Z",
     "completedAt": "2026-02-27T11:08:00Z"
   },
   {
     "id": "MC-005",
     "title": "Réparer mémoire sémantique",
-    "description": "Embeddings OpenAI en quota épuisé. Switcher sur Gemini.",
     "status": "done",
     "priority": "high",
-    "subtasks": [
-      { "id": "sub_001", "title": "Diagnostiquer le problème", "done": true },
-      { "id": "sub_002", "title": "Switcher provider vers Gemini", "done": true },
-      { "id": "sub_003", "title": "Reindexer 26 fichiers", "done": true }
-    ],
-    "dod": "memory_search fonctionne, 26/26 fichiers indexés",
-    "comments": ["Switché sur gemini-embedding-001, 62 chunks indexés"],
+    "subtasks": [],
+    "dod": "memory_search fonctionne",
+    "comments": [],
     "createdAt": "2026-02-27T11:08:00Z",
     "completedAt": "2026-02-27T11:14:00Z"
+  },
+  {
+    "id": "FI-100",
+    "title": "[Forge IA] @product — Vision & Specs MVP",
+    "description": "Rédiger le PRD complet du MVP. Partir du repo agent-vocal existant (projects/forge-ia/). Définir : persona prioritaire, user stories, flow onboarding → WhatsApp, métriques de succès. Documenter dans Notion.",
+    "status": "review",
+    "priority": "critical",
+    "subtasks": [
+      {
+        "id": "sub_001",
+        "title": "Analyser le repo agent-vocal (types.ts, deploy.ts, workspace.ts, templates)",
+        "done": true
+      },
+      {
+        "id": "sub_002",
+        "title": "Rédiger le PRD v1 dans Notion",
+        "done": true
+      },
+      {
+        "id": "sub_003",
+        "title": "Définir 3 personas PME prioritaires avec jobs-to-be-done",
+        "done": true
+      },
+      {
+        "id": "sub_004",
+        "title": "Mapper le parcours complet : landing → vocal → validation → deploy → WhatsApp",
+        "done": true
+      },
+      {
+        "id": "sub_005",
+        "title": "Définir les métriques MVP (time to value, activation, retention)",
+        "done": true
+      }
+    ],
+    "dod": "PRD validé par Alexis dans Notion avec personas, user stories et roadmap MVP",
+    "comments": [
+      "Repo: projects/forge-ia/",
+      "Notion: https://www.notion.so/Forge-IA-Agents-IA-pour-PME-31621238e13881c9a178e69cd40c2af0",
+      "Positionnement: 'Votre équipe de nuit'",
+      "Cible: PME 5-100 pers.",
+      "PRD complet dans Notion avec 3 personas, 5 user stories, métriques, roadmap 4 semaines"
+    ],
+    "createdAt": "2026-03-01T20:45:00Z",
+    "tags": [
+      "forge-ia",
+      "product"
+    ]
+  },
+  {
+    "id": "FI-101",
+    "title": "[Forge IA] @jimmy — Ajouter WhatsApp Business API",
+    "description": "Le repo supporte Telegram. Ajouter WhatsApp Business API comme channel. Modifier types.ts (channel type), workspace.ts (config génération), deploy.ts (configuration WA). Tester end-to-end.",
+    "status": "review",
+    "priority": "critical",
+    "subtasks": [
+      {
+        "id": "sub_001",
+        "title": "Rechercher les options WhatsApp Business API (Meta Cloud API vs providers)",
+        "done": true
+      },
+      {
+        "id": "sub_002",
+        "title": "Modifier types.ts : ajouter channel type 'whatsapp'",
+        "done": true
+      },
+      {
+        "id": "sub_003",
+        "title": "Modifier workspace.ts : générer config WhatsApp dans openclaw.json",
+        "done": true
+      },
+      {
+        "id": "sub_004",
+        "title": "Modifier deploy.ts : configurer WhatsApp au déploiement",
+        "done": true
+      },
+      {
+        "id": "sub_005",
+        "title": "Tester le flow complet : onboarding → deploy → premier message WhatsApp",
+        "done": false
+      }
+    ],
+    "dod": "Un client test reçoit son premier message sur WhatsApp après déploiement automatique",
+    "comments": [
+      "Repo: projects/forge-ia/",
+      "Priorité: WhatsApp > Telegram pour les PME françaises",
+      "WhatsApp channel intégré dans types.ts/workspace.ts/validate.ts. 41/41 tests passent. Meta Cloud API choisi. Doc: WHATSAPP-INTEGRATION.md"
+    ],
+    "createdAt": "2026-03-01T20:45:00Z",
+    "tags": [
+      "forge-ia",
+      "dev"
+    ]
+  },
+  {
+    "id": "FI-102",
+    "title": "[Forge IA] @anna — Landing Page & GTM",
+    "description": "Créer la landing page et la stratégie go-to-market. Positionnement : 'Votre équipe de nuit'. Cible : dirigeants PME 5-100 pers. Utiliser le framework existant Next.js du repo.",
+    "status": "review",
+    "priority": "high",
+    "subtasks": [
+      {
+        "id": "sub_001",
+        "title": "Rédiger le copy landing page (hero, benefits, social proof, CTA)",
+        "done": true
+      },
+      {
+        "id": "sub_002",
+        "title": "Définir le messaging par canal (LinkedIn, email, WhatsApp)",
+        "done": true
+      },
+      {
+        "id": "sub_003",
+        "title": "Préparer 5 posts LinkedIn de pré-lancement",
+        "done": true
+      },
+      {
+        "id": "sub_004",
+        "title": "Créer la séquence d'acquisition : LinkedIn → landing → démo vocale → conversion",
+        "done": true
+      },
+      {
+        "id": "sub_005",
+        "title": "Benchmark concurrents (Notion AI, Lindy, Dust, etc.)",
+        "done": true
+      }
+    ],
+    "dod": "Landing page copy prête + 5 posts LinkedIn en draft + séquence acquisition définie",
+    "comments": [
+      "Inspiré Notion AI: 'Découvrez l'équipe de nuit'",
+      "3 value props à tester: ventes / COO IA / disruption",
+      "Copy landing + 5 posts LinkedIn dans Notion. Messaging: Votre équipe de nuit."
+    ],
+    "createdAt": "2026-03-01T20:45:00Z",
+    "tags": [
+      "forge-ia",
+      "marketing"
+    ]
+  },
+  {
+    "id": "FI-103",
+    "title": "[Forge IA] @design — UX Flows & Brand Identity",
+    "description": "Designer l'expérience utilisateur complète et l'identité visuelle. Le frontend Next.js existe déjà (dark theme, Instrument Serif + Plus Jakarta Sans). Travailler les flows WhatsApp et l'onboarding.",
+    "status": "review",
+    "priority": "high",
+    "subtasks": [
+      {
+        "id": "sub_001",
+        "title": "Analyser le frontend existant (web/src/app/)",
+        "done": true
+      },
+      {
+        "id": "sub_002",
+        "title": "Proposer 3 directions brand (logo, couleurs, ton)",
+        "done": true
+      },
+      {
+        "id": "sub_003",
+        "title": "Mapper le flow UX complet : découverte → onboarding vocal → validation → deploy → WhatsApp",
+        "done": true
+      },
+      {
+        "id": "sub_004",
+        "title": "Designer les messages WhatsApp types (onboarding, morning brief, alertes)",
+        "done": true
+      },
+      {
+        "id": "sub_005",
+        "title": "Wireframes de la page /recommendations et /deployment",
+        "done": true
+      }
+    ],
+    "dod": "Brand book v1 + flow UX complet + wireframes dans Notion",
+    "comments": [
+      "Frontend existant: dark theme #09090b, Instrument Serif display, Plus Jakarta Sans body",
+      "3 directions brand dans Notion. Reco: Nuit Premium. Flow UX 6 étapes. Messages WhatsApp types."
+    ],
+    "createdAt": "2026-03-01T20:45:00Z",
+    "tags": [
+      "forge-ia",
+      "design"
+    ]
+  },
+  {
+    "id": "FI-200",
+    "title": "[Forge IA] @franck — Business Plan 3 ans",
+    "description": "Rédiger le business plan financier détaillé à 3 ans. Revenue model, unit economics, projections, break-even, hiring plan.",
+    "status": "review",
+    "priority": "critical",
+    "subtasks": [
+      {
+        "id": "sub_001",
+        "title": "Revenue model et unit economics",
+        "done": true
+      },
+      {
+        "id": "sub_002",
+        "title": "Projections financières M1-M36",
+        "done": true
+      },
+      {
+        "id": "sub_003",
+        "title": "Analyse break-even et CAC/LTV",
+        "done": true
+      },
+      {
+        "id": "sub_004",
+        "title": "Hiring plan et coûts opérationnels",
+        "done": true
+      },
+      {
+        "id": "sub_005",
+        "title": "Scénarios (base, optimiste, pessimiste)",
+        "done": true
+      }
+    ],
+    "dod": "BP complet dans Notion avec 3 scénarios et métriques clés",
+    "comments": [
+      "BP complet: revenue model, unit economics, 3 scénarios, projections M1-M36, hiring plan, risques. Notion: 31621238-e138-8191-a49a-ebec239e7ab9"
+    ],
+    "createdAt": "2026-03-01T21:36:00Z",
+    "tags": [
+      "forge-ia",
+      "finance"
+    ]
+  },
+  {
+    "id": "FI-201",
+    "title": "[Forge IA] @anna — Go To Market détaillé",
+    "description": "Stratégie GTM complète avec benchmarks, inspirations (Lindy, Dust, Notion AI), canaux, séquences, métriques attendues.",
+    "status": "review",
+    "priority": "critical",
+    "subtasks": [
+      {
+        "id": "sub_001",
+        "title": "Benchmark concurrents (Lindy, Dust, Notion AI, Cal.ai)",
+        "done": true
+      },
+      {
+        "id": "sub_002",
+        "title": "Stratégie acquisition par canal",
+        "done": true
+      },
+      {
+        "id": "sub_003",
+        "title": "Séquences détaillées (LinkedIn, email, WhatsApp)",
+        "done": true
+      },
+      {
+        "id": "sub_004",
+        "title": "Métriques attendues par phase",
+        "done": true
+      },
+      {
+        "id": "sub_005",
+        "title": "Budget marketing et ROI attendu",
+        "done": true
+      }
+    ],
+    "dod": "GTM doc complet dans Notion avec inspirations sourcées et KPIs chiffrés",
+    "comments": [
+      "GTM complet: 4 benchmarks (Lindy, Notion AI, Calendly, Crisp), 4 canaux détaillés, funnel chiffré, séquences email, 4 phases, budget. Notion: 31621238-e138-8112-9515-c706a50b7edc"
+    ],
+    "createdAt": "2026-03-01T21:36:00Z",
+    "tags": [
+      "forge-ia",
+      "marketing"
+    ]
+  },
+  {
+    "id": "FI-202",
+    "title": "[Forge IA] @product — Pitch Deck Investisseurs",
+    "description": "Pitch deck de haut niveau pour investisseurs. Structure classique : problème, solution, marché, traction, modèle, équipe, ask.",
+    "status": "review",
+    "priority": "critical",
+    "subtasks": [
+      {
+        "id": "sub_001",
+        "title": "Structure et storytelling du deck",
+        "done": true
+      },
+      {
+        "id": "sub_002",
+        "title": "Slides : problème, solution, marché",
+        "done": true
+      },
+      {
+        "id": "sub_003",
+        "title": "Slides : produit, traction, modèle",
+        "done": true
+      },
+      {
+        "id": "sub_004",
+        "title": "Slides : équipe, roadmap, ask",
+        "done": true
+      },
+      {
+        "id": "sub_005",
+        "title": "Speakers notes pour chaque slide",
+        "done": true
+      }
+    ],
+    "dod": "Pitch deck complet dans Notion avec speakers notes",
+    "comments": [
+      "Pitch deck 12 slides avec speakers notes. Cover, problème, solution, démo, marché, traction, BM, concurrence, équipe, roadmap, projections, ask. Notion: 31621238-e138-81e0-9770-ece3fc8136e1"
+    ],
+    "createdAt": "2026-03-01T21:36:00Z",
+    "tags": [
+      "forge-ia",
+      "product"
+    ]
+  },
+  {
+    "id": "FIA-001",
+    "title": "Landing page finale Forge IA",
+    "status": "in-progress",
+    "priority": "high",
+    "assignee": "anna",
+    "project": "forge-ia",
+    "subtasks": [
+      {
+        "id": "fia001-1",
+        "title": "Benchmark Notion AI agents (messaging, structure, CTA)",
+        "done": false
+      },
+      {
+        "id": "fia001-2",
+        "title": "Rédiger copy final (hero + problem + solution + pricing + CTA)",
+        "done": false
+      },
+      {
+        "id": "fia001-3",
+        "title": "Tester 2 variantes accroche",
+        "done": false
+      },
+      {
+        "id": "fia001-4",
+        "title": "Déposer dans shared/outputs/anna/",
+        "done": false
+      }
+    ],
+    "dod": "Copy final validé par Alexis, brief visuel prêt pour Jimmy",
+    "dueDate": "2026-03-03",
+    "comments": [],
+    "createdAt": "2026-03-01T23:07:00Z"
+  },
+  {
+    "id": "FIA-002",
+    "title": "Go-to-Market plan Forge IA",
+    "status": "in-progress",
+    "priority": "high",
+    "assignee": "anna",
+    "project": "forge-ia",
+    "subtasks": [
+      {
+        "id": "fia002-1",
+        "title": "Définir segments cibles (artisanat, commerce, services)",
+        "done": false
+      },
+      {
+        "id": "fia002-2",
+        "title": "Canaux acquisition (LinkedIn, réseau, comptables)",
+        "done": false
+      },
+      {
+        "id": "fia002-3",
+        "title": "Plan 3 phases (beta/scale/national)",
+        "done": false
+      },
+      {
+        "id": "fia002-4",
+        "title": "Exporter Google Slides + PDF",
+        "done": false
+      }
+    ],
+    "dod": "Google Slides 10-15 slides + PDF dans shared/outputs/anna/",
+    "dueDate": "2026-03-04",
+    "comments": [],
+    "createdAt": "2026-03-01T23:07:00Z"
+  },
+  {
+    "id": "FIA-003",
+    "title": "Business Plan final 3 ans Forge IA",
+    "status": "in-progress",
+    "priority": "high",
+    "assignee": "franck",
+    "project": "forge-ia",
+    "subtasks": [
+      {
+        "id": "fia003-1",
+        "title": "P&L mensuel 36 mois (Google Spreadsheet)",
+        "done": false
+      },
+      {
+        "id": "fia003-2",
+        "title": "Hypothèses pricing + CAC + LTV + charges",
+        "done": false
+      },
+      {
+        "id": "fia003-3",
+        "title": "Synthèse PDF 10 pages",
+        "done": false
+      },
+      {
+        "id": "fia003-4",
+        "title": "Challenge des hypothèses si nécessaire",
+        "done": false
+      }
+    ],
+    "dod": "Spreadsheet 36 mois + PDF synthèse dans shared/outputs/franck/",
+    "dueDate": "2026-03-04",
+    "comments": [],
+    "createdAt": "2026-03-01T23:07:00Z"
+  },
+  {
+    "id": "FIA-004",
+    "title": "Pitch Deck final 12 slides Forge IA",
+    "status": "in-progress",
+    "priority": "high",
+    "assignee": "anna",
+    "project": "forge-ia",
+    "subtasks": [
+      {
+        "id": "fia004-1",
+        "title": "Reprendre draft Notion (12 slides)",
+        "done": false
+      },
+      {
+        "id": "fia004-2",
+        "title": "Mettre en forme Google Slides (template pro)",
+        "done": false
+      },
+      {
+        "id": "fia004-3",
+        "title": "Exporter PDF",
+        "done": false
+      }
+    ],
+    "dod": "Google Slides + PDF dans shared/outputs/anna/",
+    "dueDate": "2026-03-04",
+    "comments": [],
+    "createdAt": "2026-03-01T23:07:00Z"
+  },
+  {
+    "id": "FIA-005",
+    "title": "Déployer forgeia.fr sur Vercel",
+    "status": "backlog",
+    "priority": "urgent",
+    "assignee": "jimmy",
+    "project": "forge-ia",
+    "subtasks": [
+      {
+        "id": "fia005-1",
+        "title": "Ajouter domaine dans Vercel Settings",
+        "done": false
+      },
+      {
+        "id": "fia005-2",
+        "title": "Configurer DNS (A/CNAME ou nameservers)",
+        "done": false
+      },
+      {
+        "id": "fia005-3",
+        "title": "Vérifier SSL auto actif",
+        "done": false
+      }
+    ],
+    "dod": "https://forgeia.fr répond avec SSL valide",
+    "dueDate": "2026-03-02",
+    "comments": [],
+    "createdAt": "2026-03-01T23:07:00Z"
+  },
+  {
+    "id": "FIA-006",
+    "title": "Configurer WhatsApp Business API (Meta Cloud)",
+    "status": "backlog",
+    "priority": "high",
+    "assignee": "jimmy",
+    "project": "forge-ia",
+    "subtasks": [
+      {
+        "id": "fia006-1",
+        "title": "Créer Meta Business Account + WhatsApp App",
+        "done": false
+      },
+      {
+        "id": "fia006-2",
+        "title": "Configurer webhook dans backend",
+        "done": false
+      },
+      {
+        "id": "fia006-3",
+        "title": "Ajouter env vars (TOKEN, PHONE_ID, WEBHOOK_VERIFY)",
+        "done": false
+      },
+      {
+        "id": "fia006-4",
+        "title": "Test : envoyer message WhatsApp vers Alexis",
+        "done": false
+      }
+    ],
+    "dod": "Message WhatsApp reçu sur le numéro d'Alexis depuis le système",
+    "dueDate": "2026-03-04",
+    "comments": [],
+    "createdAt": "2026-03-01T23:07:00Z"
+  },
+  {
+    "id": "FIA-007",
+    "title": "Brief beta-testeurs Forge IA",
+    "status": "backlog",
+    "priority": "high",
+    "assignee": "john",
+    "project": "forge-ia",
+    "subtasks": [
+      {
+        "id": "fia007-1",
+        "title": "Message WhatsApp pour Régis Flagel",
+        "done": false
+      },
+      {
+        "id": "fia007-2",
+        "title": "Message WhatsApp pour Jules",
+        "done": false
+      },
+      {
+        "id": "fia007-3",
+        "title": "Message pour Andy Souche",
+        "done": false
+      }
+    ],
+    "dod": "3 drafts prêts dans shared/outputs/john/brief-beta.md, validés par Alexis",
+    "dueDate": "2026-03-03",
+    "comments": [],
+    "createdAt": "2026-03-01T23:07:00Z"
+  },
+  {
+    "id": "FIA-008",
+    "title": "Check INPI marque Forge IA",
+    "status": "backlog",
+    "priority": "medium",
+    "assignee": "john",
+    "project": "forge-ia",
+    "subtasks": [
+      {
+        "id": "fia008-1",
+        "title": "Recherche INPI classes 35 et 42",
+        "done": false
+      },
+      {
+        "id": "fia008-2",
+        "title": "Rapport dispo/conflit/reco",
+        "done": false
+      }
+    ],
+    "dod": "Rapport INPI dans shared/outputs/john/inpi-forgeia.md",
+    "dueDate": "2026-03-04",
+    "comments": [],
+    "createdAt": "2026-03-01T23:07:00Z"
   }
 ]
