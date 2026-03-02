@@ -1,0 +1,582 @@
+# X Bookmarks — Version lisible
+
+- Total: **542**
+- Exporté le: **2026-02-28T22:33:10.833Z**
+
+## Top auteurs
+- GREG ISENBERG: 21
+- Naval: 8
+- Alex Finn: 8
+- Peter Steinberger: 7
+- John Rush: 6
+- DAN KOE: 6
+- Codie Sanchez: 6
+- @levelsio: 6
+- ℏεsam: 5
+- Linus ✦ Ekenstam: 4
+- Min Choi: 4
+- Ben Lang: 4
+- Paul Graham: 4
+- Alex Prompter: 4
+- Reads with Ravi: 4
+- Machina: 4
+- Robert Youssef: 4
+- Marc Lou: 3
+- Art of Life: 3
+- Aadit Sheth: 3
+
+## 2018 (4)
+- 2018-05-31 — Naval (@naval) — https://x.com/naval/status/1002103770518441989
+- 2018-05-31 — Naval (@naval) — https://x.com/naval/status/1002105148733206528
+- 2018-05-31 — Naval (@naval) — https://x.com/naval/status/1002105652792066048
+- 2018-05-31 — Naval (@naval) — https://x.com/naval/status/1002106893265920000
+
+## 2020 (1)
+- 2020-11-20 — Pierre de Wulf (@PierreDeWulf) — https://x.com/PierreDeWulf/status/1329765202095575041
+
+## 2022 (1)
+- 2022-08-26 — ecommaster777 (@ecommaster777) — https://x.com/ecommaster777/status/1563278151576584192
+
+## 2023 (3)
+- 2023-01-07 — Marc Lou (@marclou) — https://x.com/marclou/status/1611708982841819137
+- 2023-04-28 — Steeve Morin (@steeve) — https://x.com/steeve/status/1651844133235875841
+- 2023-10-14 — BaseballHistoryNut (@nut_history) — https://x.com/nut_history/status/1712988276531810788
+
+## 2024 (4)
+- 2024-01-08 — Linus ✦ Ekenstam (@LinusEkenstam) — https://x.com/LinusEkenstam/status/1744431726443614539
+- 2024-01-09 — rabbit inc. (@rabbit_hmi) — https://x.com/rabbit_hmi/status/1744781083831574824
+- 2024-10-13 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/1845255860559257671
+- 2024-10-29 — Art of Life (@Art0fLife_) — https://x.com/Art0fLife_/status/1851398666411545062
+
+## 2025 (241)
+- 2025-01-18 — Katy Faust (@Katy_Faust) — https://x.com/Katy_Faust/status/1880741304331809006
+- 2025-01-23 — John Rush (@johnrushx) — https://x.com/johnrushx/status/1882277087224185312
+- 2025-02-02 — DAN KOE (@thedankoe) — https://x.com/thedankoe/status/1886095548295602447
+- 2025-02-03 — Stijn Noorman (@stijnnoorman) — https://x.com/stijnnoorman/status/1886421137493520493
+- 2025-02-05 — NIK HUNO (@NikHuno) — https://x.com/NikHuno/status/1887168079874170942
+- 2025-02-05 — Maxoux (@Maxouks) — https://x.com/Maxouks/status/1887249960305107450
+- 2025-02-07 — illuminatibot (@iluminatibot) — https://x.com/iluminatibot/status/1887836071452434674
+- 2025-02-25 — Marc Lou (@marclou) — https://x.com/marclou/status/1894404738944295406
+- 2025-03-02 — Amit (@HeyAmit_) — https://x.com/HeyAmit_/status/1896100713635188808
+- 2025-03-29 — Min Choi (@minchoi) — https://x.com/minchoi/status/1906127392734642421
+- 2025-04-01 — Paul William Harmon (@TheHarmonX) — https://x.com/TheHarmonX/status/1907086335263015334
+- 2025-04-02 — Ryan Hashemi (@ryanhashemi_) — https://x.com/ryanhashemi_/status/1907450254435479612
+- 2025-04-02 — Ryan Hashemi (@ryanhashemi_) — https://x.com/ryanhashemi_/status/1907450303290704189
+- 2025-04-04 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/1907946228857581958
+- 2025-04-05 — kamran Hassan (@Rana_kamran43) — https://x.com/Rana_kamran43/status/1908477191798874366
+- 2025-04-05 — Bryan Ng (@boomerrbryan) — https://x.com/boomerrbryan/status/1908625878025666795
+- 2025-04-06 — Amit (@HeyAmit_) — https://x.com/HeyAmit_/status/1908784315682422856
+- 2025-04-06 — MaximeB (@MaximeMB_) — https://x.com/MaximeMB_/status/1908795563254190418
+- 2025-04-09 — Jeddi (@antinertia) — https://x.com/antinertia/status/1909961947690185113
+- 2025-04-09 — Aadit Sheth (@aaditsh) — https://x.com/aaditsh/status/1910009943593251117
+- 2025-04-09 — ℏεsam (@Hesamation) — https://x.com/Hesamation/status/1910038462771691737
+- 2025-04-19 — Jaynit Makwana (@JaynitMakwana) — https://x.com/JaynitMakwana/status/1913502928628855132
+- 2025-04-20 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/1913745574576169215
+- 2025-04-20 — John Rush (@johnrushx) — https://x.com/johnrushx/status/1913804824514347183
+- 2025-04-21 — Denislav Jeliazkov (@DenisJeliazkov) — https://x.com/DenisJeliazkov/status/1914358072199536973
+- 2025-04-21 — Ben Lang (@benln) — https://x.com/benln/status/1914379800376209806
+- 2025-04-22 — Dan (@d4m1n) — https://x.com/d4m1n/status/1914618354859384860
+- 2025-04-23 — Matt Shumer (@mattshumer_) — https://x.com/mattshumer_/status/1915061961332507081
+- 2025-04-24 — Bo Bohunicky (@TheIntegralPath) — https://x.com/TheIntegralPath/status/1915382380073828662
+- 2025-04-29 — Joe Speiser (@jspeiser) — https://x.com/jspeiser/status/1917014600282755266
+- 2025-04-29 — Eli Langer (@EliLanger) — https://x.com/EliLanger/status/1917031588870951299
+- 2025-04-29 — Linus ✦ Ekenstam (@LinusEkenstam) — https://x.com/LinusEkenstam/status/1917183939619480008
+- 2025-04-29 — toly (@toly) — https://x.com/toly/status/1917283335275217202
+- 2025-04-29 — Noah (@noahreeveshq) — https://x.com/noahreeveshq/status/1917293636712292775
+- 2025-04-30 — Ben Lang (@benln) — https://x.com/benln/status/1917627576962388078
+- 2025-04-30 — Chris Fralic (@chrisfralic) — https://x.com/chrisfralic/status/1917709249016389945
+- 2025-05-02 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/1918318421412069848
+- 2025-05-02 — EP (@eptwts) — https://x.com/eptwts/status/1918333994695049694
+- 2025-05-04 — Suhail (@Suhail) — https://x.com/Suhail/status/1919067533891514455
+- 2025-05-04 — Paul Graham (@paulg) — https://x.com/paulg/status/1919144731369472225
+- 2025-05-08 — Ben Lang (@benln) — https://x.com/benln/status/1920475045006028950
+- 2025-05-09 — John Rush (@johnrushx) — https://x.com/johnrushx/status/1920690207785185739
+- 2025-05-09 — Solt Wagner (@soltwagner) — https://x.com/soltwagner/status/1920740811916144713
+- 2025-05-09 — John Rush (@johnrushx) — https://x.com/johnrushx/status/1920848395612418227
+- 2025-05-10 — Aadit Sheth (@aaditsh) — https://x.com/aaditsh/status/1921197040799019088
+- 2025-05-29 — John Rush (@johnrushx) — https://x.com/johnrushx/status/1928096496987066604
+- 2025-05-31 — OneFootball (@OneFootball) — https://x.com/OneFootball/status/1928918967638270366
+- 2025-06-04 — Codie Sanchez (@Codie_Sanchez) — https://x.com/Codie_Sanchez/status/1930256749769920751
+- 2025-06-04 — Codie Sanchez (@Codie_Sanchez) — https://x.com/Codie_Sanchez/status/1930257009233777150
+- 2025-06-04 — Codie Sanchez (@Codie_Sanchez) — https://x.com/Codie_Sanchez/status/1930257023544758693
+- 2025-06-04 — Codie Sanchez (@Codie_Sanchez) — https://x.com/Codie_Sanchez/status/1930257291674042874
+- 2025-06-04 — Codie Sanchez (@Codie_Sanchez) — https://x.com/Codie_Sanchez/status/1930257316495987085
+- 2025-06-05 — Actuel Moyen Âge (@AgeMoyen) — https://x.com/AgeMoyen/status/1930523245536518409
+- 2025-06-05 — Linus ✦ Ekenstam (@LinusEkenstam) — https://x.com/LinusEkenstam/status/1930626566612304164
+- 2025-06-06 — Navalism (@NavalismHQ) — https://x.com/NavalismHQ/status/1930851393218224240
+- 2025-06-06 — Tim Denning (@Tim_Denning) — https://x.com/Tim_Denning/status/1930945606580666728
+- 2025-06-06 — jason liu (@jxnlco) — https://x.com/jxnlco/status/1931003015051518077
+- 2025-06-06 — Le Meilleur du PSG (@LMDPSG) — https://x.com/LMDPSG/status/1931008898971918635
+- 2025-06-06 — tyler hogge (@thogge) — https://x.com/thogge/status/1931012715188785263
+- 2025-06-07 — Navalism (@NavalismHQ) — https://x.com/NavalismHQ/status/1931275689803542608
+- 2025-06-07 — Panam’s (@panams75) — https://x.com/panams75/status/1931348774619640087
+- 2025-06-12 — Panam’s (@panams75) — https://x.com/panams75/status/1933203319423397958
+- 2025-07-13 — Hosun Chung (@hosun_chung) — https://x.com/hosun_chung/status/1944404688536994015
+- 2025-07-15 — Codie Sanchez (@Codie_Sanchez) — https://x.com/Codie_Sanchez/status/1945221850423848998
+- 2025-08-03 — Sam Altman (@sama) — https://x.com/sama/status/1952084574366032354
+- 2025-08-16 — Louis Gleeson (@aigleeson) — https://x.com/aigleeson/status/1956647158679310517
+- 2025-08-16 — cinesthetic. (@TheCinesthetic) — https://x.com/TheCinesthetic/status/1956672788254642274
+- 2025-08-16 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/1956703650744578091
+- 2025-08-18 — Alex Prompter (@alex_prompter) — https://x.com/alex_prompter/status/1957517186446274571
+- 2025-08-19 — 𝕛𝕖𝕗𝕗 (@MSJF03) — https://x.com/MSJF03/status/1957697254875095149
+- 2025-08-19 — David Quinn (@DavQuinn) — https://x.com/DavQuinn/status/1957763046572527714
+- 2025-08-19 — Tom (@tomcrawshaw01) — https://x.com/tomcrawshaw01/status/1957792907269927230
+- 2025-08-19 — Trung Phan (@TrungTPhan) — https://x.com/TrungTPhan/status/1957870576628035730
+- 2025-08-19 — Matteo Franceschetti (@m_franceschetti) — https://x.com/m_franceschetti/status/1957883625489227858
+- 2025-08-19 — JB (@justbuilding) — https://x.com/justbuilding/status/1957890827897958535
+- 2025-08-19 — Niko Ludwig (@Collateral_com) — https://x.com/Collateral_com/status/1957902650252398629
+- 2025-08-20 — The Startup Ideas Podcast (SIP) (@startupideaspod) — https://x.com/startupideaspod/status/1958262568247763231
+- 2025-08-20 — Boring_Business (@BoringBiz_) — https://x.com/BoringBiz_/status/1958303343174185282
+- 2025-08-20 — tex mex nihilo (@flex_nihilo) — https://x.com/flex_nihilo/status/1958311741127111000
+- 2025-08-21 — future cigarette mom (@thr0at_g0at__) — https://x.com/thr0at_g0at__/status/1958331700829733244
+- 2025-08-21 — John Rush (@johnrushx) — https://x.com/johnrushx/status/1958363431922500053
+- 2025-08-21 — Blake Burge (@blakeaburge) — https://x.com/blakeaburge/status/1958549679899099536
+- 2025-08-22 — critter (@BecomingCritter) — https://x.com/BecomingCritter/status/1959029696781590633
+- 2025-08-23 — Karl Mehta (@karlmehta) — https://x.com/karlmehta/status/1959242981921497093
+- 2025-08-23 — The Startup Ideas Podcast (SIP) (@startupideaspod) — https://x.com/startupideaspod/status/1959295358527549910
+- 2025-08-23 — The Figen (@TheFigen_) — https://x.com/TheFigen_/status/1959363642601750963
+- 2025-08-23 — VEO (@vrexec) — https://x.com/vrexec/status/1959376019170939116
+- 2025-08-24 — GitHub Projects Community (@GithubProjects) — https://x.com/GithubProjects/status/1959611412055240820
+- 2025-08-24 — Dudes Posting Their W’s (@DudespostingWs) — https://x.com/DudespostingWs/status/1959745786343723251
+- 2025-08-25 — Florian Darroman (@floriandarroman) — https://x.com/floriandarroman/status/1959960478051877285
+- 2025-08-25 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/1960118007176323238
+- 2025-08-28 — Wholesome Side of 𝕏 (@itsme_urstruly) — https://x.com/itsme_urstruly/status/1961146235714506842
+- 2025-08-29 — Mind Essentials (@Mind_Essentials) — https://x.com/Mind_Essentials/status/1961217234103042137
+- 2025-08-29 — Alex Banks (@thealexbanks) — https://x.com/thealexbanks/status/1961415269332443456
+- 2025-08-29 — Matthieu Gariel — eu/acc (@MatthieuGariel) — https://x.com/MatthieuGariel/status/1961533218693218588
+- 2025-09-02 — Paul Graham (@paulg) — https://x.com/paulg/status/1962736318049288199
+- 2025-09-02 — HOUSE PORN (@HOUSEPORN___) — https://x.com/HOUSEPORN___/status/1962955672829481203
+- 2025-09-02 — Amanda Goodall (@thejobchick) — https://x.com/thejobchick/status/1962961616049471930
+- 2025-09-04 — Josh Pigford (@Shpigford) — https://x.com/Shpigford/status/1963720459419365716
+- 2025-09-07 — George Stock (@georgesttock) — https://x.com/georgesttock/status/1964749411679895619
+- 2025-09-08 — Ahmad (@TheAhmadOsman) — https://x.com/TheAhmadOsman/status/1964869801404420396
+- 2025-09-08 — mitsuri (@0xmitsurii) — https://x.com/0xmitsurii/status/1964908942292861200
+- 2025-09-08 — Book Therapy (@Book_therapy223) — https://x.com/Book_therapy223/status/1964984557997842867
+- 2025-09-08 — Linus ✦ Ekenstam (@LinusEkenstam) — https://x.com/LinusEkenstam/status/1965014479760204118
+- 2025-09-08 — Sahil Bloom (@SahilBloom) — https://x.com/SahilBloom/status/1965028067879043580
+- 2025-09-08 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/1965052581924803013
+- 2025-09-09 — Dear Self. (@Dearme2_) — https://x.com/Dearme2_/status/1965275373010403461
+- 2025-09-09 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/1965413552157852124
+- 2025-09-09 — Basic Apple Guy (@BasicAppleGuy) — https://x.com/BasicAppleGuy/status/1965510444363514101
+- 2025-09-09 — Imade. (@ImadeIyamu) — https://x.com/ImadeIyamu/status/1965527764167262336
+- 2025-09-09 — Dividend Growth Investor (@DividendGrowth) — https://x.com/DividendGrowth/status/1965534428824043575
+- 2025-09-10 — Viktor Oddy (@viktoroddy) — https://x.com/viktoroddy/status/1965716186764878095
+- 2025-09-11 — Guillermo Flor (@guilleflorvs) — https://x.com/guilleflorvs/status/1966170822239985959
+- 2025-09-11 — Deep Psychology (@DeepPsycho_HQ) — https://x.com/DeepPsycho_HQ/status/1966196683215351909
+- 2025-09-11 — vas (@vasuman) — https://x.com/vasuman/status/1966264982905254343
+- 2025-09-12 — Paul Graham (@paulg) — https://x.com/paulg/status/1966429349944418362
+- 2025-09-12 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/1966589444279914919
+- 2025-09-12 — Idea Browser (@ideabrowser) — https://x.com/ideabrowser/status/1966593112077463953
+- 2025-09-13 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/1966915128257110133
+- 2025-09-14 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/1967227456814821629
+- 2025-09-15 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/1967737940743717373
+- 2025-09-18 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/1968474931638718666
+- 2025-09-18 — robin (@zebird0) — https://x.com/zebird0/status/1968799786154221605
+- 2025-09-19 — Reads with Ravi (@readswithravi) — https://x.com/readswithravi/status/1968889554649174490
+- 2025-09-23 — Claude (@claudeai) — https://x.com/claudeai/status/1970541285615264071
+- 2025-09-23 — Aadit Sheth (@aaditsh) — https://x.com/aaditsh/status/1970555589215560163
+- 2025-09-24 — B (@itswithinme_) — https://x.com/itswithinme_/status/1970865860261609931
+- 2025-09-24 — non aesthetic things (@PicturesFoIder) — https://x.com/PicturesFoIder/status/1970966599713607847
+- 2025-09-25 — Jason Fried (@jasonfried) — https://x.com/jasonfried/status/1971341145574986001
+- 2025-09-26 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/1971557829237756104
+- 2025-09-27 — TheBetterPath (@TheBetterPath_) — https://x.com/TheBetterPath_/status/1971774194125074484
+- 2025-09-27 — Himanshu (@him_uiux) — https://x.com/him_uiux/status/1971911092206293283
+- 2025-09-27 — Instant Foot (@lnstantFoot) — https://x.com/lnstantFoot/status/1972054100272718122
+- 2025-09-27 — 𝐏𝐒𝐆𝐈𝐍𝐓 (@PSGINT_) — https://x.com/PSGINT_/status/1972074214632182115
+- 2025-09-28 — Sheel Mohnot (@pitdesi) — https://x.com/pitdesi/status/1972297067684122863
+- 2025-09-29 — insane poses (@insaneposes) — https://x.com/insaneposes/status/1972600488379183256
+- 2025-09-29 — Empire Mindset | Wealth Architect (@guideforman) — https://x.com/guideforman/status/1972603523394142595
+- 2025-09-29 — tobi lutke (@tobi) — https://x.com/tobi/status/1972713979576549565
+- 2025-09-29 — Aakash Gupta (@aakashgupta) — https://x.com/aakashgupta/status/1972747768130396389
+- 2025-09-30 — Empire Mindset | Wealth Architect (@guideforman) — https://x.com/guideforman/status/1973062828996047274
+- 2025-09-30 — Lex Fridman (@lexfridman) — https://x.com/lexfridman/status/1973111601470513650
+- 2025-10-02 — Ash Arora (@asharoraa) — https://x.com/asharoraa/status/1973699710788710817
+- 2025-10-02 — PSGINSIDE-ACTUS (@PSGInside_Actu) — https://x.com/PSGInside_Actu/status/1973806246668218622
+- 2025-10-02 — Alex Hormozi (@AlexHormozi) — https://x.com/AlexHormozi/status/1973870305945780712
+- 2025-10-05 — Reads with Ravi (@readswithravi) — https://x.com/readswithravi/status/1974689062390038712
+- 2025-10-05 — Naval (@naval) — https://x.com/naval/status/1974693789374833019
+- 2025-10-05 — Aesthetics 𝕏 (@aestheticsguyy) — https://x.com/aestheticsguyy/status/1974878371361456625
+- 2025-10-07 — Nelly; (@nrqa__) — https://x.com/nrqa__/status/1975428187770527760
+- 2025-10-18 — Daniel San (@dani_avila7) — https://x.com/dani_avila7/status/1979349357636767986
+- 2025-10-21 — Knowledge Bank (@xKnowledgeBANK) — https://x.com/xKnowledgeBANK/status/1980534306666869218
+- 2025-10-21 — Lovable (@Lovable) — https://x.com/Lovable/status/1980650647096836357
+- 2025-10-21 — OpenAI (@OpenAI) — https://x.com/OpenAI/status/1980685602384441368
+- 2025-10-22 — BeFootball (@_BeFootball) — https://x.com/_BeFootball/status/1980896966658924908
+- 2025-10-22 — DataMB (@DataMB_) — https://x.com/DataMB_/status/1980944849986629675
+- 2025-10-22 — Tyler (@TylerDurden) — https://x.com/TylerDurden/status/1980976858809430489
+- 2025-10-22 — Julien Froment (@JulienFroment) — https://x.com/JulienFroment/status/1981052492374036535
+- 2025-10-22 — Honestly with Bari Weiss (@thehonestlypod) — https://x.com/thehonestlypod/status/1981063153459879954
+- 2025-10-22 — Alex Recouso (@recouso) — https://x.com/recouso/status/1981083568010121547
+- 2025-10-22 — TIBO (@cmoitibo) — https://x.com/cmoitibo/status/1981097047613919614
+- 2025-10-31 — Dear Self. (@Dearme2_) — https://x.com/Dearme2_/status/1984230478254416268
+- 2025-10-31 — Machina (@EXM7777) — https://x.com/EXM7777/status/1984282226595619032
+- 2025-11-03 — Machina (@EXM7777) — https://x.com/EXM7777/status/1985355967324971087
+- 2025-11-04 — Jeba (@Thomas_jebarsan) — https://x.com/Thomas_jebarsan/status/1985545034322870614
+- 2025-11-08 — Auren Hoffman (@auren) — https://x.com/auren/status/1987294569671893127
+- 2025-11-09 — Alex Lieberman (@businessbarista) — https://x.com/businessbarista/status/1987582651713134861
+- 2025-11-09 — Rohit Mittal (@rohitdotmittal) — https://x.com/rohitdotmittal/status/1987608127655538755
+- 2025-11-10 — Ernesto Lopez (@ErnestoSOFTWARE) — https://x.com/ErnestoSOFTWARE/status/1987883386296258994
+- 2025-11-11 — Garry Tan (@garrytan) — https://x.com/garrytan/status/1988287261067338014
+- 2025-11-12 — Mike Futia (@mikefutia) — https://x.com/mikefutia/status/1988639255845871902
+- 2025-11-13 — Paul Graham (@paulg) — https://x.com/paulg/status/1988986258430075207
+- 2025-11-13 — aditya (@adxtyahq) — https://x.com/adxtyahq/status/1989027185617953267
+- 2025-11-13 — inhuman resources (@inhumandept_vp) — https://x.com/inhumandept_vp/status/1989108218984034412
+- 2025-11-14 — Ayda @Interfacer. (@aydaoz) — https://x.com/aydaoz/status/1989478000107106449
+- 2025-11-15 — Rumi (@rumilyrics) — https://x.com/rumilyrics/status/1989770198442799551
+- 2025-11-16 — Max (@minordissent) — https://x.com/minordissent/status/1989953370527076755
+- 2025-11-16 — Elena Song (@elenasongsong) — https://x.com/elenasongsong/status/1989994955289374960
+- 2025-11-17 — Barbell Financial (@BarbellFi) — https://x.com/BarbellFi/status/1990403838700851705
+- 2025-11-19 — Gaurav (@gaurav_mahto18) — https://x.com/gaurav_mahto18/status/1991171278255059000
+- 2025-11-19 — Dave Jones (@eevblog) — https://x.com/eevblog/status/1991293066175492297
+- 2025-11-20 — Thomas Chua (@SteadyCompound) — https://x.com/SteadyCompound/status/1991319901253038428
+- 2025-11-20 — Meng To (@MengTo) — https://x.com/MengTo/status/1991489885690364187
+- 2025-11-20 — Meng To (@MengTo) — https://x.com/MengTo/status/1991508517895999530
+- 2025-11-20 — George Pu (@TheGeorgePu) — https://x.com/TheGeorgePu/status/1991510863644098712
+- 2025-11-21 — Kr$na (@krishdotdev) — https://x.com/krishdotdev/status/1991737357452947482
+- 2025-11-21 — Karri Saarinen (@karrisaarinen) — https://x.com/karrisaarinen/status/1991950748792627248
+- 2025-11-21 — jonathan liu (@jonathanzliu) — https://x.com/jonathanzliu/status/1992019916569051554
+- 2025-11-22 — Jaynit (@jaynitx) — https://x.com/jaynitx/status/1992179014996279413
+- 2025-11-22 — Simon (@nomistair) — https://x.com/nomistair/status/1992264600629203334
+- 2025-11-22 — Garry Tan (@garrytan) — https://x.com/garrytan/status/1992283573970497661
+- 2025-11-22 — Starter Story (@starter_story) — https://x.com/starter_story/status/1992343091307811015
+- 2025-11-24 — Kevin Dahlstrom (@Camp4) — https://x.com/Camp4/status/1992958445885198805
+- 2025-11-25 — Patrick Werner (@patwerX) — https://x.com/patwerX/status/1993350612453658642
+- 2025-11-25 — B (@itswithinme_) — https://x.com/itswithinme_/status/1993410298934645015
+- 2025-11-26 — @levelsio (@levelsio) — https://x.com/levelsio/status/1993692443779145994
+- 2025-12-01 — Startup Archive (@StartupArchive_) — https://x.com/StartupArchive_/status/1995475349807763905
+- 2025-12-03 — Garry Tan (@garrytan) — https://x.com/garrytan/status/1996257339956248717
+- 2025-12-05 — Benjamin Parry (@_benjaminparry) — https://x.com/_benjaminparry/status/1997022483300352299
+- 2025-12-06 — Bryan Johnson (@bryan_johnson) — https://x.com/bryan_johnson/status/1997403290171330638
+- 2025-12-07 — Thomas Sowell Quotes (@ThomasSowell) — https://x.com/ThomasSowell/status/1997774365757186294
+- 2025-12-08 — Varun Anand (@vxanand) — https://x.com/vxanand/status/1998037723458810129
+- 2025-12-08 — @Mendes_PSG (@Mendes_PSG) — https://x.com/Mendes_PSG/status/1998093311173677213
+- 2025-12-09 — pawcord (@pawcord) — https://x.com/pawcord/status/1998361498713038874
+- 2025-12-10 — Manthan Gupta (@manthanguptaa) — https://x.com/manthanguptaa/status/1998615541574152257
+- 2025-12-10 — Enezator (@Enezator) — https://x.com/Enezator/status/1998875236390023582
+- 2025-12-12 — Naval (@naval) — https://x.com/naval/status/1999366763608441199
+- 2025-12-12 — 🀅 (@ecomchigga) — https://x.com/ecomchigga/status/1999534223237972301
+- 2025-12-12 — Alex Hormozi (@AlexHormozi) — https://x.com/AlexHormozi/status/1999586420688880094
+- 2025-12-13 — Min Choi (@minchoi) — https://x.com/minchoi/status/1999874571806355477
+- 2025-12-14 — mr fundman (@mrfundman) — https://x.com/mrfundman/status/2000347709375660360
+- 2025-12-15 — PARIN (@ParinHeidari) — https://x.com/ParinHeidari/status/2000669097915240755
+- 2025-12-17 — ramé (@escritosrame) — https://x.com/escritosrame/status/2001328201583468945
+- 2025-12-17 — sankalp (@dejavucoder) — https://x.com/dejavucoder/status/2001404450196336701
+- 2025-12-17 — Interesting things (@awkwardgoogle) — https://x.com/awkwardgoogle/status/2001416866850574545
+- 2025-12-18 — Tom Dörr (@tom_doerr) — https://x.com/tom_doerr/status/2001581161399611483
+- 2025-12-18 — Robert Youssef (@rryssf_) — https://x.com/rryssf_/status/2001595797025214868
+- 2025-12-18 — Nicholas Fabiano, MD (@NTFabiano) — https://x.com/NTFabiano/status/2001631226113986666
+- 2025-12-18 — Brent Beshore (@BrentBeshore) — https://x.com/BrentBeshore/status/2001668621139890616
+- 2025-12-18 — Nithya Shri (@Nithya_Shrii) — https://x.com/Nithya_Shrii/status/2001671316051779960
+- 2025-12-18 — Firecrawl (@firecrawl) — https://x.com/firecrawl/status/2001708833006403716
+- 2025-12-19 — Rumi (@rumilyrics) — https://x.com/rumilyrics/status/2002001837004931333
+- 2025-12-19 — Patrick's AIBuzzNews (@AIBuzzNews) — https://x.com/AIBuzzNews/status/2002020994643370033
+- 2025-12-19 — ℏεsam (@Hesamation) — https://x.com/Hesamation/status/2002043132213604717
+- 2025-12-19 — Andrej Karpathy (@karpathy) — https://x.com/karpathy/status/2002118205729562949
+- 2025-12-20 — Seedance Clips (@SeedanceVideos) — https://x.com/SeedanceVideos/status/2002189498676109755
+- 2025-12-20 — Tom Dörr (@tom_doerr) — https://x.com/tom_doerr/status/2002205442294915517
+- 2025-12-20 — Daniel San (@dani_avila7) — https://x.com/dani_avila7/status/2002207619188944953
+- 2025-12-20 — jack (@jack) — https://x.com/jack/status/2002260571148988542
+- 2025-12-20 — Ilya Berdysh (@ilyaberdysh) — https://x.com/ilyaberdysh/status/2002356632596934822
+- 2025-12-20 — Melvin Vivas (@donvito) — https://x.com/donvito/status/2002383613837427016
+- 2025-12-22 — Sukhada (@appadappajappa) — https://x.com/appadappajappa/status/2002947431428980794
+- 2025-12-22 — Nathan Covey (@nathan_covey) — https://x.com/nathan_covey/status/2003200386988212468
+- 2025-12-23 — Peter Yang (@petergyang) — https://x.com/petergyang/status/2003488313626546454
+- 2025-12-23 — Jaya Gupta (@JayaGup10) — https://x.com/JayaGup10/status/2003525933534179480
+- 2025-12-24 — John Rich (@johnrich) — https://x.com/johnrich/status/2003671861050085621
+- 2025-12-24 — mitsuri (@0xmitsurii) — https://x.com/0xmitsurii/status/2003807193163067614
+- 2025-12-29 — Peter Steinberger (@steipete) — https://x.com/steipete/status/2005451576971043097
+- 2025-12-30 — rahul (@rahulgs) — https://x.com/rahulgs/status/2006090208823910573
+- 2025-12-30 — BOSS (@thebeautyofsaas) — https://x.com/thebeautyofsaas/status/2006104228381721052
+- 2025-12-30 — Rohun (@RohunJauhar) — https://x.com/RohunJauhar/status/2006147267959644303
+- 2025-12-31 — Jainam Parmar (@aiwithjainam) — https://x.com/aiwithjainam/status/2006319618970021990
+- 2025-12-31 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/2006382073418752250
+
+## 2026 (288)
+- 2026-01-05 — Res (@resdegen) — https://x.com/resdegen/status/2008277182238343636
+- 2026-01-06 — Digi (@digiii) — https://x.com/digiii/status/2008518313995911533
+- 2026-01-06 — Md Riyazuddin (@riyazmd774) — https://x.com/riyazmd774/status/2008519416137609307
+- 2026-01-08 — nader dabit (@dabit3) — https://x.com/dabit3/status/2009139688959852701
+- 2026-01-08 — naiive (@naiivememe) — https://x.com/naiivememe/status/2009235888686125071
+- 2026-01-08 — Damian Player (@damianplayer) — https://x.com/damianplayer/status/2009258825619050899
+- 2026-01-08 — Simone Canc (@simonecanciello) — https://x.com/simonecanciello/status/2009305167963779379
+- 2026-01-08 — @levelsio (@levelsio) — https://x.com/levelsio/status/2009314001155432552
+- 2026-01-08 — DAN KOE (@thedankoe) — https://x.com/thedankoe/status/2009320195848872014
+- 2026-01-08 — Hunter Hammonds (@hunterhammonds) — https://x.com/hunterhammonds/status/2009328970375025109
+- 2026-01-09 — Boris Cherny (@bcherny) — https://x.com/bcherny/status/2009450715081789767
+- 2026-01-09 — 𝔇𝔧𝔦𝔟𝔦𝔫𝔥𝔬 (@DjibinhoPvris_) — https://x.com/DjibinhoPvris_/status/2009577192913817606
+- 2026-01-09 — Abdul Șhakoor (@abxxai) — https://x.com/abxxai/status/2009584417585639510
+- 2026-01-09 — Robert Youssef (@rryssf_) — https://x.com/rryssf_/status/2009587531910938787
+- 2026-01-09 — kanav (@kanavtwt) — https://x.com/kanavtwt/status/2009588042038997024
+- 2026-01-09 — sluj (@smashdirt) — https://x.com/smashdirt/status/2009660157312254197
+- 2026-01-09 — Rohit (@rohit4verse) — https://x.com/rohit4verse/status/2009663737469542875
+- 2026-01-10 — Yewande O (@yewiedewie) — https://x.com/yewiedewie/status/2009903222262256089
+- 2026-01-10 — Benny Johnson (@bennyjohnson) — https://x.com/bennyjohnson/status/2009989471736082675
+- 2026-01-10 — Saurabh (@TheOvermanEthos) — https://x.com/TheOvermanEthos/status/2009996201479835897
+- 2026-01-10 — DAN KOE (@thedankoe) — https://x.com/thedankoe/status/2010042119121957316
+- 2026-01-11 — Om Patel (@om_patel5) — https://x.com/om_patel5/status/2010201583892496481
+- 2026-01-11 — Hridoy Rehman (@hridoyreh) — https://x.com/hridoyreh/status/2010284341461766590
+- 2026-01-11 — nxthompson (@nxthompson) — https://x.com/nxthompson/status/2010336399405265302
+- 2026-01-11 — Anthony Pompliano (@APompliano) — https://x.com/APompliano/status/2010354704723988613
+- 2026-01-11 — tobi lutke (@tobi) — https://x.com/tobi/status/2010372642843599064
+- 2026-01-11 — The Founders' Tribune (@foundertribune) — https://x.com/foundertribune/status/2010413482399948800
+- 2026-01-11 — Bp2f (@BourpiffCh) — https://x.com/BourpiffCh/status/2010417693112025413
+- 2026-01-11 — Tim Denning (@Tim_Denning) — https://x.com/Tim_Denning/status/2010441640318558391
+- 2026-01-12 — autist (@litteralyme0) — https://x.com/litteralyme0/status/2010541239733739931
+- 2026-01-12 — DAN KOE (@thedankoe) — https://x.com/thedankoe/status/2010751592346030461
+- 2026-01-12 — Machina (@EXM7777) — https://x.com/EXM7777/status/2010797185001275622
+- 2026-01-12 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/2010814799496548699
+- 2026-01-13 — Top 1% Men (@dtop1percentmen) — https://x.com/dtop1percentmen/status/2010902442368528828
+- 2026-01-13 — Mind Essentials (@Mind_Essentials) — https://x.com/Mind_Essentials/status/2010939866058747915
+- 2026-01-13 — Marc Lou (@marclou) — https://x.com/marclou/status/2011024430567473547
+- 2026-01-13 — Art of Life (@Art0fLife_) — https://x.com/Art0fLife_/status/2011067523827917107
+- 2026-01-13 — Cody Schneider (@codyschneiderxx) — https://x.com/codyschneiderxx/status/2011105976921813032
+- 2026-01-13 — AI Edge (@aiedge_) — https://x.com/aiedge_/status/2011108297152082250
+- 2026-01-13 — Scott Adams (@ScottAdamsSays) — https://x.com/ScottAdamsSays/status/2011116140626657458
+- 2026-01-13 — Reads with Ravi (@readswithravi) — https://x.com/readswithravi/status/2011135902295474406
+- 2026-01-14 — Justine Moore (@venturetwins) — https://x.com/venturetwins/status/2011285029541077033
+- 2026-01-14 — Dan (@d4m1n) — https://x.com/d4m1n/status/2011366281744908469
+- 2026-01-14 — @iruletheworldmo (@iruletheworldmo) — https://x.com/iruletheworldmo/status/2011411177843085343
+- 2026-01-14 — 𝐓𝐔𝐂𝐎𝐖 (@Tapadibal_) — https://x.com/Tapadibal_/status/2011432383560753578
+- 2026-01-14 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/2011461812890329313
+- 2026-01-14 — DAN KOE (@thedankoe) — https://x.com/thedankoe/status/2011479682462707821
+- 2026-01-14 — Andrew Yeung (@andruyeung) — https://x.com/andruyeung/status/2011558540008476852
+- 2026-01-14 — Rizark (@Rizark213) — https://x.com/Rizark213/status/2011568364905447803
+- 2026-01-15 — Dudes Posting Their W’s (@DudespostingWs) — https://x.com/DudespostingWs/status/2011671185055191092
+- 2026-01-15 — gaut (@0xgaut) — https://x.com/0xgaut/status/2011821762850296036
+- 2026-01-15 — God of Prompt (@godofprompt) — https://x.com/godofprompt/status/2011850737354228039
+- 2026-01-15 — Savannah (@SavannahFeder) — https://x.com/SavannahFeder/status/2011875544783339868
+- 2026-01-16 — Aporia (@0xaporia) — https://x.com/0xaporia/status/2012112111330091247
+- 2026-01-16 — naiive (@naiivememe) — https://x.com/naiivememe/status/2012134236363358447
+- 2026-01-16 — Coach AJ Mental Fitness (@coachajkings) — https://x.com/coachajkings/status/2012156288277373294
+- 2026-01-16 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/2012171244666253777
+- 2026-01-16 — Sam Altman (@sama) — https://x.com/sama/status/2012253252771824074
+- 2026-01-17 — Marc Randolph (@marcrandolph) — https://x.com/marcrandolph/status/2012354672606974182
+- 2026-01-17 — Aakash Gupta (@aakashgupta) — https://x.com/aakashgupta/status/2012393275685278080
+- 2026-01-17 — James Shields (@scaling_shields) — https://x.com/scaling_shields/status/2012494115217473751
+- 2026-01-17 — Enezator (@Enezator) — https://x.com/Enezator/status/2012502412427509988
+- 2026-01-17 — Daniel Priestley (@DanielPriestley) — https://x.com/DanielPriestley/status/2012505992580235343
+- 2026-01-17 — Justine Moore (@venturetwins) — https://x.com/venturetwins/status/2012583915215880584
+- 2026-01-18 — Rohit (@rohit4verse) — https://x.com/rohit4verse/status/2012925228159295810
+- 2026-01-18 — Markov (@MarkovMagnifico) — https://x.com/MarkovMagnifico/status/2012930198354764058
+- 2026-01-18 — @levelsio (@levelsio) — https://x.com/levelsio/status/2012943783424393356
+- 2026-01-18 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/2012960814701949281
+- 2026-01-19 — Daniel Dalen (@danielvandalen) — https://x.com/danielvandalen/status/2013087215614898471
+- 2026-01-19 — aditya (@adxtyahq) — https://x.com/adxtyahq/status/2013095572534653352
+- 2026-01-19 — Ryan Dahl (@rough__sea) — https://x.com/rough__sea/status/2013280952370573666
+- 2026-01-19 — @levelsio (@levelsio) — https://x.com/levelsio/status/2013292045939388928
+- 2026-01-19 — aditya (@adxtyahq) — https://x.com/adxtyahq/status/2013331375571562743
+- 2026-01-19 — @levelsio (@levelsio) — https://x.com/levelsio/status/2013346569618170147
+- 2026-01-19 — @levelsio (@levelsio) — https://x.com/levelsio/status/2013383363676045422
+- 2026-01-20 — HackerRank (@hackerrank) — https://x.com/hackerrank/status/2013499794736763174
+- 2026-01-20 — Big Brain Business (@BigBrainBizness) — https://x.com/BigBrainBizness/status/2013597462515315142
+- 2026-01-20 — Arman Hezarkhani (@ArmanHezarkhani) — https://x.com/ArmanHezarkhani/status/2013608521900683765
+- 2026-01-20 — Tyler Denk (@denk_tweets) — https://x.com/denk_tweets/status/2013618810016690461
+- 2026-01-20 — Remotion (@Remotion) — https://x.com/Remotion/status/2013626968386765291
+- 2026-01-20 — Wes Roth (@WesRoth) — https://x.com/WesRoth/status/2013693268190437410
+- 2026-01-20 — Ray (@rincidium) — https://x.com/rincidium/status/2013722349825036520
+- 2026-01-21 — ₕₐₘₚₜₒₙ (@hamptonism) — https://x.com/hamptonism/status/2013811309960429835
+- 2026-01-21 — Mario Nawfal (@MarioNawfal) — https://x.com/MarioNawfal/status/2013895592876089619
+- 2026-01-21 — Talley (@__Talley__) — https://x.com/__Talley__/status/2014033357630263518
+- 2026-01-21 — Chamath Palihapitiya (@chamath) — https://x.com/chamath/status/2014044948660887981
+- 2026-01-21 — Starter Story (@starter_story) — https://x.com/starter_story/status/2014082790174892335
+- 2026-01-21 — Ernesto Lopez (@ErnestoSOFTWARE) — https://x.com/ErnestoSOFTWARE/status/2014110519913857122
+- 2026-01-22 — Coach Dan Casey (@CoachDanCasey) — https://x.com/CoachDanCasey/status/2014171632676249811
+- 2026-01-22 — Shane Legg (@ShaneLegg) — https://x.com/ShaneLegg/status/2014345509675155639
+- 2026-01-22 — Hamza Baig (@hamza_automates) — https://x.com/hamza_automates/status/2014394462697595361
+- 2026-01-22 — 🀅 (@ecomchigga) — https://x.com/ecomchigga/status/2014436675041034587
+- 2026-01-22 — Reads with Ravi (@readswithravi) — https://x.com/readswithravi/status/2014452984210509870
+- 2026-01-22 — Magnus Müller (@mamagnus00) — https://x.com/mamagnus00/status/2014459283560358034
+- 2026-01-23 — Aaron Ng (@localghost) — https://x.com/localghost/status/2014568799824212004
+- 2026-01-23 — Hugging Models (@HuggingModels) — https://x.com/HuggingModels/status/2014788077924040729
+- 2026-01-24 — Tech Friend AJ (@techfrenAJ) — https://x.com/techfrenAJ/status/2014934471095812547
+- 2026-01-24 — Damian Player (@damianplayer) — https://x.com/damianplayer/status/2015105669620269373
+- 2026-01-24 — Dan Peguine ⌐◨-◨ (@danpeguine) — https://x.com/danpeguine/status/2015142139143897160
+- 2026-01-24 — Alex Finn (@AlexFinn) — https://x.com/AlexFinn/status/2015182480064893118
+- 2026-01-24 — Brave (@brave) — https://x.com/brave/status/2015201576130957365
+- 2026-01-25 — Stuart Blitz (@StuartBlitz) — https://x.com/StuartBlitz/status/2015252565999407199
+- 2026-01-25 — Peter Steinberger (@steipete) — https://x.com/steipete/status/2015266538371125727
+- 2026-01-25 — Shruti (@heyshrutimishra) — https://x.com/heyshrutimishra/status/2015327280911073789
+- 2026-01-25 — Robert Scoble (@Scobleizer) — https://x.com/Scobleizer/status/2015346738517942628
+- 2026-01-25 — David Mattin (@DMattin) — https://x.com/DMattin/status/2015405818586279993
+- 2026-01-25 — Burak Eregar (@burakeregar) — https://x.com/burakeregar/status/2015410141751922872
+- 2026-01-25 — Corey Ganim (@coreyganim) — https://x.com/coreyganim/status/2015415731622486254
+- 2026-01-25 — Ivaavi.eth (@ivaavimusic) — https://x.com/ivaavimusic/status/2015416518960624047
+- 2026-01-25 — Min Choi (@minchoi) — https://x.com/minchoi/status/2015457223372087467
+- 2026-01-25 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/2015462950367101430
+- 2026-01-25 — nader dabit (@dabit3) — https://x.com/dabit3/status/2015463591084703815
+- 2026-01-25 — GREG ISENBERG (@gregisenberg) — https://x.com/gregisenberg/status/2015467654463496423
+- 2026-01-25 — Ethan Woo (@EthanWoo) — https://x.com/EthanWoo/status/2015476571914572264
+- 2026-01-25 — God of Prompt (@godofprompt) — https://x.com/godofprompt/status/2015490539953721640
+- 2026-01-25 — Morgan (@morganlinton) — https://x.com/morganlinton/status/2015511509464658409
+- 2026-01-25 — Elorm Daniel (@elormkdaniel) — https://x.com/elormkdaniel/status/2015511743309689250
+- 2026-01-25 — Allie Howe (@vtahowe) — https://x.com/vtahowe/status/2015515922279387330
+- 2026-01-25 — 0xSammy (@0xSammy) — https://x.com/0xSammy/status/2015562918151020593
+- 2026-01-26 — Zara Zhang (@zarazhangrui) — https://x.com/zarazhangrui/status/2015584063051231436
+- 2026-01-26 — Robert Youssef (@rryssf_) — https://x.com/rryssf_/status/2015587158468300948
+- 2026-01-26 — RTSG News (@RTSG_News) — https://x.com/RTSG_News/status/2015593782033453402
+- 2026-01-26 — Olivia Moore (@omooretweets) — https://x.com/omooretweets/status/2015618038088024164
+- 2026-01-26 — Alex Scott (@afscott) — https://x.com/afscott/status/2015654968733397193
+- 2026-01-26 — Naval (@naval) — https://x.com/naval/status/2015658260007920095
+- 2026-01-26 — Tuki (@TukiFromKL) — https://x.com/TukiFromKL/status/2015688502935978395
+- 2026-01-26 — Rob | Bitsaga.be (@BitsagaRob) — https://x.com/BitsagaRob/status/2015757134760202469
+- 2026-01-26 — Manthan Gupta (@manthanguptaa) — https://x.com/manthanguptaa/status/2015780646770323543
+- 2026-01-26 — Peter Steinberger (@steipete) — https://x.com/steipete/status/2015816059832390137
+- 2026-01-26 — Itamar Golan (@ItakGol) — https://x.com/ItakGol/status/2015828732217274656
+- 2026-01-26 — Dario Amodei (@DarioAmodei) — https://x.com/DarioAmodei/status/2015833046327402527
+- 2026-01-26 — Idea Browser (@ideabrowser) — https://x.com/ideabrowser/status/2015845585866391622
+- 2026-01-26 — Mr. Buzzoni (@polydao) — https://x.com/polydao/status/2015850159310078324
+- 2026-01-26 — Claude (@claudeai) — https://x.com/claudeai/status/2015851783655194640
+- 2026-01-26 — Ash Arora (@asharoraa) — https://x.com/asharoraa/status/2015862562446049685
+- 2026-01-26 — anita (@anitakirkovska) — https://x.com/anitakirkovska/status/2015870473750642696
+- 2026-01-26 — Idea Browser (@ideabrowser) — https://x.com/ideabrowser/status/2015871941958070545
+- 2026-01-26 — BowTiedMystic (@BowTied_Mystic) — https://x.com/BowTied_Mystic/status/2015916220545921165
+- 2026-01-26 — Samy Kacimi (@fakenine_) — https://x.com/fakenine_/status/2015925432718155860
+- 2026-01-27 — Peter Steinberger (@steipete) — https://x.com/steipete/status/2015954706883846540
+- 2026-01-27 — pixel (@spacepixel) — https://x.com/spacepixel/status/2015967798636556777
+- 2026-01-27 — Alex Finn (@AlexFinn) — https://x.com/AlexFinn/status/2015976067320922155
+- 2026-01-27 — Min Choi (@minchoi) — https://x.com/minchoi/status/2016006476070817968
+- 2026-01-27 — Miles Deutscher (@milesdeutscher) — https://x.com/milesdeutscher/status/2016016997507862648
+- 2026-01-27 — Mischa van den Burg (@mischavdburg) — https://x.com/mischavdburg/status/2016040188405842141
+- 2026-01-27 — Param (@Param_eth) — https://x.com/Param_eth/status/2016042529230356987
+- 2026-01-27 — Peter Steinberger (@steipete) — https://x.com/steipete/status/2016112986415309290
+- 2026-01-27 — may.crypto {} (@xmayeth) — https://x.com/xmayeth/status/2016167214487839133
+- 2026-01-27 — DAN KOE (@thedankoe) — https://x.com/thedankoe/status/2016200242690195509
+- 2026-01-27 — Alex Finn (@AlexFinn) — https://x.com/AlexFinn/status/2016212448148389980
+- 2026-01-27 — Hugo Mercier (@hugomercierooo) — https://x.com/hugomercierooo/status/2016222038248083857
+- 2026-01-28 — Fortune MMXM (@FortuneMMXM) — https://x.com/FortuneMMXM/status/2016330668846813327
+- 2026-01-28 — Naval (@naval) — https://x.com/naval/status/2016343169651409407
+- 2026-01-28 — God of Prompt (@godofprompt) — https://x.com/godofprompt/status/2016480088095879567
+- 2026-01-28 — Peter Yang (@petergyang) — https://x.com/petergyang/status/2016519165822312619
+- 2026-01-28 — Ryan Carson (@ryancarson) — https://x.com/ryancarson/status/2016520542723924279
+- 2026-01-28 — Nikunj Kothari (@nikunj) — https://x.com/nikunj/status/2016532998544560376
+- 2026-01-28 — Alex Finn (@AlexFinn) — https://x.com/AlexFinn/status/2016550475718664522
+- 2026-01-28 — Nicholas Fabiano, MD (@NTFabiano) — https://x.com/NTFabiano/status/2016594013810250135
+- 2026-01-28 — George Pickett (@georgepickett) — https://x.com/georgepickett/status/2016628217260757105
+- 2026-01-28 — yanni (@YanniTrades) — https://x.com/YanniTrades/status/2016642550044713279
+- 2026-01-29 — ℏεsam (@Hesamation) — https://x.com/Hesamation/status/2016712942545240203
+- 2026-01-29 — Matt Schlicht (@MattPRD) — https://x.com/MattPRD/status/2016737034908664175
+- 2026-01-29 — Robert Scoble (@Scobleizer) — https://x.com/Scobleizer/status/2016766016349753662
+- 2026-01-29 — Kimi Product (@KimiProduct) — https://x.com/KimiProduct/status/2016791330022973892
+- 2026-01-29 — Peter Steinberger (@steipete) — https://x.com/steipete/status/2016863619829383324
+- 2026-01-29 — @jason (@Jason) — https://x.com/Jason/status/2016865256723657107
+- 2026-01-29 — Legendary (@Legendaryy) — https://x.com/Legendaryy/status/2016873766362464472
+- 2026-01-29 — Kekius Maximus (@Kekius_Sage) — https://x.com/Kekius_Sage/status/2016877106345758787
+- 2026-01-29 — Guri Singh (@heygurisingh) — https://x.com/heygurisingh/status/2016883251244363828
+- 2026-01-29 — ℏεsam (@Hesamation) — https://x.com/Hesamation/status/2016908213644365947
+- 2026-01-29 — Trenton Hughes (@trentjhughes) — https://x.com/trentjhughes/status/2016943282664984995
+- 2026-01-30 — ℏεsam (@Hesamation) — https://x.com/Hesamation/status/2017038553058857413
+- 2026-01-30 — Alex Prompter (@alex_prompter) — https://x.com/alex_prompter/status/2017044857764688132
+- 2026-01-30 — Ricardo (@Ric_RTP) — https://x.com/Ric_RTP/status/2017222759785390232
+- 2026-01-30 — Ben Tossell (@bentossell) — https://x.com/bentossell/status/2017251981685879152
+- 2026-01-30 — Damian Player (@damianplayer) — https://x.com/damianplayer/status/2017260983446536379
+- 2026-01-30 — AI Edge (@aiedge_) — https://x.com/aiedge_/status/2017269741564604659
+- 2026-01-30 — gaut (@0xgaut) — https://x.com/0xgaut/status/2017299901781041257
+- 2026-01-30 — Alex Finn (@AlexFinn) — https://x.com/AlexFinn/status/2017305997212323887
+- 2026-01-30 — am.will (@LLMJunky) — https://x.com/LLMJunky/status/2017315164689686938
+- 2026-01-30 — cocktail peanut (@cocktailpeanut) — https://x.com/cocktailpeanut/status/2017328971327607263
+- 2026-01-30 — Ira Bodnar (@irabukht) — https://x.com/irabukht/status/2017338273916719355
+- 2026-01-31 — HustleBitch (@HustleBitch_) — https://x.com/HustleBitch_/status/2017421532109197653
+- 2026-01-31 — Goutham Jay (@gouthamjay8) — https://x.com/gouthamjay8/status/2017451400087916724
+- 2026-01-31 — Bhanu Teja P (@pbteja1998) — https://x.com/pbteja1998/status/2017495026230775832
+- 2026-01-31 — Jaynit (@jaynitx) — https://x.com/jaynitx/status/2017570618561151166
+- 2026-01-31 — OpenClaw (@openclaw) — https://x.com/openclaw/status/2017628464933753067
+- 2026-01-31 — Bill D'Alessandro (@BillDA) — https://x.com/BillDA/status/2017650241101598872
+- 2026-01-31 — Benjamin De Kraker (@BenjaminDEKR) — https://x.com/BenjaminDEKR/status/2017660150463582282
+- 2026-01-31 — Sahil Bloom (@SahilBloom) — https://x.com/SahilBloom/status/2017668605140152557
+- 2026-01-31 — Boris Cherny (@bcherny) — https://x.com/bcherny/status/2017742741636321619
+- 2026-02-01 — shirish (@shiri_shh) — https://x.com/shiri_shh/status/2017827752125288960
+- 2026-02-01 — Caesar | Make Money Online (@CaesarMakeMoney) — https://x.com/CaesarMakeMoney/status/2017887939561214249
+- 2026-02-01 — pixel (@spacepixel) — https://x.com/spacepixel/status/2017892748737818756
+- 2026-02-01 — Aryan Siddiqui (@Ar_boian) — https://x.com/Ar_boian/status/2017900020226511051
+- 2026-02-01 — Kalash (@kalashvasaniya) — https://x.com/kalashvasaniya/status/2017919607508812044
+- 2026-02-01 — Lior Alexander (@LiorOnAI) — https://x.com/LiorOnAI/status/2017931100555718834
+- 2026-02-01 — Art of Life (@Art0fLife_) — https://x.com/Art0fLife_/status/2017952924085768533
+- 2026-02-01 — Afiz (@itsafiz) — https://x.com/itsafiz/status/2017956785567531434
+- 2026-02-01 — The Boring Marketer (@boringmarketer) — https://x.com/boringmarketer/status/2017958442049138697
+- 2026-02-01 — Robert Youssef (@rryssf_) — https://x.com/rryssf_/status/2017979448167919796
+- 2026-02-01 — Allie (@allie__voss) — https://x.com/allie__voss/status/2017989568792867065
+- 2026-02-01 — Peter Steinberger (@steipete) — https://x.com/steipete/status/2018032296343781706
+- 2026-02-02 — dharmesh (@dharmesh) — https://x.com/dharmesh/status/2018224922582032649
+- 2026-02-02 — Julian Goldie SEO (@JulianGoldieSEO) — https://x.com/JulianGoldieSEO/status/2018248904702300520
+- 2026-02-02 — Rohan Paul (@rohanpaul_ai) — https://x.com/rohanpaul_ai/status/2018277125443477861
+- 2026-02-02 — Basit A. Khan (@basit_designs) — https://x.com/basit_designs/status/2018287757076869566
+- 2026-02-02 — OpenClaw (@openclaw) — https://x.com/openclaw/status/2018293323199635545
+- 2026-02-02 — Wes McKinney (@wesmckinn) — https://x.com/wesmckinn/status/2018303622145065455
+- 2026-02-02 — Christopher ODonnell (@markitecht) — https://x.com/markitecht/status/2018327176508997948
+- 2026-02-02 — Alton Syn (@WorkflowWhisper) — https://x.com/WorkflowWhisper/status/2018337612008657223
+- 2026-02-02 — Tom (@tomcrawshaw01) — https://x.com/tomcrawshaw01/status/2018348937208627380
+- 2026-02-02 — AA (@measure_plan) — https://x.com/measure_plan/status/2018369164428140602
+- 2026-02-02 — Jason Shuman (@JasonrShuman) — https://x.com/JasonrShuman/status/2018373141781741756
+- 2026-02-02 — Matt Van Horn (@mvanhorn) — https://x.com/mvanhorn/status/2018415463026589822
+- 2026-02-02 — Alex (@AlexanderTw33ts) — https://x.com/AlexanderTw33ts/status/2018436050935292276
+- 2026-02-02 — Savio (@saviomartin7) — https://x.com/saviomartin7/status/2018437642820731148
+- 2026-02-02 — Racem Flazi (@Racem) — https://x.com/Racem/status/2018447996078473371
+- 2026-02-02 — nick vasilescu (@nickvasiles) — https://x.com/nickvasiles/status/2018450077019513159
+- 2026-02-03 — Nick St. Pierre (@nickfloats) — https://x.com/nickfloats/status/2018550088109269381
+- 2026-02-03 — Julian Goldie SEO (@JulianGoldieSEO) — https://x.com/JulianGoldieSEO/status/2018589601594851705
+- 2026-02-03 — Ben Lang (@benln) — https://x.com/benln/status/2018700180082581964
+- 2026-02-03 — Josh Pigford (@Shpigford) — https://x.com/Shpigford/status/2018710065239269785
+- 2026-02-03 — KJ Dhaliwal (@kjdhaliwal) — https://x.com/kjdhaliwal/status/2018731342113247533
+- 2026-02-03 — Hasan Toor (@hasantoxr) — https://x.com/hasantoxr/status/2018731470282764319
+- 2026-02-03 — Drew Fallon (@drewfallon12) — https://x.com/drewfallon12/status/2018733421200134225
+- 2026-02-03 — Founder Mode (@Founder_Mode_) — https://x.com/Founder_Mode_/status/2018764756283179506
+- 2026-02-03 — Andrey (@Andrey__HQ) — https://x.com/Andrey__HQ/status/2018767494178349484
+- 2026-02-03 — Machina (@EXM7777) — https://x.com/EXM7777/status/2018768205423255829
+- 2026-02-03 — Miles Deutscher (@milesdeutscher) — https://x.com/milesdeutscher/status/2018768974872449100
+- 2026-02-03 — Andreas Steno Larsen (@AndreasSteno) — https://x.com/AndreasSteno/status/2018775502639796313
+- 2026-02-03 — NuScienta (@NuScienta) — https://x.com/NuScienta/status/2018795893718184285
+- 2026-02-03 — Andy Berman (@berman66) — https://x.com/berman66/status/2018800817248055531
+- 2026-02-04 — Allan Guo (@_allanguo) — https://x.com/_allanguo/status/2018889315812880797
+- 2026-02-04 — Aakash Gupta (@aakashgupta) — https://x.com/aakashgupta/status/2018936091232067921
+- 2026-02-05 — Brew Markets (@brewmarkets) — https://x.com/brewmarkets/status/2019425107333320893
+- 2026-02-05 — Nav Toor (@heynavtoor) — https://x.com/heynavtoor/status/2019471217674317914
+- 2026-02-05 — atlas (@bestplayeratlas) — https://x.com/bestplayeratlas/status/2019495239728451629
+- 2026-02-05 — TBPN (@tbpn) — https://x.com/tbpn/status/2019547333298647093
+- 2026-02-06 — Alex Prompter (@alex_prompter) — https://x.com/alex_prompter/status/2019700467811664314
+- 2026-02-06 — kanav (@kanavtwt) — https://x.com/kanavtwt/status/2019742191233438206
+- 2026-02-06 — Tom (@tomcrawshaw01) — https://x.com/tomcrawshaw01/status/2019778646043758957
+- 2026-02-06 — Vox (@Voxyz_ai) — https://x.com/Voxyz_ai/status/2019914775061270747
+- 2026-02-07 — Kyriakos Eleftheriou (@kyriakosel) — https://x.com/kyriakosel/status/2019980867683422318
+- 2026-02-07 — Thomas Roccia (@fr0gger_) — https://x.com/fr0gger_/status/2020025525784514671
+- 2026-02-07 — Marshall Richards (@marshallrichrds) — https://x.com/marshallrichrds/status/2020034922304426237
+- 2026-02-07 — klöss (@kloss_xyz) — https://x.com/kloss_xyz/status/2020058254328684938
+- 2026-02-07 — Dr. Alex Wissner-Gross (@alexwg) — https://x.com/alexwg/status/2020139129460134216
+- 2026-02-07 — Mayank Vora (@aiwithmayank) — https://x.com/aiwithmayank/status/2020155554547847601
+- 2026-02-07 — Nozz (@NoahEpstein_) — https://x.com/NoahEpstein_/status/2020158945516462472
+- 2026-02-07 — Alex Finn (@AlexFinn) — https://x.com/AlexFinn/status/2020178105579737440
+- 2026-02-07 — Miles Deutscher (@milesdeutscher) — https://x.com/milesdeutscher/status/2020227573129809931
+- 2026-02-07 — Moon Dev (@MoonDevOnYT) — https://x.com/MoonDevOnYT/status/2020276169669738630
+- 2026-02-08 — @jason (@Jason) — https://x.com/Jason/status/2020299573445681282
+- 2026-02-08 — am.will (@LLMJunky) — https://x.com/LLMJunky/status/2020344249254891685
+- 2026-02-08 — Paweł Huryn (@PawelHuryn) — https://x.com/PawelHuryn/status/2020487917152383142
+- 2026-02-08 — hoeem (@hooeem) — https://x.com/hooeem/status/2020522623134822537
+- 2026-02-08 — Oliver Prompts (@oliviscusAI) — https://x.com/oliviscusAI/status/2020528481717625130
+- 2026-02-08 — Alex Finn (@AlexFinn) — https://x.com/AlexFinn/status/2020567487180579086
+- 2026-02-08 — Gergely Orosz (@GergelyOrosz) — https://x.com/GergelyOrosz/status/2020571450369826896
+- 2026-02-08 — Shayan (@ImSh4yy) — https://x.com/ImSh4yy/status/2020584459482153376
+- 2026-02-08 — The Figen (@TheFigen_) — https://x.com/TheFigen_/status/2020599282856796598
+- 2026-02-09 — shirish (@shiri_shh) — https://x.com/shiri_shh/status/2020709241703580101
+- 2026-02-09 — padphone (@lepadphone) — https://x.com/lepadphone/status/2020728930278531232
+- 2026-02-09 — Brady Long (@thisguyknowsai) — https://x.com/thisguyknowsai/status/2020793287557386417
+- 2026-02-09 — Alex Prompter (@alex_prompter) — https://x.com/alex_prompter/status/2020811478979563815
+- 2026-02-09 — Andrew Jefferson (@EastlondonDev) — https://x.com/EastlondonDev/status/2020826097890242582
+- 2026-02-09 — Simon Høiberg (@SimonHoiberg) — https://x.com/SimonHoiberg/status/2020843874382487959
+- 2026-02-09 — Chetaslua (@chetaslua) — https://x.com/chetaslua/status/2020863877068603661
+- 2026-02-09 — Science girl (@sciencegirl) — https://x.com/sciencegirl/status/2020935112549072971
+- 2026-02-09 — Luke Alexander (@Lukealexxander) — https://x.com/Lukealexxander/status/2020942361321406762
+- 2026-02-09 — Harry Stebbings (@HarryStebbings) — https://x.com/HarryStebbings/status/2020953348485026087
+- 2026-02-10 — This Week in Startups (@twistartups) — https://x.com/twistartups/status/2021018540648825181
+- 2026-02-10 — Frank (@frankdegods) — https://x.com/frankdegods/status/2021049459656822933
+- 2026-02-10 — Obsidian (@obsdmd) — https://x.com/obsdmd/status/2021241384057930224
+- 2026-02-10 — Rian Doris (@RianSweetDoris) — https://x.com/RianSweetDoris/status/2021298875319894309
+- 2026-02-11 — tic toc (@TicTocTick) — https://x.com/TicTocTick/status/2021379232375451815
+- 2026-02-11 — Leaders 𝕏 Junction (@LeadersJunction) — https://x.com/LeadersJunction/status/2021460220011229411
+- 2026-02-11 — witcheer ☯︎ (@witcheer) — https://x.com/witcheer/status/2021610036980543767
+- 2026-02-11 — Sam Blond (@samdblond) — https://x.com/samdblond/status/2021616625058017588
+- 2026-02-11 — Matthew Berman (@MatthewBerman) — https://x.com/MatthewBerman/status/2021669868366598632
+- 2026-02-12 — Financial Times (@FT) — https://x.com/FT/status/2021913057065160828
+- 2026-02-12 — Aziz Sunderji (@AzizSunderji) — https://x.com/AzizSunderji/status/2021951752640020904
+- 2026-02-12 — ChatCut (@chatcutapp) — https://x.com/chatcutapp/status/2021967628387139989
+- 2026-02-12 — MiniMax (official) (@MiniMax_AI) — https://x.com/MiniMax_AI/status/2021980761210134808
+- 2026-02-13 — Alex Finn (@AlexFinn) — https://x.com/AlexFinn/status/2022151291057713490
+- 2026-02-14 — Meta Alchemist (@meta_alchemist) — https://x.com/meta_alchemist/status/2022614255426769129

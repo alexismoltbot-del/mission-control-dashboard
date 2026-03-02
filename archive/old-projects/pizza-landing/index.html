@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlexisBidi Sushi 🍣</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --salmon: #FF6B6B;
+            --wasabi: #7ED957;
+            --soy: #2D2A32;
+            --rice: #FFF8F0;
+            --nori: #1A472A;
+            --ginger: #FFB5C2;
+            --ocean: #0099CC;
+            --gold: #FFD93D;
+            --black: #1a1a1a;
+            --white: #FFFEF5;
+            --shadow: 6px 6px 0px var(--black);
+            --shadow-lg: 10px 10px 0px var(--black);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--white);
+            color: var(--black);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--salmon);
+            border-bottom: 5px solid var(--black);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--white);
+        }
+
+        .logo-sushi {
+            font-size: 2.2rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-8px) rotate(5deg); }
+        }
+
+        nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        nav a {
+            background: var(--white);
+            color: var(--black);
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 3px solid var(--black);
+            box-shadow: var(--shadow);
+            font-weight: 700;
+            transition: all 0.15s ease;
+        }
+
+        nav a:hover {
+            transform: translate(3px, 3px);
+            box-shadow: 3px 3px 0px var(--black);
+            background: var(--gold);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--nori) 0%, var(--soy) 100%);
+            border-bottom: 5px solid var(--black);
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "🍣";
+            position: absolute;
+            font-size: 180px;
+            opacity: 0.15;
+            top: -30px;
+            right: -30px;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: "🥢";
+            position: absolute;
+            font-size: 120px;
+            opacity: 0.1;
+            bottom: -20px;
+            left: -20px;
+            animation: float 3s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        .hero h1 {
+            font-family: 'Space Mono', monospace;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-shadow: 4px 4px 0px var(--salmon);
+            color: var(--white);
+        }
+
+        .hero-tagline {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 40px;
+            color: var(--ginger);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--salmon);
+            color: var(--white);
+            padding: 20px 50px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            border: 5px solid var(--black);
+            box-shadow: var(--shadow-lg);
+            transition: all 0.15s ease;
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            transform: translate(5px, 5px);
+            box-shadow: 5px 5px 0px var(--black);
+            background: var(--wasabi);
+            color: var(--black);
+        }
+
+        /* Sushi Parade */
+        .sushi-parade {
+            background: var(--salmon);
+            padding: 20px 0;
+            overflow: hidden;
+            border-bottom: 5px solid var(--black);
+        }
+
+        .parade-track {
+            display: flex;
+            gap: 40px;
+            animation: scroll 20s linear infinite;
+            width: max-content;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .parade-item {
+            font-size: 2rem;
+            color: var(--white);
+            white-space: nowrap;
+            font-weight: 700;
+        }
+
+        /* Menu Section */
+        .menu {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .section-title {
+            font-family: 'Space Mono', monospace;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 8px;
+            background: var(--salmon);
+        }
+
+        .sushi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .sushi-card {
+            background: var(--ginger);
+            border: 5px solid var(--black);
+            box-shadow: var(--shadow-lg);
+            padding: 30px;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .sushi-card:nth-child(2) { background: var(--wasabi); }
+        .sushi-card:nth-child(3) { background: var(--ocean); color: var(--white); }
+        .sushi-card:nth-child(4) { background: var(--gold); }
+
+        .sushi-card:hover {
+            transform: translate(5px, 5px);
+            box-shadow: 5px 5px 0px var(--black);
+        }
+
+        .sushi-emoji {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+
+        .sushi-name {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .sushi-desc {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .sushi-price {
+            font-family: 'Space Mono', monospace;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .pieces {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Features */
+        .features {
+            background: var(--nori);
+            border-top: 5px solid var(--black);
+            border-bottom: 5px solid var(--black);
+            padding: 60px 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 30px;
+            background: var(--white);
+            border: 4px solid var(--black);
+            box-shadow: var(--shadow);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        /* Specials */
+        .specials {
+            padding: 60px 20px;
+            background: var(--rice);
+            border-bottom: 5px solid var(--black);
+        }
+
+        .specials-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .special-box {
+            background: var(--white);
+            border: 4px solid var(--black);
+            box-shadow: var(--shadow);
+            padding: 25px;
+            text-align: center;
+        }
+
+        .special-box h4 {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .contact-box {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--soy);
+            border: 5px solid var(--black);
+            box-shadow: var(--shadow-lg);
+            padding: 40px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .contact-box h3 {
+            font-family: 'Space Mono', monospace;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--salmon);
+        }
+
+        .phone-number {
+            font-family: 'Space Mono', monospace;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--salmon);
+            color: var(--white);
+            padding: 15px 30px;
+            display: inline-block;
+            border: 4px solid var(--black);
+            box-shadow: var(--shadow);
+            margin: 20px 0;
+        }
+
+        .address {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: var(--ginger);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            color: var(--salmon);
+            text-align: center;
+            padding: 40px 20px;
+            font-family: 'Space Mono', monospace;
+        }
+
+        footer p {
+            font-size: 1.2rem;
+        }
+
+        .footer-sushi {
+            font-size: 2rem;
+            margin-top: 15px;
+            letter-spacing: 10px;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .header-content {
+                justify-content: center;
+            }
+            
+            nav {
+                width: 100%;
+                justify-content: center;
+            }
+
+            nav a {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.2rem;
+            }
+
+            .sushi-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-sushi">🍣</span>
+                    AlexisBidi Sushi
+                </div>
+                <nav>
+                    <a href="#menu">Menu</a>
+                    <a href="#contact">Commander</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Sushi d'Exception 🥢</h1>
+        <p class="hero-tagline">Frais • Authentique • Généreux</p>
+        <a href="#menu" class="cta-button">Découvrir 🍱</a>
+    </section>
+
+    <div class="sushi-parade">
+        <div class="parade-track">
+            <span class="parade-item">🍣 SASHIMI</span>
+            <span class="parade-item">🍱 BENTO</span>
+            <span class="parade-item">🥟 GYOZA</span>
+            <span class="parade-item">🍙 ONIGIRI</span>
+            <span class="parade-item">🥢 MAKI</span>
+            <span class="parade-item">🍜 RAMEN</span>
+            <span class="parade-item">🍣 SASHIMI</span>
+            <span class="parade-item">🍱 BENTO</span>
+            <span class="parade-item">🥟 GYOZA</span>
+            <span class="parade-item">🍙 ONIGIRI</span>
+            <span class="parade-item">🥢 MAKI</span>
+            <span class="parade-item">🍜 RAMEN</span>
+        </div>
+    </div>
+
+    <section class="menu" id="menu">
+        <h2 class="section-title">Nos Créations 🍱</h2>
+        <div class="sushi-grid">
+            <div class="sushi-card">
+                <div class="sushi-emoji">🍣</div>
+                <h3 class="sushi-name">Assortiment Sashimi</h3>
+                <p class="sushi-desc">Saumon, thon, daurade, maquereau — Fraîcheur absolue, tranché minute</p>
+                <span class="sushi-price">18€</span>
+                <span class="pieces">12 pièces</span>
+            </div>
+            <div class="sushi-card">
+                <div class="sushi-emoji">🥢</div>
+                <h3 class="sushi-name">California Roll</h3>
+                <p class="sushi-desc">Avocat, concombre, surimi, sésame — Le classique revisité</p>
+                <span class="sushi-price">14€</span>
+                <span class="pieces">8 pièces</span>
+            </div>
+            <div class="sushi-card">
+                <div class="sushi-emoji">🔥</div>
+                <h3 class="sushi-name">Dragon Roll</h3>
+                <p class="sushi-desc">Tempura crevette, anguille grillée, avocat, sauce unagi</p>
+                <span class="sushi-price">19€</span>
+                <span class="pieces">8 pièces</span>
+            </div>
+            <div class="sushi-card">
+                <div class="sushi-emoji">⭐</div>
+                <h3 class="sushi-name">Bidi Special</h3>
+                <p class="sushi-desc">Tartare saumon-mangue, chips de riz soufflé, sauce yuzu-truffe</p>
+                <span class="sushi-price">22€</span>
+                <span class="pieces">6 pièces</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">🐟</div>
+                <h4 class="feature-title">Poisson Frais</h4>
+                <p>Arrivage quotidien de Rungis</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">👨‍🍳</div>
+                <h4 class="feature-title">Chef Japonais</h4>
+                <p>15 ans d'expérience</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🚴</div>
+                <h4 class="feature-title">Livraison 30min</h4>
+                <p>Neuilly & alentours</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="specials">
+        <h2 class="section-title">Formules 🎌</h2>
+        <div class="specials-content">
+            <div class="special-box">
+                <h4>🌸 Midi Express</h4>
+                <p>Soupe miso + 12 pièces + riz</p>
+                <strong>16€</strong>
+            </div>
+            <div class="special-box">
+                <h4>🏯 Plateau Découverte</h4>
+                <p>24 pièces assorties</p>
+                <strong>28€</strong>
+            </div>
+            <div class="special-box">
+                <h4>🎎 Menu Omakase</h4>
+                <p>Choix du chef — Surprise!</p>
+                <strong>45€</strong>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-box">
+            <h3>Réservez ! 📞</h3>
+            <div class="phone-number">01 23 45 67 89</div>
+            <p class="address">
+                📍 42 Rue du Soleil Levant<br>
+                92200 Neuilly-sur-Seine<br><br>
+                🕐 Mar-Dim — 12h-14h30 / 19h-22h30<br>
+                <small>Fermé le lundi</small>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 AlexisBidi Sushi — いただきます 🙏</p>
+        <div class="footer-sushi">🍣🥢🍱🍙🥟</div>
+    </footer>
+</body>
+</html>

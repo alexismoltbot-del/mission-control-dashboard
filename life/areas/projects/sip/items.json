@@ -1,0 +1,42 @@
+[
+  {
+    "id": "sip-001",
+    "fact": "SIP est une chaîne de coffee shops parisiens lancée par Alexis",
+    "category": "milestone",
+    "timestamp": "2025-05-15",
+    "source": "conversation",
+    "status": "active"
+  },
+  {
+    "id": "sip-002",
+    "fact": "Positionnement inspiré de Sézane : haut de gamme mais abordable",
+    "category": "decision",
+    "timestamp": "2025-05-15",
+    "source": "conversation",
+    "status": "active"
+  },
+  {
+    "id": "sip-003",
+    "fact": "Prix espresso fixé à 3,50 € (moitié moins que Starbucks)",
+    "category": "decision",
+    "timestamp": "2025-05-15",
+    "source": "conversation",
+    "status": "active"
+  },
+  {
+    "id": "sip-004",
+    "fact": "Concept décrit comme 'abordable et sexy'",
+    "category": "decision",
+    "timestamp": "2025-05-15",
+    "source": "conversation",
+    "status": "active"
+  },
+  {
+    "id": "sip-005",
+    "fact": "Landing page créée : projects/sip/index.html",
+    "category": "milestone",
+    "timestamp": "2025-05-15",
+    "source": "conversation",
+    "status": "active"
+  }
+]

@@ -1,0 +1,23 @@
+types:
+  Person:
+    required:
+    - name
+  Organization:
+    required:
+    - name
+  Project:
+    required:
+    - name
+    - status
+  Task:
+    required:
+    - title
+    - status
+    status_enum:
+    - open
+    - in_progress
+    - blocked
+    - done
+  Goal:
+    required:
+    - description

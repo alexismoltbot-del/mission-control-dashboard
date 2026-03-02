@@ -1,0 +1,802 @@
+[
+  {
+    "name": "auth-profiles.json",
+    "path": "/Users/alexis/.openclaw/agents/main/agent/auth-profiles.json",
+    "scope": "runtime",
+    "category": "runtime_agent",
+    "ext": "json",
+    "size": 3387,
+    "updated": "2026-03-02T15:44:13+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "models.json",
+    "path": "/Users/alexis/.openclaw/agents/main/agent/models.json",
+    "scope": "runtime",
+    "category": "runtime_agent",
+    "ext": "json",
+    "size": 3532,
+    "updated": "2026-03-02T15:01:50+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "06fd6061-527d-4c41-9d1d-a2874b2a879d.jsonl",
+    "path": "/Users/alexis/.openclaw/agents/main/sessions/06fd6061-527d-4c41-9d1d-a2874b2a879d.jsonl",
+    "scope": "runtime",
+    "category": "runtime_sessions",
+    "ext": "jsonl",
+    "size": 234870,
+    "updated": "2026-03-02T15:46:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "06fd6061-527d-4c41-9d1d-a2874b2a879d.jsonl.lock",
+    "path": "/Users/alexis/.openclaw/agents/main/sessions/06fd6061-527d-4c41-9d1d-a2874b2a879d.jsonl.lock",
+    "scope": "runtime",
+    "category": "runtime_sessions",
+    "ext": "lock",
+    "size": 61,
+    "updated": "2026-03-02T15:45:26+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "47d377da-c37a-4ad9-8a5d-4a17ef2411bf.jsonl",
+    "path": "/Users/alexis/.openclaw/agents/main/sessions/47d377da-c37a-4ad9-8a5d-4a17ef2411bf.jsonl",
+    "scope": "runtime",
+    "category": "runtime_sessions",
+    "ext": "jsonl",
+    "size": 64731,
+    "updated": "2026-03-02T15:39:42+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "sessions.json",
+    "path": "/Users/alexis/.openclaw/agents/main/sessions/sessions.json",
+    "scope": "runtime",
+    "category": "runtime_sessions",
+    "ext": "json",
+    "size": 105880,
+    "updated": "2026-03-02T15:45:26+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-03-01.md",
+    "path": "/Users/alexis/.openclaw/shared/discussions/2026-03-01.md",
+    "scope": "shared",
+    "category": "shared_discussions",
+    "ext": "md",
+    "size": 5698,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "board.md",
+    "path": "/Users/alexis/.openclaw/shared/tasks/board.md",
+    "scope": "shared",
+    "category": "shared_tasks",
+    "ext": "md",
+    "size": 1599,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "README.md",
+    "path": "/Users/alexis/.openclaw/workspace/.claude/agents/README.md",
+    "scope": "workspace",
+    "category": "claude_agents",
+    "ext": "md",
+    "size": 960,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "anna.md",
+    "path": "/Users/alexis/.openclaw/workspace/.claude/agents/anna.md",
+    "scope": "workspace",
+    "category": "claude_agents",
+    "ext": "md",
+    "size": 1765,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "anna"
+  },
+  {
+    "name": "bidi.md",
+    "path": "/Users/alexis/.openclaw/workspace/.claude/agents/bidi.md",
+    "scope": "workspace",
+    "category": "claude_agents",
+    "ext": "md",
+    "size": 1701,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "bidi"
+  },
+  {
+    "name": "franck.md",
+    "path": "/Users/alexis/.openclaw/workspace/.claude/agents/franck.md",
+    "scope": "workspace",
+    "category": "claude_agents",
+    "ext": "md",
+    "size": 1662,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "franck"
+  },
+  {
+    "name": "jimmy.md",
+    "path": "/Users/alexis/.openclaw/workspace/.claude/agents/jimmy.md",
+    "scope": "workspace",
+    "category": "claude_agents",
+    "ext": "md",
+    "size": 1743,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "jimmy"
+  },
+  {
+    "name": "john.md",
+    "path": "/Users/alexis/.openclaw/workspace/.claude/agents/john.md",
+    "scope": "workspace",
+    "category": "claude_agents",
+    "ext": "md",
+    "size": 1739,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "john"
+  },
+  {
+    "name": "AGENTS-proactive.md",
+    "path": "/Users/alexis/.openclaw/workspace/AGENTS-proactive.md",
+    "scope": "workspace",
+    "category": "core_config",
+    "ext": "md",
+    "size": 3860,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "AGENTS.md",
+    "path": "/Users/alexis/.openclaw/workspace/AGENTS.md",
+    "scope": "workspace",
+    "category": "core_config",
+    "ext": "md",
+    "size": 2725,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "HEARTBEAT-proactive.md",
+    "path": "/Users/alexis/.openclaw/workspace/HEARTBEAT-proactive.md",
+    "scope": "workspace",
+    "category": "core_config",
+    "ext": "md",
+    "size": 2939,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "HEARTBEAT.md",
+    "path": "/Users/alexis/.openclaw/workspace/HEARTBEAT.md",
+    "scope": "workspace",
+    "category": "core_config",
+    "ext": "md",
+    "size": 516,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "IDENTITY.md",
+    "path": "/Users/alexis/.openclaw/workspace/IDENTITY.md",
+    "scope": "workspace",
+    "category": "core_config",
+    "ext": "md",
+    "size": 308,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "MEMORY.md",
+    "path": "/Users/alexis/.openclaw/workspace/MEMORY.md",
+    "scope": "workspace",
+    "category": "core_config",
+    "ext": "md",
+    "size": 7992,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "MORNING_BRIEF.md",
+    "path": "/Users/alexis/.openclaw/workspace/MORNING_BRIEF.md",
+    "scope": "workspace",
+    "category": "core_config",
+    "ext": "md",
+    "size": 2767,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "ONBOARDING.md",
+    "path": "/Users/alexis/.openclaw/workspace/ONBOARDING.md",
+    "scope": "workspace",
+    "category": "core_config",
+    "ext": "md",
+    "size": 2423,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SOUL.md",
+    "path": "/Users/alexis/.openclaw/workspace/SOUL.md",
+    "scope": "workspace",
+    "category": "core_config",
+    "ext": "md",
+    "size": 2693,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "TOOLS.md",
+    "path": "/Users/alexis/.openclaw/workspace/TOOLS.md",
+    "scope": "workspace",
+    "category": "core_config",
+    "ext": "md",
+    "size": 1058,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "USER.md",
+    "path": "/Users/alexis/.openclaw/workspace/USER.md",
+    "scope": "workspace",
+    "category": "core_config",
+    "ext": "md",
+    "size": 2180,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2025-05-15.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2025-05-15.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 2068,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2025-06-26.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2025-06-26.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 1252,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-01-30.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-01-30.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 2879,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-01-31.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-01-31.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 6133,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-01.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-01.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 5691,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-02-daily-prios.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-02-daily-prios.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 1231,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-02-greeting-chat.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-02-greeting-chat.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 880,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-02-memory-priorities.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-02-memory-priorities.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 1292,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-02-ok-test.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-02-ok-test.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 1112,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-02-personal-info.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-02-personal-info.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 2803,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-02-security-status.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-02-security-status.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 1780,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-02.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-02.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 4187,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-03.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-03.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 3197,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-04.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-04.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 2692,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-05.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-05.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 2453,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-16-1439.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-16-1439.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 149,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-16-openai-key-check.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-16-openai-key-check.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 2021,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-16-security-audit.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-16-security-audit.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 4111,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-16.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-16.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 3276,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-17.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-17.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 3029,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-18.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-18.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 1465,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-19.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-19.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 1726,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-20.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-20.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 1896,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-26.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-26.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 3089,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-27.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-27.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 1306,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-28-2029.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-28-2029.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 3858,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-28-2051.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-28-2051.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 4388,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-28-api-rate-limits.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-28-api-rate-limits.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 5012,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-28-new-session-startup.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-28-new-session-startup.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 1473,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-28-system-check.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-28-system-check.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 436,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-02-28.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-02-28.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 1276,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-03-01-forge-ia-pitch.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-03-01-forge-ia-pitch.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 6670,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-03-01-tesla-model-y.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-03-01-tesla-model-y.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 12046,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-03-01-x-feed-digest.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-03-01-x-feed-digest.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 18450,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "2026-03-02-acpx-activation.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/2026-03-02-acpx-activation.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 5424,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "WORKING.md",
+    "path": "/Users/alexis/.openclaw/workspace/memory/WORKING.md",
+    "scope": "workspace",
+    "category": "memory",
+    "ext": "md",
+    "size": 749,
+    "updated": "2026-03-02T15:01:34+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SKILL.md",
+    "path": "/Users/alexis/.openclaw/workspace/skills/agent-browser/SKILL.md",
+    "scope": "workspace",
+    "category": "skills",
+    "ext": "md",
+    "size": 10224,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SKILL.md",
+    "path": "/Users/alexis/.openclaw/workspace/skills/auto-updater/SKILL.md",
+    "scope": "workspace",
+    "category": "skills",
+    "ext": "md",
+    "size": 3300,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SKILL.md",
+    "path": "/Users/alexis/.openclaw/workspace/skills/chirp/SKILL.md",
+    "scope": "workspace",
+    "category": "skills",
+    "ext": "md",
+    "size": 4335,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SKILL.md",
+    "path": "/Users/alexis/.openclaw/workspace/skills/find-skills/SKILL.md",
+    "scope": "workspace",
+    "category": "skills",
+    "ext": "md",
+    "size": 4635,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SKILL.md",
+    "path": "/Users/alexis/.openclaw/workspace/skills/frontend-design/SKILL.md",
+    "scope": "workspace",
+    "category": "skills",
+    "ext": "md",
+    "size": 4275,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SKILL.md",
+    "path": "/Users/alexis/.openclaw/workspace/skills/github/SKILL.md",
+    "scope": "workspace",
+    "category": "skills",
+    "ext": "md",
+    "size": 1113,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SKILL.md",
+    "path": "/Users/alexis/.openclaw/workspace/skills/gog/SKILL.md",
+    "scope": "workspace",
+    "category": "skills",
+    "ext": "md",
+    "size": 1748,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SKILL.md",
+    "path": "/Users/alexis/.openclaw/workspace/skills/humanizer/SKILL.md",
+    "scope": "workspace",
+    "category": "skills",
+    "ext": "md",
+    "size": 17782,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SKILL.md",
+    "path": "/Users/alexis/.openclaw/workspace/skills/linkedin/SKILL.md",
+    "scope": "workspace",
+    "category": "skills",
+    "ext": "md",
+    "size": 2362,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SKILL.md",
+    "path": "/Users/alexis/.openclaw/workspace/skills/llmrouter/SKILL.md",
+    "scope": "workspace",
+    "category": "skills",
+    "ext": "md",
+    "size": 9474,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SKILL.md",
+    "path": "/Users/alexis/.openclaw/workspace/skills/mission-control/SKILL.md",
+    "scope": "workspace",
+    "category": "skills",
+    "ext": "md",
+    "size": 6966,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SKILL.md",
+    "path": "/Users/alexis/.openclaw/workspace/skills/model-usage/SKILL.md",
+    "scope": "workspace",
+    "category": "skills",
+    "ext": "md",
+    "size": 2046,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SKILL.md",
+    "path": "/Users/alexis/.openclaw/workspace/skills/notion/SKILL.md",
+    "scope": "workspace",
+    "category": "skills",
+    "ext": "md",
+    "size": 5039,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SKILL.md",
+    "path": "/Users/alexis/.openclaw/workspace/skills/ontology/SKILL.md",
+    "scope": "workspace",
+    "category": "skills",
+    "ext": "md",
+    "size": 6703,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SKILL.md",
+    "path": "/Users/alexis/.openclaw/workspace/skills/proactive-agent/SKILL.md",
+    "scope": "workspace",
+    "category": "skills",
+    "ext": "md",
+    "size": 20883,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SKILL.md",
+    "path": "/Users/alexis/.openclaw/workspace/skills/security-sentinel-skill/SKILL.md",
+    "scope": "workspace",
+    "category": "skills",
+    "ext": "md",
+    "size": 27087,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SKILL.md",
+    "path": "/Users/alexis/.openclaw/workspace/skills/self-improving-agent/SKILL.md",
+    "scope": "workspace",
+    "category": "skills",
+    "ext": "md",
+    "size": 19704,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SKILL.md",
+    "path": "/Users/alexis/.openclaw/workspace/skills/sonoscli/SKILL.md",
+    "scope": "workspace",
+    "category": "skills",
+    "ext": "md",
+    "size": 940,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  },
+  {
+    "name": "SKILL.md",
+    "path": "/Users/alexis/.openclaw/workspace/skills/tavily-search/SKILL.md",
+    "scope": "workspace",
+    "category": "skills",
+    "ext": "md",
+    "size": 1195,
+    "updated": "2026-03-02T15:01:48+00:00",
+    "owner": "system"
+  }
+]

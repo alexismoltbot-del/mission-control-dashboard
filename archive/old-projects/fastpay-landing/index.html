@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastPay — Paiements simplifiés pour l'économie moderne</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #635BFF;
+            --primary-dark: #5851DB;
+            --secondary: #00D4FF;
+            --accent: #FF6B6B;
+            --dark: #0A2540;
+            --gray-900: #1A1F36;
+            --gray-700: #3C4257;
+            --gray-500: #697386;
+            --gray-300: #A3ACB9;
+            --gray-100: #F6F9FC;
+            --white: #FFFFFF;
+            --gradient-1: linear-gradient(135deg, #635BFF 0%, #00D4FF 100%);
+            --gradient-2: linear-gradient(135deg, #0A2540 0%, #1A1F36 100%);
+            --gradient-mesh: radial-gradient(ellipse at 20% 20%, rgba(99, 91, 255, 0.15) 0%, transparent 50%),
+                            radial-gradient(ellipse at 80% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                            radial-gradient(ellipse at 40% 80%, rgba(255, 107, 107, 0.08) 0%, transparent 40%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gray-900);
+            line-height: 1.6;
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 72px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--gradient-1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: white;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        nav a {
+            color: var(--gray-700);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--dark);
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-ghost {
+            color: var(--gray-700);
+            background: transparent;
+        }
+
+        .btn-ghost:hover {
+            color: var(--dark);
+            background: var(--gray-100);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 14px rgba(99, 91, 255, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(99, 91, 255, 0.5);
+        }
+
+        .btn-large {
+            padding: 16px 32px;
+            font-size: 1.05rem;
+            border-radius: 10px;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 160px 0 120px;
+            background: var(--gradient-mesh), var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(99, 91, 255, 0.1);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            color: var(--dark);
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 span {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-500);
+            margin-bottom: 40px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 48px;
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--gray-700);
+            border: 1px solid var(--gray-300);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--gray-500);
+            background: var(--gray-100);
+        }
+
+        .hero-trust {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            color: var(--gray-500);
+            font-size: 0.9rem;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .trust-icon {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+        /* Code Preview */
+        .code-preview {
+            max-width: 680px;
+            margin: 60px auto 0;
+            background: var(--dark);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 25px 80px rgba(10, 37, 64, 0.35),
+                        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+        }
+
+        .code-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .code-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .code-dot.red { background: #FF5F57; }
+        .code-dot.yellow { background: #FEBC2E; }
+        .code-dot.green { background: #28C840; }
+
+        .code-body {
+            padding: 24px;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: #A3ACB9;
+            overflow-x: auto;
+        }
+
+        .code-body .keyword { color: #FF79C6; }
+        .code-body .string { color: #50FA7B; }
+        .code-body .property { color: #8BE9FD; }
+        .code-body .number { color: #BD93F9; }
+        .code-body .comment { color: #6272A4; }
+
+        /* Features */
+        .features {
+            padding: 120px 0;
+            background: var(--gray-100);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 64px;
+        }
+
+        .section-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--gray-500);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(10, 37, 64, 0.08);
+        }
+
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--gradient-1);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .feature-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: white;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: var(--gray-500);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Stats */
+        .stats {
+            padding: 100px 0;
+            background: var(--gradient-2);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 48px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .stat-item p {
+            color: var(--gray-300);
+            font-size: 1rem;
+        }
+
+        /* Pricing */
+        .pricing {
+            padding: 120px 0;
+            background: var(--white);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 20px;
+            padding: 48px 40px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            box-shadow: 0 20px 60px rgba(10, 37, 64, 0.1);
+        }
+
+        .pricing-card.featured {
+            background: var(--dark);
+            border: none;
+            transform: scale(1.02);
+        }
+
+        .pricing-card.featured * {
+            color: var(--white);
+        }
+
+        .pricing-card.featured .pricing-desc {
+            color: var(--gray-300);
+        }
+
+        .pricing-card.featured .check {
+            color: var(--secondary);
+        }
+
+        .pricing-card.featured .btn {
+            background: var(--white);
+            color: var(--dark);
+        }
+
+        .pricing-popular {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-1);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .pricing-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .pricing-desc {
+            color: var(--gray-500);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+        }
+
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .pricing-price span {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--gray-500);
+        }
+
+        .pricing-period {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+            margin-bottom: 32px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .pricing-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            font-size: 0.95rem;
+        }
+
+        .check {
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .pricing-card .btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 120px 0;
+            background: var(--gradient-mesh), var(--gray-100);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            font-size: 1.1rem;
+            color: var(--gray-500);
+            margin-bottom: 32px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 80px 0 40px;
+            background: var(--dark);
+            color: var(--gray-300);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 48px;
+            margin-bottom: 64px;
+        }
+
+        .footer-brand p {
+            margin-top: 16px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            max-width: 280px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-col a {
+            display: block;
+            color: var(--gray-300);
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 6px 0;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-legal a {
+            color: var(--gray-500);
+            text-decoration: none;
+        }
+
+        .footer-legal a:hover {
+            color: var(--gray-300);
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-trust {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .code-preview {
+                margin: 60px 16px 0;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    FastPay
+                </a>
+                <nav>
+                    <a href="#features">Produits</a>
+                    <a href="#pricing">Tarifs</a>
+                    <a href="#">Développeurs</a>
+                    <a href="#">Entreprise</a>
+                </nav>
+                <div class="nav-cta">
+                    <a href="#" class="btn btn-ghost">Connexion</a>
+                    <a href="#" class="btn btn-primary">Commencer →</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    Nouvelle API v3 disponible
+                </div>
+                <h1>L'infrastructure de paiement pour <span>l'internet</span></h1>
+                <p class="hero-subtitle">
+                    Des millions d'entreprises utilisent FastPay pour accepter des paiements, envoyer des virements et gérer leur activité en ligne.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#" class="btn btn-primary btn-large">Commencer maintenant →</a>
+                    <a href="#" class="btn btn-secondary btn-large">Contacter les ventes</a>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        Certifié PCI DSS
+                    </div>
+                    <div class="trust-item">
+                        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        Uptime 99.99%
+                    </div>
+                    <div class="trust-item">
+                        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        135+ devises
+                    </div>
+                </div>
+            </div>
+            <div class="code-preview">
+                <div class="code-header">
+                    <div class="code-dot red"></div>
+                    <div class="code-dot yellow"></div>
+                    <div class="code-dot green"></div>
+                </div>
+                <div class="code-body">
+                    <span class="comment">// Créer un paiement en 3 lignes</span><br>
+                    <span class="keyword">const</span> payment = <span class="keyword">await</span> fastpay.payments.<span class="property">create</span>({<br>
+                    &nbsp;&nbsp;<span class="property">amount</span>: <span class="number">2000</span>,<br>
+                    &nbsp;&nbsp;<span class="property">currency</span>: <span class="string">'eur'</span>,<br>
+                    &nbsp;&nbsp;<span class="property">customer</span>: <span class="string">'cus_4QFOF3xrvBT2nU'</span>,<br>
+                    &nbsp;&nbsp;<span class="property">description</span>: <span class="string">'Abonnement Pro'</span><br>
+                    });<br><br>
+                    <span class="comment">// → Paiement confirmé en 200ms</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Fonctionnalités</div>
+                <h2>Tout ce dont vous avez besoin pour scaler</h2>
+                <p>Une suite complète d'outils de paiement conçue pour les entreprises ambitieuses.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                    </div>
+                    <h3>Checkout optimisé</h3>
+                    <p>Un tunnel de paiement préconçu qui maximise vos conversions. Support de 40+ moyens de paiement, optimisé mobile.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                    </div>
+                    <h3>Abonnements</h3>
+                    <p>Gérez vos revenus récurrents avec une logique de billing flexible. Essais gratuits, prorata, et upgrade automatiques.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                    </div>
+                    <h3>Paiements globaux</h3>
+                    <p>Acceptez des paiements de 195 pays. Conversion automatique, taxes locales, et conformité réglementaire incluses.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Sécurité bancaire</h3>
+                    <p>Détection de fraude ML en temps réel. Chiffrement de bout en bout et tokenisation des données sensibles.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <h3>API développeur</h3>
+                    <p>Documentation exhaustive, SDKs dans 8 langages, webhooks en temps réel. Intégrez en quelques heures, pas des semaines.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+                    </div>
+                    <h3>Payouts instantanés</h3>
+                    <p>Envoyez des virements vers 40+ pays. Versements sur compte bancaire, carte, ou wallet en moins de 24h.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>500M€+</h3>
+                    <p>Transactions traitées</p>
+                </div>
+                <div class="stat-item">
+                    <h3>99.99%</h3>
+                    <p>Disponibilité API</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10K+</h3>
+                    <p>Entreprises clientes</p>
+                </div>
+                <div class="stat-item">
+                    <h3>200ms</h3>
+                    <p>Latence moyenne</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Tarification</div>
+                <h2>Simple, transparent, prévisible</h2>
+                <p>Pas de frais cachés. Pas d'engagement. Payez uniquement ce que vous utilisez.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-name">Starter</div>
+                    <div class="pricing-desc">Pour démarrer et valider</div>
+                    <div class="pricing-price">1.4% <span>+ 0.25€</span></div>
+                    <div class="pricing-period">par transaction réussie</div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Checkout hébergé</li>
+                        <li><span class="check">✓</span> 20+ moyens de paiement</li>
+                        <li><span class="check">✓</span> Dashboard analytics</li>
+                        <li><span class="check">✓</span> Support email</li>
+                        <li><span class="check">✓</span> API & Webhooks</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary">Commencer gratuitement</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-popular">Le plus populaire</div>
+                    <div class="pricing-name">Scale</div>
+                    <div class="pricing-desc">Pour accélérer la croissance</div>
+                    <div class="pricing-price">1.2% <span>+ 0.20€</span></div>
+                    <div class="pricing-period">par transaction réussie</div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Tout de Starter</li>
+                        <li><span class="check">✓</span> Abonnements & facturation</li>
+                        <li><span class="check">✓</span> Anti-fraude avancé</li>
+                        <li><span class="check">✓</span> Multi-devises</li>
+                        <li><span class="check">✓</span> Support prioritaire 24/7</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Commencer avec Scale</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à transformer vos paiements ?</h2>
+                <p>Rejoignez les 10 000+ entreprises qui font confiance à FastPay pour leur croissance.</p>
+                <a href="#" class="btn btn-primary btn-large">Créer un compte gratuit →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo" style="color: white;">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        </div>
+                        FastPay
+                    </a>
+                    <p>L'infrastructure de paiement moderne pour les entreprises qui veulent aller vite.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Produits</h4>
+                    <a href="#">Payments</a>
+                    <a href="#">Checkout</a>
+                    <a href="#">Billing</a>
+                    <a href="#">Invoicing</a>
+                    <a href="#">Terminal</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Développeurs</h4>
+                    <a href="#">Documentation</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">SDKs</a>
+                    <a href="#">Status</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Entreprise</h4>
+                    <a href="#">À propos</a>
+                    <a href="#">Clients</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Carrières</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 FastPay, Inc. Tous droits réservés.</div>
+                <div class="footer-legal">
+                    <a href="#">Confidentialité</a>
+                    <a href="#">CGU</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

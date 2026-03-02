@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Je t'installe ton assistant IA | Par Alexis Bidinot</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #0f172a;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        .header-cta {
+            background: #0f172a;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        /* Hero - Personal approach */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        
+        .hero-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+            font-weight: 700;
+        }
+        
+        .hero-intro {
+            font-size: 18px;
+            color: #64748b;
+            margin-bottom: 16px;
+        }
+        
+        .hero h1 {
+            font-size: 44px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero h1 em {
+            font-style: normal;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-description {
+            font-size: 20px;
+            color: #475569;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        .cta-primary {
+            display: inline-block;
+            background: #0f172a;
+            color: white;
+            padding: 18px 36px;
+            border-radius: 12px;
+            font-size: 17px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .cta-primary:hover {
+            background: #1e293b;
+            transform: translateY(-1px);
+        }
+        
+        .trust-badges {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            color: #64748b;
+            font-size: 14px;
+        }
+        
+        .trust-badges span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        /* Story Section */
+        .story {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+        
+        .story-content {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        
+        .story h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        
+        .story p {
+            font-size: 18px;
+            color: #475569;
+            margin-bottom: 20px;
+        }
+        
+        .story p strong {
+            color: #0f172a;
+        }
+        
+        .highlight-box {
+            background: white;
+            border-left: 4px solid #3b82f6;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 0 12px 12px 0;
+        }
+        
+        .highlight-box p {
+            font-size: 17px;
+            margin: 0;
+            color: #0f172a;
+        }
+        
+        /* What you get */
+        .features {
+            padding: 80px 0;
+        }
+        
+        .features h2 {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        
+        .features-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #64748b;
+            margin-bottom: 48px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        
+        .feature-item {
+            background: #f8fafc;
+            padding: 28px;
+            border-radius: 16px;
+        }
+        
+        .feature-item .icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 24px;
+        }
+        
+        .feature-item h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .feature-item p {
+            font-size: 15px;
+            color: #64748b;
+        }
+        
+        /* How it works */
+        .process {
+            padding: 80px 0;
+            background: #0f172a;
+            color: white;
+        }
+        
+        .process h2 {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .process-step {
+            text-align: center;
+        }
+        
+        .step-number {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .process-step h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .process-step p {
+            font-size: 15px;
+            color: #94a3b8;
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 80px 0;
+        }
+        
+        .pricing h2 {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        
+        .pricing-subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 48px;
+            font-size: 18px;
+        }
+        
+        .pricing-box {
+            background: #f8fafc;
+            border-radius: 24px;
+            padding: 48px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .pricing-row {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-bottom: 32px;
+        }
+        
+        .pricing-item {
+            text-align: center;
+        }
+        
+        .pricing-item .label {
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        
+        .pricing-item .price {
+            font-size: 40px;
+            font-weight: 700;
+        }
+        
+        .pricing-item .price span {
+            font-size: 18px;
+            font-weight: 500;
+            color: #64748b;
+        }
+        
+        .pricing-details {
+            text-align: left;
+            margin: 32px 0;
+            padding: 0 24px;
+        }
+        
+        .pricing-details li {
+            padding: 12px 0;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .pricing-details li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-details li::before {
+            content: "✓";
+            color: #22c55e;
+            font-weight: 700;
+        }
+        
+        .pricing-box .cta-primary {
+            width: 100%;
+            display: block;
+        }
+        
+        .guarantee {
+            margin-top: 24px;
+            font-size: 14px;
+            color: #64748b;
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+        
+        .faq h2 {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .faq-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .faq-item h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .faq-item p {
+            font-size: 15px;
+            color: #64748b;
+        }
+        
+        /* CTA */
+        .final-cta {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .final-cta p {
+            font-size: 18px;
+            color: #64748b;
+            margin-bottom: 32px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            color: #64748b;
+            font-size: 14px;
+        }
+        
+        footer a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            
+            .pricing-row {
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Alexis Bidinot</div>
+                <a href="#contact" class="header-cta">Prendre RDV</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero - Personal -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-photo">AB</div>
+            <p class="hero-intro">Salut, moi c'est Alexis 👋</p>
+            <h1>Je t'installe <em>ton assistant IA</em> en 48 heures</h1>
+            <p class="hero-description">Tu lui parles sur WhatsApp. Il gère tes mails, ton agenda, tes recherches. Comme un associé virtuel qui bosse H24.</p>
+            <a href="#contact" class="cta-primary">On en discute ? →</a>
+            
+            <div class="trust-badges">
+                <span>✓ Déjà 10+ dirigeants équipés</span>
+                <span>✓ Sans engagement</span>
+                <span>✓ Installé en 48h</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Story -->
+    <section class="story">
+        <div class="container">
+            <div class="story-content">
+                <h2>Pourquoi je fais ça ?</h2>
+                <p>J'ai passé 10 ans dans la tech (Iliad/Free, puis fondateur de Qiara). J'ai vu des dizaines de dirigeants de PME crouler sous les tâches admin pendant que leur business stagne.</p>
+                <p>Aujourd'hui, <strong>l'IA permet de déléguer une énorme partie de ce travail</strong>. Mais les outils du marché sont soit trop complexes, soit trop génériques.</p>
+                
+                <div class="highlight-box">
+                    <p>Ma solution : je t'installe un agent IA <strong>configuré pour toi</strong>, accessible depuis WhatsApp. Tu lui parles, il fait. C'est tout.</p>
+                </div>
+                
+                <p>Pas de plateforme à apprendre. Pas d'abonnement SaaS impersonnel. <strong>Un humain (moi) qui configure l'IA pour ton business.</strong></p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2>Ce que ton assistant peut faire</h2>
+            <p class="features-subtitle">Tout ce que tu lui demandes, il exécute.</p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="icon">📧</div>
+                    <h3>Gérer tes mails</h3>
+                    <p>Il lit, trie, te fait des résumés et prépare des réponses. Tu valides, il envoie.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="icon">📅</div>
+                    <h3>Organiser ton agenda</h3>
+                    <p>Il cale tes RDV, te rappelle tes deadlines, et gère les reports.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="icon">🔍</div>
+                    <h3>Faire des recherches</h3>
+                    <p>Concurrents, prospects, infos marché. Il fouille et te synthétise.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="icon">📝</div>
+                    <h3>Préparer des docs</h3>
+                    <p>Mails, présentations, propositions commerciales. Il rédige, tu ajustes.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="icon">🔗</div>
+                    <h3>Se connecter à tes outils</h3>
+                    <p>CRM, Notion, Google Workspace, Slack... Il s'intègre à ton écosystème.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="icon">🧠</div>
+                    <h3>Apprendre tes préférences</h3>
+                    <p>Plus tu l'utilises, plus il devient pertinent. Il retient tout.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Process -->
+    <section class="process">
+        <div class="container">
+            <h2>Comment ça se passe ?</h2>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>On fait un call</h3>
+                    <p>20 min pour comprendre ton business, tes besoins, tes outils actuels.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>J'installe tout</h3>
+                    <p>En 48h, ton assistant est configuré, connecté à tes outils, prêt à bosser.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Tu l'utilises</h3>
+                    <p>Tu lui parles sur WhatsApp. Je reste dispo pour les ajustements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Tarifs clairs, sans surprise</h2>
+            <p class="pricing-subtitle">Tu sais ce que tu paies. Point.</p>
+            
+            <div class="pricing-box">
+                <div class="pricing-row">
+                    <div class="pricing-item">
+                        <div class="label">Installation</div>
+                        <div class="price">800€ <span>HT</span></div>
+                    </div>
+                    <div class="pricing-item">
+                        <div class="label">Accompagnement</div>
+                        <div class="price">250€ <span>/mois</span></div>
+                    </div>
+                </div>
+                
+                <ul class="pricing-details">
+                    <li>Configuration personnalisée à ton business</li>
+                    <li>Connexion à tous tes outils</li>
+                    <li>Formation 1h en visio</li>
+                    <li>Support prioritaire par WhatsApp</li>
+                    <li>Mises à jour et améliorations continues</li>
+                    <li>Résiliable à tout moment, sans frais</li>
+                </ul>
+                
+                <a href="#contact" class="cta-primary">Réserver mon call →</a>
+                
+                <p class="guarantee">🛡️ Satisfait ou remboursé les 14 premiers jours</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>Questions fréquentes</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>C'est quoi la différence avec ChatGPT ?</h3>
+                    <p>ChatGPT ne connaît pas ton business. Mon assistant est configuré avec TES infos, connecté à TES outils, et il retient tout. C'est comme comparer un stagiaire qui débarque vs un collaborateur qui te connaît depuis 2 ans.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Mes données sont sécurisées ?</h3>
+                    <p>Oui. Tout est hébergé sur des serveurs sécurisés. Je n'ai pas accès à tes conversations une fois l'installation terminée. Tu restes maître de tes données.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Et si ça ne me convient pas ?</h3>
+                    <p>Tu as 14 jours pour tester. Si ça ne te convient pas, je te rembourse l'installation. Et l'abonnement mensuel est résiliable quand tu veux, sans préavis.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Combien de temps pour être opérationnel ?</h3>
+                    <p>48h après notre call, ton assistant est prêt. La formation dure 1h. Dès le lendemain, tu l'utilises au quotidien.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Je peux te contacter si j'ai des questions ?</h3>
+                    <p>Évidemment. Support direct par WhatsApp. Je réponds en quelques heures max.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <h2>Prêt à déléguer ?</h2>
+            <p>20 min de call pour voir si ça peut t'aider. Zéro engagement.</p>
+            <a href="https://calendly.com/alexis-bidinot/demo" class="cta-primary">Prendre RDV avec Alexis →</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Alexis Bidinot · <a href="https://linkedin.com/in/alexisbidinot">LinkedIn</a> · alexis@almavi.fr</p>
+            <p style="margin-top: 8px;">Ex-Iliad/Free · Fondateur Qiara · Enseignant entrepreneuriat ESSEC</p>
+        </div>
+    </footer>
+</body>
+</html>

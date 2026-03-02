@@ -1,0 +1,13 @@
+{
+  "gateway": {
+    "url": "http://127.0.0.1:18789",
+    "hookToken": "65bd26b1e3e84854066840b8f7300d9b8905bfc02101f91d"
+  },
+  "workspace": {
+    "path": "/Users/alexis/.openclaw/workspace"
+  },
+  "github": {
+    "repo": "alexismoltbot-del/mission-control-dashboard",
+    "branch": "main"
+  }
+}

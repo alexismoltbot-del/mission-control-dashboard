@@ -1,0 +1,42 @@
+[
+  {
+    "id": "voiture-001",
+    "fact": "Projet d'achat Peugeot 5008 GT Hybrid pour l'arrivée de la 3ème enfant",
+    "category": "decision",
+    "timestamp": "2026-02-01",
+    "source": "conversation",
+    "status": "active"
+  },
+  {
+    "id": "voiture-002",
+    "fact": "Budget max 5008 : 35 000€, année 2025/2026, finition GT, <20k km, couleur noir ou gris",
+    "category": "preference",
+    "timestamp": "2026-02-01",
+    "source": "conversation",
+    "status": "active"
+  },
+  {
+    "id": "voiture-003",
+    "fact": "Fiat 500X 1.0 120ch Cross BVM 2019 (FH-151-AH) - 75 000 km - Aramisauto offre 8 400€",
+    "category": "status",
+    "timestamp": "2026-02-01",
+    "source": "conversation",
+    "status": "active"
+  },
+  {
+    "id": "voiture-005",
+    "fact": "Stratégie Fiat : carrossier Sevran puis rachat plateforme (Aramisauto/VVV/Spoticar)",
+    "category": "decision",
+    "timestamp": "2026-02-01",
+    "source": "conversation",
+    "status": "active"
+  },
+  {
+    "id": "voiture-004",
+    "fact": "Recherche parking location Neuilly : Av. Achille Peretti, Rue de l'Église, Rue des Poissonniers, Rue Chartran",
+    "category": "preference",
+    "timestamp": "2026-02-01",
+    "source": "conversation",
+    "status": "active"
+  }
+]

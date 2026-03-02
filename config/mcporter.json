@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "exa": {
+      "baseUrl": "https://mcp.exa.ai/mcp"
+    },
+    "scrapling": {
+      "command": "scrapling mcp"
+    },
+    "notion": {
+      "command": "npx -y @notionhq/notion-mcp-server",
+      "env": {
+        "OPENAPI_MCP_HEADERS": "{\"Authorization\":\"Bearer ntn_Y88956521525zC350AAPbSgRT0XmxoPpz7inJOrztWUeDu\",\"Notion-Version\":\"2022-06-28\"}"
+      }
+    }
+  },
+  "imports": []
+}

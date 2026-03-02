@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agents IA pour Dirigeants PME | Gagnez 10h/semaine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #111827;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Nav */
+        nav {
+            padding: 16px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-weight: 800;
+            font-size: 22px;
+            background: linear-gradient(135deg, #059669, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #6b7280;
+            font-weight: 500;
+            font-size: 15px;
+        }
+        
+        .nav-links a:hover {
+            color: #111827;
+        }
+        
+        .nav-cta {
+            background: #059669 !important;
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+        
+        /* Hero - Results focused */
+        .hero {
+            padding: 140px 0 80px;
+            background: linear-gradient(180deg, #ecfdf5 0%, #ffffff 100%);
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .hero-text .badge {
+            display: inline-block;
+            background: #d1fae5;
+            color: #059669;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        
+        .hero-text h1 {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+        
+        .hero-text h1 .highlight {
+            color: #059669;
+        }
+        
+        .hero-text p {
+            font-size: 19px;
+            color: #4b5563;
+            margin-bottom: 32px;
+            max-width: 500px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background: #059669;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary:hover {
+            background: #047857;
+            transform: translateY(-1px);
+        }
+        
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #111827;
+            padding: 16px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .stat {
+            text-align: left;
+        }
+        
+        .stat-value {
+            font-size: 36px;
+            font-weight: 800;
+            color: #059669;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        .hero-visual {
+            background: #111827;
+            border-radius: 24px;
+            padding: 32px;
+            color: white;
+        }
+        
+        .terminal-header {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .terminal-dot.red { background: #ef4444; }
+        .terminal-dot.yellow { background: #fbbf24; }
+        .terminal-dot.green { background: #22c55e; }
+        
+        .terminal-content {
+            font-family: 'Monaco', monospace;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .terminal-line {
+            margin-bottom: 8px;
+        }
+        
+        .terminal-line .prompt {
+            color: #10b981;
+        }
+        
+        .terminal-line .command {
+            color: #f3f4f6;
+        }
+        
+        .terminal-line .result {
+            color: #9ca3af;
+            padding-left: 16px;
+        }
+        
+        /* Social proof */
+        .social-proof {
+            padding: 60px 0;
+            background: #f9fafb;
+        }
+        
+        .logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            opacity: 0.6;
+        }
+        
+        .logo-item {
+            font-weight: 700;
+            font-size: 20px;
+            color: #374151;
+        }
+        
+        /* Benefits */
+        .benefits {
+            padding: 100px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+        
+        .section-header .tag {
+            color: #059669;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        
+        .section-header h2 {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        
+        .section-header p {
+            font-size: 18px;
+            color: #6b7280;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        
+        .benefit-card {
+            background: #f9fafb;
+            border-radius: 20px;
+            padding: 36px;
+            transition: all 0.2s;
+        }
+        
+        .benefit-card:hover {
+            background: #ecfdf5;
+        }
+        
+        .benefit-icon {
+            width: 56px;
+            height: 56px;
+            background: #d1fae5;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .benefit-card p {
+            font-size: 15px;
+            color: #6b7280;
+        }
+        
+        /* Use cases */
+        .usecases {
+            padding: 100px 0;
+            background: #111827;
+            color: white;
+        }
+        
+        .usecases .section-header h2 {
+            color: white;
+        }
+        
+        .usecases .section-header p {
+            color: #9ca3af;
+        }
+        
+        .usecase-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+        
+        .usecase-tab {
+            background: #1f2937;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .usecase-tab.active {
+            background: #059669;
+        }
+        
+        .usecase-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .usecase-text h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .usecase-text p {
+            font-size: 17px;
+            color: #9ca3af;
+            margin-bottom: 24px;
+        }
+        
+        .usecase-list {
+            list-style: none;
+        }
+        
+        .usecase-list li {
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 16px;
+        }
+        
+        .usecase-list li::before {
+            content: "✓";
+            color: #10b981;
+            font-weight: 700;
+        }
+        
+        .usecase-visual {
+            background: #1f2937;
+            border-radius: 20px;
+            padding: 32px;
+        }
+        
+        .chat-message {
+            background: #374151;
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+        
+        .chat-message.user {
+            background: #059669;
+            margin-left: 40px;
+        }
+        
+        .chat-message.bot {
+            margin-right: 40px;
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 100px 0;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: #f9fafb;
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+        }
+        
+        .pricing-card.featured {
+            background: #111827;
+            color: white;
+        }
+        
+        .pricing-card .popular {
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            background: #059669;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        .pricing-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .pricing-card .price {
+            font-size: 48px;
+            font-weight: 800;
+            margin: 16px 0;
+        }
+        
+        .pricing-card .price span {
+            font-size: 18px;
+            font-weight: 500;
+            color: #6b7280;
+        }
+        
+        .pricing-card.featured .price span {
+            color: #9ca3af;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            margin: 32px 0;
+        }
+        
+        .pricing-card ul li {
+            padding: 10px 0;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .pricing-card ul li::before {
+            content: "✓";
+            color: #059669;
+            font-weight: 700;
+        }
+        
+        .pricing-card .btn-primary {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .pricing-card.featured .btn-primary {
+            background: white;
+            color: #111827;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: #f9fafb;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 32px;
+            border-radius: 20px;
+        }
+        
+        .testimonial-quote {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #059669, #10b981);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .testimonial-info h4 {
+            font-weight: 600;
+            font-size: 15px;
+        }
+        
+        .testimonial-info p {
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        /* CTA */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-section .btn-primary {
+            background: white;
+            color: #059669;
+            padding: 18px 40px;
+            font-size: 17px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            background: #111827;
+            color: #9ca3af;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            font-weight: 800;
+            font-size: 20px;
+            color: white;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+        
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-visual {
+                display: none;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .usecase-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Nav -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-logo">AgentIA.pro</div>
+                <div class="nav-links">
+                    <a href="#benefits">Avantages</a>
+                    <a href="#usecases">Cas d'usage</a>
+                    <a href="#pricing">Tarifs</a>
+                    <a href="#contact" class="nav-cta">Démo gratuite</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="badge">🎯 Pour dirigeants de PME</div>
+                    <h1>Gagnez <span class="highlight">10 heures</span> par semaine avec votre agent IA</h1>
+                    <p>Un assistant personnel intelligent qui gère vos mails, votre agenda et vos tâches répétitives. Accessible depuis WhatsApp.</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn-primary">Réserver une démo →</a>
+                        <a href="#usecases" class="btn-secondary">
+                            <span>▶</span> Voir en action
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-value">10h</div>
+                            <div class="stat-label">gagnées / semaine</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">48h</div>
+                            <div class="stat-label">pour être opérationnel</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">24/7</div>
+                            <div class="stat-label">disponible</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="terminal-header">
+                        <div class="terminal-dot red"></div>
+                        <div class="terminal-dot yellow"></div>
+                        <div class="terminal-dot green"></div>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="terminal-line">
+                            <span class="prompt">Toi:</span>
+                            <span class="command"> Résume mes 10 derniers mails</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="result">→ 3 urgents, 4 en attente, 3 spam</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">Toi:</span>
+                            <span class="command"> Prépare les réponses aux urgents</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="result">→ Voici 3 drafts prêts à envoyer...</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">Toi:</span>
+                            <span class="command"> Cale un RDV avec Jean cette semaine</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="result">→ ✓ Proposition envoyée : jeudi 14h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Social proof -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="logos">
+                <div class="logo-item">Sinequanon</div>
+                <div class="logo-item">Panorama</div>
+                <div class="logo-item">Reeb</div>
+                <div class="logo-item">Art City Agency</div>
+                <div class="logo-item">+ 15 PME</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefits -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag">Pourquoi un agent IA ?</div>
+                <h2>Déléguez ce qui vous ralentit</h2>
+                <p>Votre temps vaut trop cher pour les tâches admin. L'IA s'en charge.</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Réponses instantanées</h3>
+                    <p>Vos mails sont traités en temps réel. Plus de retard, plus de prospects perdus.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Focus sur l'essentiel</h3>
+                    <p>Éliminez les tâches répétitives. Concentrez-vous sur la stratégie et le développement.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔄</div>
+                    <h3>Disponible 24/7</h3>
+                    <p>Votre assistant ne dort jamais. Il travaille pendant que vous vous reposez.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧠</div>
+                    <h3>Apprentissage continu</h3>
+                    <p>Plus vous l'utilisez, plus il devient pertinent. Il apprend vos préférences.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔗</div>
+                    <h3>Intégré à vos outils</h3>
+                    <p>Gmail, Notion, CRM, Slack... Il se connecte à tout votre écosystème.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">📱</div>
+                    <h3>Simple comme WhatsApp</h3>
+                    <p>Pas d'app à installer, pas de formation. Vous lui parlez, il fait.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Use cases -->
+    <section class="usecases" id="usecases">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag" style="color: #10b981;">Cas d'usage</div>
+                <h2>Concrètement, il fait quoi ?</h2>
+                <p>Tout ce que vous lui demandez, dans les limites du raisonnable.</p>
+            </div>
+            
+            <div class="usecase-content">
+                <div class="usecase-text">
+                    <h3>Gestion des emails</h3>
+                    <p>Votre boîte mail triée, résumée et préparée. Vous validez, il envoie.</p>
+                    
+                    <ul class="usecase-list">
+                        <li>Tri automatique par priorité</li>
+                        <li>Résumé des mails importants</li>
+                        <li>Réponses pré-rédigées</li>
+                        <li>Relances automatiques</li>
+                        <li>Archivage intelligent</li>
+                    </ul>
+                </div>
+                
+                <div class="usecase-visual">
+                    <div class="chat-message user">
+                        Fais-moi un résumé des mails de cette semaine
+                    </div>
+                    <div class="chat-message bot">
+                        📧 Résumé semaine :<br><br>
+                        • 3 demandes clients → 2 traitées, 1 en attente<br>
+                        • 2 propositions commerciales reçues<br>
+                        • 1 relance facture impayée à faire<br><br>
+                        Tu veux que je prépare la relance ?
+                    </div>
+                    <div class="chat-message user">
+                        Oui, propose-moi un mail
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag">Tarifs</div>
+                <h2>Simple, transparent, sans surprise</h2>
+                <p>Pas d'engagement. Résiliable à tout moment.</p>
+            </div>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Installation</h3>
+                    <div class="price">800€ <span>HT</span></div>
+                    <ul>
+                        <li>Configuration personnalisée</li>
+                        <li>Connexion à vos outils</li>
+                        <li>Formation 1h en visio</li>
+                        <li>Documentation sur-mesure</li>
+                        <li>2 semaines de support inclus</li>
+                    </ul>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="popular">Recommandé</div>
+                    <h3>Accompagnement</h3>
+                    <div class="price">250€ <span>/mois</span></div>
+                    <ul>
+                        <li>Hébergement et maintenance</li>
+                        <li>Support prioritaire WhatsApp</li>
+                        <li>Mises à jour continues</li>
+                        <li>Ajout de nouvelles fonctions</li>
+                        <li>Sans engagement</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary">Démarrer →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag">Témoignages</div>
+                <h2>Ce qu'en disent nos clients</h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p class="testimonial-quote">"Mon assistant gère 80% de mes mails. Je me concentre enfin sur ce qui compte vraiment : développer mon business."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">A</div>
+                        <div class="testimonial-info">
+                            <h4>Andy S.</h4>
+                            <p>Dirigeant, Courtage</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-quote">"L'installation a pris 2h. Le lendemain, j'utilisais déjà mon assistant. Le ROI est immédiat."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">J</div>
+                        <div class="testimonial-info">
+                            <h4>Jean V.</h4>
+                            <p>CEO, Tech</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-quote">"Je gagne minimum 1h30 par jour. Sur un mois, ça représente 30h. Le calcul est vite fait."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">T</div>
+                        <div class="testimonial-info">
+                            <h4>Théo V.</h4>
+                            <p>Fondateur, FMCG</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Prêt à gagner du temps ?</h2>
+            <p>Démo gratuite de 20 minutes. On vous montre exactement ce que l'agent peut faire pour vous.</p>
+            <a href="https://calendly.com/alexis-bidinot/demo" class="btn-primary">Réserver ma démo gratuite →</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">AgentIA.pro</div>
+                <div class="footer-links">
+                    <a href="#">Contact</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Mentions légales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

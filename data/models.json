@@ -1,0 +1,133 @@
+{
+  "config": {
+    "primary": "anthropic/claude-opus-4-6",
+    "fallbacks": [
+      "openai-codex/gpt-5.3-codex"
+    ]
+  },
+  "heartbeat": {
+    "every": "2h",
+    "activeHours": {
+      "start": "08:00",
+      "end": "20:00"
+    },
+    "model": "anthropic/claude-haiku-4-5-20251001"
+  },
+  "sessions": {
+    "path": "/Users/alexis/.openclaw/agents/main/sessions/sessions.json",
+    "count": 7,
+    "activeMinutes": 1440,
+    "sessions": [
+      {
+        "key": "agent:main:main",
+        "updatedAt": 1772309956096,
+        "ageMs": 57745,
+        "sessionId": "4b63ab6a-8220-41cf-899d-b82f1b3563fd",
+        "systemSent": true,
+        "abortedLastRun": false,
+        "inputTokens": 20,
+        "outputTokens": 5826,
+        "totalTokens": 151142,
+        "totalTokensFresh": true,
+        "model": "claude-opus-4-6",
+        "modelProvider": "anthropic",
+        "contextTokens": 200000,
+        "agentId": "main",
+        "kind": "direct"
+      },
+      {
+        "key": "agent:main:whatsapp:direct:+33638167834",
+        "updatedAt": 1772309908481,
+        "ageMs": 105360,
+        "sessionId": "8fd84845-e5d4-409a-aec6-f660dac040e0",
+        "systemSent": true,
+        "abortedLastRun": false,
+        "inputTokens": 4,
+        "outputTokens": 199,
+        "totalTokens": 169267,
+        "totalTokensFresh": true,
+        "model": "claude-opus-4-6",
+        "modelProvider": "anthropic",
+        "contextTokens": 200000,
+        "agentId": "main",
+        "kind": "direct"
+      },
+      {
+        "key": "agent:main:whatsapp:group:120363424010945711@g.us",
+        "updatedAt": 1772285056034,
+        "ageMs": 24957807,
+        "sessionId": "9fae817b-037e-4baf-9a3a-135e43da4d6f",
+        "systemSent": true,
+        "abortedLastRun": false,
+        "inputTokens": 4,
+        "outputTokens": 1743,
+        "totalTokens": 93163,
+        "totalTokensFresh": true,
+        "model": "claude-opus-4-6",
+        "modelProvider": "anthropic",
+        "contextTokens": 200000,
+        "agentId": "main",
+        "kind": "group"
+      },
+      {
+        "key": "agent:main:whatsapp:group:120363426641691127@g.us",
+        "updatedAt": 1772282251131,
+        "ageMs": 27762710,
+        "sessionId": "a50f1c1f-1edb-42cf-9563-f32cce27a052",
+        "totalTokens": null,
+        "totalTokensFresh": false,
+        "model": "claude-opus-4-6",
+        "contextTokens": 200000,
+        "agentId": "main",
+        "kind": "group"
+      },
+      {
+        "key": "agent:main:telegram:direct:6820925284",
+        "updatedAt": 1772279945791,
+        "ageMs": 30068050,
+        "sessionId": "0c3e99ae-1e0b-455d-acc3-2acc79846220",
+        "systemSent": true,
+        "abortedLastRun": false,
+        "inputTokens": 5,
+        "outputTokens": 292,
+        "totalTokens": 19450,
+        "totalTokensFresh": true,
+        "model": "claude-sonnet-4-6",
+        "modelProvider": "anthropic",
+        "contextTokens": 200000,
+        "agentId": "main",
+        "kind": "direct"
+      },
+      {
+        "key": "telegram:slash:6820925284",
+        "updatedAt": 1772279936799,
+        "ageMs": 30077042,
+        "sessionId": "34156fa9-32f3-4bf0-9b99-c11aa6bc5a4d",
+        "totalTokens": null,
+        "totalTokensFresh": false,
+        "model": "claude-opus-4-6",
+        "contextTokens": 200000,
+        "agentId": "main",
+        "kind": "direct"
+      },
+      {
+        "key": "agent:main:whatsapp:direct:+33689289360",
+        "updatedAt": 1772279933821,
+        "ageMs": 30080020,
+        "sessionId": "4bb2eec9-2a3b-42c8-8052-be34d3c5740d",
+        "systemSent": true,
+        "abortedLastRun": false,
+        "inputTokens": 5,
+        "outputTokens": 393,
+        "totalTokens": 20204,
+        "totalTokensFresh": true,
+        "model": "claude-sonnet-4-6",
+        "modelProvider": "anthropic",
+        "contextTokens": 200000,
+        "agentId": "main",
+        "kind": "direct"
+      }
+    ]
+  },
+  "generatedAt": "2026-02-28T21:20:14.826619"
+}

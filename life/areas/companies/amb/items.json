@@ -1,0 +1,42 @@
+[
+  {
+    "id": "amb-001",
+    "fact": "SARL AMB est la société de facturation d'Alexis",
+    "category": "status",
+    "timestamp": "2025-05-15",
+    "source": "conversation",
+    "status": "active"
+  },
+  {
+    "id": "amb-002",
+    "fact": "SIRET : 884 458 043 00012",
+    "category": "status",
+    "timestamp": "2025-05-15",
+    "source": "conversation",
+    "status": "active"
+  },
+  {
+    "id": "amb-003",
+    "fact": "IBAN : FR76 1820 6002 8565 0704 0444 892 (Crédit Agricole)",
+    "category": "status",
+    "timestamp": "2025-05-15",
+    "source": "conversation",
+    "status": "active"
+  },
+  {
+    "id": "amb-004",
+    "fact": "Dernière facture : 070 (ESSEC, novembre 2025)",
+    "category": "milestone",
+    "timestamp": "2025-11-01",
+    "source": "conversation",
+    "status": "active"
+  },
+  {
+    "id": "amb-005",
+    "fact": "Adresse : 132 avenue Achille Peretti, 92200 Neuilly-sur-Seine",
+    "category": "status",
+    "timestamp": "2025-05-15",
+    "source": "conversation",
+    "status": "active"
+  }
+]

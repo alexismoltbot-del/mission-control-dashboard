@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "skills": {
+    "security-sentinel-skill": {
+      "version": "2.0.3",
+      "installedAt": 1772045236849
+    },
+    "sonoscli": {
+      "version": "1.0.0",
+      "installedAt": 1772129573163
+    },
+    "gog": {
+      "version": "1.0.0",
+      "installedAt": 1772131876458
+    },
+    "mission-control": {
+      "version": "2.3.1",
+      "installedAt": 1772187871776
+    },
+    "llmrouter": {
+      "version": "0.1.1",
+      "installedAt": 1772217242522
+    },
+    "self-improving-agent": {
+      "version": "1.0.11",
+      "installedAt": 1772227337112
+    },
+    "tavily-search": {
+      "version": "1.0.0",
+      "installedAt": 1772227412294
+    },
+    "proactive-agent": {
+      "version": "3.1.0",
+      "installedAt": 1772229612367
+    },
+    "chirp": {
+      "version": "1.0.1",
+      "installedAt": 1772313622315
+    },
+    "ontology": {
+      "version": "0.1.2",
+      "installedAt": 1772370561903
+    },
+    "find-skills": {
+      "version": "0.1.0",
+      "installedAt": 1772370741852
+    },
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1772370804616
+    },
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1772370858907
+    },
+    "humanizer": {
+      "version": "1.0.0",
+      "installedAt": 1772370918546
+    },
+    "auto-updater": {
+      "version": "1.0.0",
+      "installedAt": 1772371029353
+    },
+    "notion": {
+      "version": "1.0.0",
+      "installedAt": 1772393770157
+    },
+    "model-usage": {
+      "version": "1.0.0",
+      "installedAt": 1772445987671
+    },
+    "frontend-design": {
+      "version": "1.0.0",
+      "installedAt": 1772445989304
+    },
+    "nano-banana-pro": {
+      "version": "1.0.1",
+      "installedAt": 1772468355054
+    },
+    "discord": {
+      "version": "1.0.1",
+      "installedAt": 1772468737971
+    },
+    "agent-team-orchestration": {
+      "version": "1.0.0",
+      "installedAt": 1772486311995
+    },
+    "agent-evaluation": {
+      "version": "1.0.0",
+      "installedAt": 1772486329987
+    },
+    "agent-council": {
+      "version": "1.0.0",
+      "installedAt": 1772486350376
+    },
+    "self-improving": {
+      "version": "1.1.3",
+      "installedAt": 1772486367752
+    }
+  }
+}

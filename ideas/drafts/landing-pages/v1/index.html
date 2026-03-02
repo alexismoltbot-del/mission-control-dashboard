@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ton Assistant IA Personnel | Pilote ta boîte depuis WhatsApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 100px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero h1 span {
+            background: linear-gradient(90deg, #ffd700, #ffeb3b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-weight: 400;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ffffff;
+            color: #667eea;
+            padding: 18px 40px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(0,0,0,0.3);
+        }
+        
+        .hero-note {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        /* Problem Section */
+        .problem {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 48px;
+        }
+        
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        
+        .problem-card {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        
+        .problem-card .emoji {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+        
+        .problem-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .problem-card p {
+            color: #666;
+            font-size: 15px;
+        }
+        
+        /* Solution Section */
+        .solution {
+            padding: 80px 0;
+        }
+        
+        .solution-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .solution-text h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        
+        .solution-text p {
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 32px;
+        }
+        
+        .features-list {
+            list-style: none;
+        }
+        
+        .features-list li {
+            padding: 12px 0;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .features-list li::before {
+            content: "✓";
+            background: #667eea;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        
+        .mockup {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 24px;
+            padding: 40px;
+            color: white;
+        }
+        
+        .chat-bubble {
+            background: rgba(255,255,255,0.15);
+            padding: 16px 20px;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+        
+        .chat-bubble.user {
+            background: white;
+            color: #1a1a2e;
+            margin-left: 40px;
+        }
+        
+        .chat-bubble.assistant {
+            margin-right: 40px;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid #667eea;
+            position: relative;
+        }
+        
+        .pricing-card.featured::before {
+            content: "Le plus populaire";
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #667eea;
+            color: white;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        .pricing-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .pricing-card .price {
+            font-size: 48px;
+            font-weight: 800;
+            color: #667eea;
+            margin: 16px 0;
+        }
+        
+        .pricing-card .price span {
+            font-size: 18px;
+            font-weight: 500;
+            color: #666;
+        }
+        
+        .pricing-card .description {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 24px;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 32px;
+        }
+        
+        .pricing-card ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 15px;
+        }
+        
+        .pricing-card ul li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-card .cta-button {
+            width: 100%;
+            text-align: center;
+            background: #667eea;
+            color: white;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+        
+        .testimonial-card {
+            background: #f8f9fa;
+            padding: 32px;
+            border-radius: 16px;
+        }
+        
+        .testimonial-card .quote {
+            font-size: 16px;
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .testimonial-card .author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .testimonial-card .avatar {
+            width: 48px;
+            height: 48px;
+            background: #667eea;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .testimonial-card .author-info h4 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .testimonial-card .author-info p {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+        }
+        
+        .cta-section .cta-button {
+            background: white;
+            color: #667eea;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .solution-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">🚀 Offre de lancement — Places limitées</div>
+            <h1>Ton assistant IA personnel,<br><span>accessible depuis WhatsApp</span></h1>
+            <p class="hero-subtitle">Tu lui parles, il exécute. Mails, agenda, recherches, docs... Un associé virtuel qui bosse H24 pour toi.</p>
+            <a href="#contact" class="cta-button">Réserver un call de démo →</a>
+            <p class="hero-note">✓ Sans engagement · ✓ Démo gratuite · ✓ Installé en 48h</p>
+        </div>
+    </section>
+    
+    <!-- Problem -->
+    <section class="problem">
+        <div class="container">
+            <h2 class="section-title">Tu reconnais cette situation ?</h2>
+            <p class="section-subtitle">Tu gères tout seul. Et tu perds un temps fou sur des tâches qui ne créent pas de valeur.</p>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="emoji">📧</div>
+                    <h3>Ta boîte mail déborde</h3>
+                    <p>Tu passes 2h par jour à trier, répondre, relancer. Pendant ce temps, ton business n'avance pas.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="emoji">📅</div>
+                    <h3>Ton agenda est un chaos</h3>
+                    <p>RDV qui se chevauchent, calls à reprogrammer, deadlines oubliées. Tu cours après le temps.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="emoji">🔍</div>
+                    <h3>Tu cherches tout le temps</h3>
+                    <p>Infos clients, docs, chiffres... Tu perds 30 min par jour à retrouver ce que tu sais déjà avoir quelque part.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Solution -->
+    <section class="solution">
+        <div class="container">
+            <div class="solution-content">
+                <div class="solution-text">
+                    <h2>Imagine un assistant qui te comprend vraiment</h2>
+                    <p>Pas un chatbot générique. Un agent IA configuré pour TOI, qui connaît ton business, tes contacts, tes process. Accessible depuis WhatsApp, comme si tu parlais à un collaborateur.</p>
+                    
+                    <ul class="features-list">
+                        <li>Gère tes mails et te prépare des réponses</li>
+                        <li>Organise ton agenda et tes rappels</li>
+                        <li>Fait des recherches et te synthétise les résultats</li>
+                        <li>Prépare des docs, présentations, devis</li>
+                        <li>Se connecte à tes outils (CRM, Notion, etc.)</li>
+                        <li>Apprend de tes préférences au fil du temps</li>
+                    </ul>
+                </div>
+                
+                <div class="mockup">
+                    <div class="chat-bubble user">
+                        Prépare-moi un récap des 5 derniers mails de prospects et propose des réponses
+                    </div>
+                    <div class="chat-bubble assistant">
+                        Voici les 5 mails prospects :<br><br>
+                        1. Jean (Panorama) - Intéressé par une démo<br>
+                        → Réponse suggérée : "Salut Jean, dispo jeudi 14h ?"<br><br>
+                        2. Théo (Reeb) - Question pricing<br>
+                        → Réponse suggérée : "800€ setup + 250€/mois"<br><br>
+                        [...]<br><br>
+                        Tu veux que j'envoie ces réponses ?
+                    </div>
+                    <div class="chat-bubble user">
+                        Envoie la réponse à Jean, attends pour Théo
+                    </div>
+                    <div class="chat-bubble assistant">
+                        ✓ Mail envoyé à Jean<br>
+                        ✓ Théo en attente - je te relance demain
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Pricing simple et transparent</h2>
+            <p class="section-subtitle">Pas de surprises. Tu sais exactement ce que tu paies.</p>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Installation</h3>
+                    <div class="price">800€ <span>HT</span></div>
+                    <p class="description">Setup complet en 48h</p>
+                    <ul>
+                        <li>✓ Configuration personnalisée</li>
+                        <li>✓ Connexion à tes outils</li>
+                        <li>✓ Formation 1h en visio</li>
+                        <li>✓ Documentation sur-mesure</li>
+                        <li>✓ 2 semaines de support inclus</li>
+                    </ul>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <h3>Accompagnement</h3>
+                    <div class="price">250€ <span>HT/mois</span></div>
+                    <p class="description">Support continu</p>
+                    <ul>
+                        <li>✓ Hébergement et maintenance</li>
+                        <li>✓ Mises à jour automatiques</li>
+                        <li>✓ Support prioritaire</li>
+                        <li>✓ Ajout de nouvelles fonctions</li>
+                        <li>✓ Sans engagement - résiliable</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Démarrer →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Ils l'utilisent au quotidien</h2>
+            <p class="section-subtitle">Retours de dirigeants qui ont fait le pas.</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="quote">"Je gagne minimum 1h30 par jour. L'assistant gère mes mails, me prépare mes RDV, et me fait des synthèses de mes docs. C'est devenu indispensable."</p>
+                    <div class="author">
+                        <div class="avatar">A</div>
+                        <div class="author-info">
+                            <h4>Andy S.</h4>
+                            <p>Dirigeant, Courtage assurance</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="quote">"Le setup a pris 2h. Depuis, c'est comme avoir un assistant perso H24. Je lui parle sur WhatsApp, il fait le reste."</p>
+                    <div class="author">
+                        <div class="avatar">J</div>
+                        <div class="author-info">
+                            <h4>Jean V.</h4>
+                            <p>CEO, Panorama</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="quote">"J'étais sceptique sur l'IA. Mais là c'est concret : je lui demande, il fait. Pas de blabla, des résultats."</p>
+                    <div class="author">
+                        <div class="avatar">T</div>
+                        <div class="author-info">
+                            <h4>Théo V.</h4>
+                            <p>Fondateur, Reeb</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Prêt à gagner 10h par semaine ?</h2>
+            <p>Call de 20 min pour te montrer comment ça marche. Sans engagement.</p>
+            <a href="https://calendly.com/alexis-bidinot/demo" class="cta-button">Réserver mon call de démo →</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 · Une offre d'Alexis Bidinot · Contact : alexis@almavi.fr</p>
+        </div>
+    </footer>
+</body>
+</html>

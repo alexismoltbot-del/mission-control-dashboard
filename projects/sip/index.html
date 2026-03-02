@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP — Le café parisien, réinventé</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #FAF7F2;
+            --espresso: #2C1810;
+            --caramel: #C4A77D;
+            --latte: #E8DED1;
+            --charcoal: #3D3D3D;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--espresso);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: linear-gradient(to bottom, var(--cream) 60%, transparent);
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            color: var(--espresso);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--caramel);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--latte) 0%, transparent 70%);
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(4rem, 15vw, 12rem);
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            margin-bottom: 1rem;
+            animation: fadeUp 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 400;
+            font-style: italic;
+            color: var(--charcoal);
+            margin-bottom: 3rem;
+            animation: fadeUp 1s ease-out 0.2s both;
+        }
+
+        .hero-price {
+            display: inline-block;
+            padding: 1rem 3rem;
+            border: 1px solid var(--espresso);
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            animation: fadeUp 1s ease-out 0.4s both;
+        }
+
+        .hero-price span {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        /* Manifesto Section */
+        .manifesto {
+            padding: 8rem 4rem;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .manifesto h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+        }
+
+        .manifesto p {
+            font-size: 1.1rem;
+            line-height: 2;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+        }
+
+        .manifesto-highlight {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-style: italic;
+            color: var(--espresso);
+            margin: 3rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid var(--latte);
+            border-bottom: 1px solid var(--latte);
+        }
+
+        /* Features Section */
+        .features {
+            background-color: var(--espresso);
+            color: var(--cream);
+            padding: 8rem 4rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .feature h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+        }
+
+        .feature p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            opacity: 0.8;
+        }
+
+        /* Menu Preview */
+        .menu-preview {
+            padding: 8rem 4rem;
+            text-align: center;
+        }
+
+        .menu-preview h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 400;
+            margin-bottom: 4rem;
+        }
+
+        .menu-items {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .menu-item {
+            width: 200px;
+        }
+
+        .menu-item-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-item-price {
+            font-size: 1rem;
+            color: var(--caramel);
+            font-weight: 400;
+        }
+
+        .menu-item-desc {
+            font-size: 0.85rem;
+            color: var(--charcoal);
+            margin-top: 0.5rem;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            background-color: var(--latte);
+            padding: 6rem 4rem;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter p {
+            font-size: 1rem;
+            color: var(--charcoal);
+            margin-bottom: 2rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input[type="email"] {
+            flex: 1;
+            min-width: 250px;
+            padding: 1rem 1.5rem;
+            border: 1px solid var(--espresso);
+            background: transparent;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .newsletter-form input[type="email"]::placeholder {
+            color: var(--charcoal);
+            opacity: 0.6;
+        }
+
+        .newsletter-form button {
+            padding: 1rem 2.5rem;
+            background-color: var(--espresso);
+            color: var(--cream);
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background-color: var(--charcoal);
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem;
+            text-align: center;
+            background-color: var(--cream);
+        }
+
+        .footer-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            margin-bottom: 2rem;
+        }
+
+        .footer-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--charcoal);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            color: var(--espresso);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--caramel);
+        }
+
+        .footer-bottom {
+            font-size: 0.8rem;
+            color: var(--charcoal);
+            opacity: 0.6;
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .manifesto,
+            .features,
+            .menu-preview,
+            .newsletter {
+                padding: 4rem 2rem;
+            }
+
+            .features-grid {
+                gap: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">SIP</div>
+        <ul class="nav-links">
+            <li><a href="#manifeste">Manifeste</a></li>
+            <li><a href="#carte">La Carte</a></li>
+            <li><a href="#newsletter">Rejoindre</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1 class="hero-title">SIP</h1>
+        <p class="hero-subtitle">Le café parisien, réinventé</p>
+        <div class="hero-price">Espresso <span>3,50 €</span></div>
+    </section>
+
+    <section class="manifesto" id="manifeste">
+        <h2>Notre Manifeste</h2>
+        <p>
+            Paris mérite mieux qu'un café à 7 euros servi dans un gobelet en carton. 
+            Chez SIP, nous croyons que l'excellence n'a pas besoin d'être inaccessible.
+        </p>
+        <p>
+            Nous avons créé des espaces où le beau rencontre l'essentiel. 
+            Des intérieurs pensés avec soin, une sélection de grains d'exception, 
+            et un prix qui respecte votre quotidien.
+        </p>
+        <p class="manifesto-highlight">
+            "Le luxe, c'est de prendre le temps. Pas de vider son portefeuille."
+        </p>
+        <p>
+            Inspirés par ceux qui ont su rendre le beau accessible — de Sézane à nos 
+            bistrots de quartier préférés — nous réinventons le coffee shop parisien.
+        </p>
+    </section>
+
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">☕</div>
+                <h3>Grains d'Exception</h3>
+                <p>Torréfaction artisanale, sourcing éthique. Le même café que les grandes maisons, sans la marge.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">✨</div>
+                <h3>Design Parisien</h3>
+                <p>Des espaces pensés pour durer. Marbre, laiton, lumière naturelle. Instagrammable sans le vouloir.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">♡</div>
+                <h3>Prix Justes</h3>
+                <p>Un espresso à 3,50 €. Un latte à 4,50 €. Parce que le quotidien ne devrait pas être un luxe.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-preview" id="carte">
+        <h2>La Carte</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <div class="menu-item-name">Espresso</div>
+                <div class="menu-item-price">3,50 €</div>
+                <div class="menu-item-desc">Pur, intense, essentiel</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-name">Flat White</div>
+                <div class="menu-item-price">4,50 €</div>
+                <div class="menu-item-desc">Velouté, équilibré</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-name">Latte</div>
+                <div class="menu-item-price">4,50 €</div>
+                <div class="menu-item-desc">Doux, réconfortant</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-name">Matcha Latte</div>
+                <div class="menu-item-price">5,00 €</div>
+                <div class="menu-item-desc">Cérémonie japonaise</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-name">Pastry du Jour</div>
+                <div class="menu-item-price">3,50 €</div>
+                <div class="menu-item-desc">Artisan parisien</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter" id="newsletter">
+        <h2>Soyez les Premiers</h2>
+        <p>Inscrivez-vous pour découvrir nos adresses avant tout le monde.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Votre email" required>
+            <button type="submit">Rejoindre</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-logo">SIP</div>
+        <p class="footer-tagline">Bientôt dans votre quartier</p>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <p class="footer-bottom">© 2026 SIP Paris — Tous droits réservés</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input').value;
+            alert('Merci ! Vous serez informé(e) de nos ouvertures.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

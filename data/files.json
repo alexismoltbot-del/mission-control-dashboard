@@ -1,0 +1,1706 @@
+[
+  {
+    "path": ".clawhub",
+    "name": ".clawhub",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 0
+  },
+  {
+    "path": ".git",
+    "name": ".git",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 0
+  },
+  {
+    "path": ".learnings",
+    "name": ".learnings",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 0
+  },
+  {
+    "path": ".openclaw",
+    "name": ".openclaw",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 0
+  },
+  {
+    "path": "archive",
+    "name": "archive",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 0
+  },
+  {
+    "path": "canvas",
+    "name": "canvas",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 0
+  },
+  {
+    "path": "config",
+    "name": "config",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 0
+  },
+  {
+    "path": "context",
+    "name": "context",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 0
+  },
+  {
+    "path": "context/substack_export",
+    "name": "substack_export",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 1
+  },
+  {
+    "path": "context/substack_export/posts",
+    "name": "posts",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "data",
+    "name": "data",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 0
+  },
+  {
+    "path": "factures",
+    "name": "factures",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 0
+  },
+  {
+    "path": "fastpay-landing",
+    "name": "fastpay-landing",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 0
+  },
+  {
+    "path": "ideas",
+    "name": "ideas",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 0
+  },
+  {
+    "path": "ideas/drafts",
+    "name": "drafts",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 1
+  },
+  {
+    "path": "ideas/drafts/landing-pages",
+    "name": "landing-pages",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "life",
+    "name": "life",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 0
+  },
+  {
+    "path": "life/areas",
+    "name": "areas",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 1
+  },
+  {
+    "path": "life/areas/companies",
+    "name": "companies",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "life/areas/people",
+    "name": "people",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "life/areas/projects",
+    "name": "projects",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "memory",
+    "name": "memory",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 0
+  },
+  {
+    "path": "outputs",
+    "name": "outputs",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 0
+  },
+  {
+    "path": "outputs/research",
+    "name": "research",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 1
+  },
+  {
+    "path": "pizza-landing",
+    "name": "pizza-landing",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 0
+  },
+  {
+    "path": "projects",
+    "name": "projects",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 0
+  },
+  {
+    "path": "projects/factures",
+    "name": "factures",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 1
+  },
+  {
+    "path": "projects/sip",
+    "name": "sip",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 1
+  },
+  {
+    "path": "scripts",
+    "name": "scripts",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 0
+  },
+  {
+    "path": "skills",
+    "name": "skills",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 0
+  },
+  {
+    "path": "skills/gog",
+    "name": "gog",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 1
+  },
+  {
+    "path": "skills/gog/.clawhub",
+    "name": ".clawhub",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "skills/linkedin",
+    "name": "linkedin",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 1
+  },
+  {
+    "path": "skills/llmrouter",
+    "name": "llmrouter",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 1
+  },
+  {
+    "path": "skills/llmrouter/.clawhub",
+    "name": ".clawhub",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "skills/mission-control",
+    "name": "mission-control",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 1
+  },
+  {
+    "path": "skills/mission-control/.clawhub",
+    "name": ".clawhub",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "skills/mission-control/assets",
+    "name": "assets",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "skills/mission-control/docs",
+    "name": "docs",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "skills/mission-control/scripts",
+    "name": "scripts",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "skills/proactive-agent",
+    "name": "proactive-agent",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 1
+  },
+  {
+    "path": "skills/proactive-agent/.clawhub",
+    "name": ".clawhub",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "skills/proactive-agent/assets",
+    "name": "assets",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "skills/proactive-agent/references",
+    "name": "references",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "skills/proactive-agent/scripts",
+    "name": "scripts",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "skills/security-sentinel-skill",
+    "name": "security-sentinel-skill",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 1
+  },
+  {
+    "path": "skills/security-sentinel-skill/.clawhub",
+    "name": ".clawhub",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "skills/self-improving-agent",
+    "name": "self-improving-agent",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 1
+  },
+  {
+    "path": "skills/self-improving-agent/.clawhub",
+    "name": ".clawhub",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "skills/self-improving-agent/.learnings",
+    "name": ".learnings",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "skills/self-improving-agent/assets",
+    "name": "assets",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "skills/self-improving-agent/hooks",
+    "name": "hooks",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "skills/self-improving-agent/references",
+    "name": "references",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "skills/self-improving-agent/scripts",
+    "name": "scripts",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "skills/sonoscli",
+    "name": "sonoscli",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 1
+  },
+  {
+    "path": "skills/sonoscli/.clawhub",
+    "name": ".clawhub",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "skills/tavily-search",
+    "name": "tavily-search",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 1
+  },
+  {
+    "path": "skills/tavily-search/.clawhub",
+    "name": ".clawhub",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "skills/tavily-search/scripts",
+    "name": "scripts",
+    "isDir": true,
+    "size": 0,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": ".clawhub/lock.json",
+    "name": "lock.json",
+    "isDir": false,
+    "size": 768,
+    "ext": ".json",
+    "depth": 1
+  },
+  {
+    "path": ".learnings/ERRORS.md",
+    "name": "ERRORS.md",
+    "isDir": false,
+    "size": 1374,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": ".learnings/FEATURE_REQUESTS.md",
+    "name": "FEATURE_REQUESTS.md",
+    "isDir": false,
+    "size": 406,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": ".learnings/LEARNINGS.md",
+    "name": "LEARNINGS.md",
+    "isDir": false,
+    "size": 1144,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": ".openclaw/workspace-state.json",
+    "name": "workspace-state.json",
+    "isDir": false,
+    "size": 125,
+    "ext": ".json",
+    "depth": 1
+  },
+  {
+    "path": "AGENTS-proactive.md",
+    "name": "AGENTS-proactive.md",
+    "isDir": false,
+    "size": 3860,
+    "ext": ".md",
+    "depth": 0
+  },
+  {
+    "path": "AGENTS.md",
+    "name": "AGENTS.md",
+    "isDir": false,
+    "size": 2725,
+    "ext": ".md",
+    "depth": 0
+  },
+  {
+    "path": "AGENTS.md.backup",
+    "name": "AGENTS.md.backup",
+    "isDir": false,
+    "size": 2725,
+    "ext": ".backup",
+    "depth": 0
+  },
+  {
+    "path": "archive/HEARTBEAT-v1.md",
+    "name": "HEARTBEAT-v1.md",
+    "isDir": false,
+    "size": 4080,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "canvas/index.html",
+    "name": "index.html",
+    "isDir": false,
+    "size": 3663,
+    "ext": ".html",
+    "depth": 1
+  },
+  {
+    "path": "config/mcporter.json",
+    "name": "mcporter.json",
+    "isDir": false,
+    "size": 413,
+    "ext": ".json",
+    "depth": 1
+  },
+  {
+    "path": "config/mission-control.json",
+    "name": "mission-control.json",
+    "isDir": false,
+    "size": 296,
+    "ext": ".json",
+    "depth": 1
+  },
+  {
+    "path": "context/prospects-clawdbot.md",
+    "name": "prospects-clawdbot.md",
+    "isDir": false,
+    "size": 1580,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "context/style_substack.md",
+    "name": "style_substack.md",
+    "isDir": false,
+    "size": 14488,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "context/substack_export/email_list.alexisbidinot.csv",
+    "name": "email_list.alexisbidinot.csv",
+    "isDir": false,
+    "size": 17125,
+    "ext": ".csv",
+    "depth": 2
+  },
+  {
+    "path": "context/substack_export/posts.csv",
+    "name": "posts.csv",
+    "isDir": false,
+    "size": 5036,
+    "ext": ".csv",
+    "depth": 2
+  },
+  {
+    "path": "context/voice.md",
+    "name": "voice.md",
+    "isDir": false,
+    "size": 4520,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "data/files.json",
+    "name": "files.json",
+    "isDir": false,
+    "size": 0,
+    "ext": ".json",
+    "depth": 1
+  },
+  {
+    "path": "data/tasks.json",
+    "name": "tasks.json",
+    "isDir": false,
+    "size": 4730,
+    "ext": ".json",
+    "depth": 1
+  },
+  {
+    "path": "factures/Facture_073_SineQuaNon_Assurances.md",
+    "name": "Facture_073_SineQuaNon_Assurances.md",
+    "isDir": false,
+    "size": 1176,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "fastpay-landing/index.html",
+    "name": "index.html",
+    "isDir": false,
+    "size": 29326,
+    "ext": ".html",
+    "depth": 1
+  },
+  {
+    "path": "HEARTBEAT-proactive.md",
+    "name": "HEARTBEAT-proactive.md",
+    "isDir": false,
+    "size": 2939,
+    "ext": ".md",
+    "depth": 0
+  },
+  {
+    "path": "HEARTBEAT.md",
+    "name": "HEARTBEAT.md",
+    "isDir": false,
+    "size": 516,
+    "ext": ".md",
+    "depth": 0
+  },
+  {
+    "path": "HEARTBEAT.md.backup",
+    "name": "HEARTBEAT.md.backup",
+    "isDir": false,
+    "size": 516,
+    "ext": ".backup",
+    "depth": 0
+  },
+  {
+    "path": "ideas/drafts/2026-01-30-ai-contract-checker.md",
+    "name": "2026-01-30-ai-contract-checker.md",
+    "isDir": false,
+    "size": 13272,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-01-30-linkedin-contract-checker.md",
+    "name": "2026-01-30-linkedin-contract-checker.md",
+    "isDir": false,
+    "size": 3405,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-01-30-messages-prospects-clawdbot.md",
+    "name": "2026-01-30-messages-prospects-clawdbot.md",
+    "isDir": false,
+    "size": 3317,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-01-30-plan-clawdbot-pme.md",
+    "name": "2026-01-30-plan-clawdbot-pme.md",
+    "isDir": false,
+    "size": 9850,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-01-30-reponses-emails.md",
+    "name": "2026-01-30-reponses-emails.md",
+    "isDir": false,
+    "size": 5169,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-01-30-substack-contrats-pme.md",
+    "name": "2026-01-30-substack-contrats-pme.md",
+    "isDir": false,
+    "size": 6228,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-01-31-benchmark-agents-ia.md",
+    "name": "2026-01-31-benchmark-agents-ia.md",
+    "isDir": false,
+    "size": 3493,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-01-31-linkedin-ao-publics.md",
+    "name": "2026-01-31-linkedin-ao-publics.md",
+    "isDir": false,
+    "size": 4853,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-01-31-naming-propositions.md",
+    "name": "2026-01-31-naming-propositions.md",
+    "isDir": false,
+    "size": 10965,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-01-31-reponse-ao-publics.md",
+    "name": "2026-01-31-reponse-ao-publics.md",
+    "isDir": false,
+    "size": 14108,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-01-31-strategie-acquisition-deploiement.md",
+    "name": "2026-01-31-strategie-acquisition-deploiement.md",
+    "isDir": false,
+    "size": 16667,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-01-31-substack-ao-publics.md",
+    "name": "2026-01-31-substack-ao-publics.md",
+    "isDir": false,
+    "size": 5943,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-01-31-synthese-landing-pages.md",
+    "name": "2026-01-31-synthese-landing-pages.md",
+    "isDir": false,
+    "size": 6623,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-01-formation-entreprendre-ia.md",
+    "name": "2026-02-01-formation-entreprendre-ia.md",
+    "isDir": false,
+    "size": 11877,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-01-landing-page-formation.md",
+    "name": "2026-02-01-landing-page-formation.md",
+    "isDir": false,
+    "size": 5742,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-01-linkedin-formation-ia.md",
+    "name": "2026-02-01-linkedin-formation-ia.md",
+    "isDir": false,
+    "size": 4779,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-01-substack-formation-ia.md",
+    "name": "2026-02-01-substack-formation-ia.md",
+    "isDir": false,
+    "size": 5546,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-02-business-review-generator.md",
+    "name": "2026-02-02-business-review-generator.md",
+    "isDir": false,
+    "size": 13516,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-02-linkedin-business-review.md",
+    "name": "2026-02-02-linkedin-business-review.md",
+    "isDir": false,
+    "size": 3421,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-02-substack-automatiser-reporting.md",
+    "name": "2026-02-02-substack-automatiser-reporting.md",
+    "isDir": false,
+    "size": 5215,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-03-linkedin-ma-agent.md",
+    "name": "2026-02-03-linkedin-ma-agent.md",
+    "isDir": false,
+    "size": 6263,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-03-ma-agent-banque-affaires.md",
+    "name": "2026-02-03-ma-agent-banque-affaires.md",
+    "isDir": false,
+    "size": 16773,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-03-recap-alexis.md",
+    "name": "2026-02-03-recap-alexis.md",
+    "isDir": false,
+    "size": 5345,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-03-substack-democratiser-ma.md",
+    "name": "2026-02-03-substack-democratiser-ma.md",
+    "isDir": false,
+    "size": 12525,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-04-insights-marche-prospection.md",
+    "name": "2026-02-04-insights-marche-prospection.md",
+    "isDir": false,
+    "size": 9881,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-04-linkedin-prospectpilot.md",
+    "name": "2026-02-04-linkedin-prospectpilot.md",
+    "isDir": false,
+    "size": 6635,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-04-outil-prospection-exa.md",
+    "name": "2026-02-04-outil-prospection-exa.md",
+    "isDir": false,
+    "size": 16996,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-04-recap-alexis.md",
+    "name": "2026-02-04-recap-alexis.md",
+    "isDir": false,
+    "size": 5438,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-04-substack-casser-prospection.md",
+    "name": "2026-02-04-substack-casser-prospection.md",
+    "isDir": false,
+    "size": 12716,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-05-prospectpilot.md",
+    "name": "2026-02-05-prospectpilot.md",
+    "isDir": false,
+    "size": 16733,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-16-ia-sante-mentale-entreprises.md",
+    "name": "2026-02-16-ia-sante-mentale-entreprises.md",
+    "isDir": false,
+    "size": 14907,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-17-ai-contract-checker.md",
+    "name": "2026-02-17-ai-contract-checker.md",
+    "isDir": false,
+    "size": 9823,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-18-journalistes-fr-agent-rp.md",
+    "name": "2026-02-18-journalistes-fr-agent-rp.md",
+    "isDir": false,
+    "size": 14199,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-19-nps-review-generator.md",
+    "name": "2026-02-19-nps-review-generator.md",
+    "isDir": false,
+    "size": 7162,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/drafts/2026-02-20-amorti-ai-tableau-amortissement.md",
+    "name": "2026-02-20-amorti-ai-tableau-amortissement.md",
+    "isDir": false,
+    "size": 15038,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "ideas/linkedin.md",
+    "name": "linkedin.md",
+    "isDir": false,
+    "size": 6038,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "ideas/startups.md",
+    "name": "startups.md",
+    "isDir": false,
+    "size": 19114,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "ideas/substack.md",
+    "name": "substack.md",
+    "isDir": false,
+    "size": 9703,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "IDENTITY.md",
+    "name": "IDENTITY.md",
+    "isDir": false,
+    "size": 308,
+    "ext": ".md",
+    "depth": 0
+  },
+  {
+    "path": "index.html",
+    "name": "index.html",
+    "isDir": false,
+    "size": 293774,
+    "ext": ".html",
+    "depth": 0
+  },
+  {
+    "path": "llm-monitoring.html",
+    "name": "llm-monitoring.html",
+    "isDir": false,
+    "size": 8339,
+    "ext": ".html",
+    "depth": 0
+  },
+  {
+    "path": "MEMORY.md",
+    "name": "MEMORY.md",
+    "isDir": false,
+    "size": 7249,
+    "ext": ".md",
+    "depth": 0
+  },
+  {
+    "path": "memory/2025-05-15.md",
+    "name": "2025-05-15.md",
+    "isDir": false,
+    "size": 2068,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2025-06-26.md",
+    "name": "2025-06-26.md",
+    "isDir": false,
+    "size": 1252,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-01-30.md",
+    "name": "2026-01-30.md",
+    "isDir": false,
+    "size": 2879,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-01-31.md",
+    "name": "2026-01-31.md",
+    "isDir": false,
+    "size": 6133,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-01.md",
+    "name": "2026-02-01.md",
+    "isDir": false,
+    "size": 5691,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-02-daily-prios.md",
+    "name": "2026-02-02-daily-prios.md",
+    "isDir": false,
+    "size": 1231,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-02-greeting-chat.md",
+    "name": "2026-02-02-greeting-chat.md",
+    "isDir": false,
+    "size": 880,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-02-memory-priorities.md",
+    "name": "2026-02-02-memory-priorities.md",
+    "isDir": false,
+    "size": 1292,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-02-ok-test.md",
+    "name": "2026-02-02-ok-test.md",
+    "isDir": false,
+    "size": 1112,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-02-personal-info.md",
+    "name": "2026-02-02-personal-info.md",
+    "isDir": false,
+    "size": 2803,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-02-security-status.md",
+    "name": "2026-02-02-security-status.md",
+    "isDir": false,
+    "size": 1780,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-02.md",
+    "name": "2026-02-02.md",
+    "isDir": false,
+    "size": 4187,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-03.md",
+    "name": "2026-02-03.md",
+    "isDir": false,
+    "size": 3197,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-04.md",
+    "name": "2026-02-04.md",
+    "isDir": false,
+    "size": 2692,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-05.md",
+    "name": "2026-02-05.md",
+    "isDir": false,
+    "size": 2453,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-16-1439.md",
+    "name": "2026-02-16-1439.md",
+    "isDir": false,
+    "size": 149,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-16-openai-key-check.md",
+    "name": "2026-02-16-openai-key-check.md",
+    "isDir": false,
+    "size": 2021,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-16-security-audit.md",
+    "name": "2026-02-16-security-audit.md",
+    "isDir": false,
+    "size": 4111,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-16.md",
+    "name": "2026-02-16.md",
+    "isDir": false,
+    "size": 3276,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-17.md",
+    "name": "2026-02-17.md",
+    "isDir": false,
+    "size": 3029,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-18.md",
+    "name": "2026-02-18.md",
+    "isDir": false,
+    "size": 1465,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-19.md",
+    "name": "2026-02-19.md",
+    "isDir": false,
+    "size": 1726,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-20.md",
+    "name": "2026-02-20.md",
+    "isDir": false,
+    "size": 1896,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-26.md",
+    "name": "2026-02-26.md",
+    "isDir": false,
+    "size": 3089,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-27.md",
+    "name": "2026-02-27.md",
+    "isDir": false,
+    "size": 1306,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-28-api-rate-limits.md",
+    "name": "2026-02-28-api-rate-limits.md",
+    "isDir": false,
+    "size": 5012,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-28-new-session-startup.md",
+    "name": "2026-02-28-new-session-startup.md",
+    "isDir": false,
+    "size": 1473,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-28-system-check.md",
+    "name": "2026-02-28-system-check.md",
+    "isDir": false,
+    "size": 436,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/2026-02-28.md",
+    "name": "2026-02-28.md",
+    "isDir": false,
+    "size": 1276,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "memory/extraction-state.json",
+    "name": "extraction-state.json",
+    "isDir": false,
+    "size": 127,
+    "ext": ".json",
+    "depth": 1
+  },
+  {
+    "path": "memory/WORKING.md",
+    "name": "WORKING.md",
+    "isDir": false,
+    "size": 509,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "migration-secrets-plan.md",
+    "name": "migration-secrets-plan.md",
+    "isDir": false,
+    "size": 4430,
+    "ext": ".md",
+    "depth": 0
+  },
+  {
+    "path": "monitor-usage.py",
+    "name": "monitor-usage.py",
+    "isDir": false,
+    "size": 2458,
+    "ext": ".py",
+    "depth": 0
+  },
+  {
+    "path": "MORNING_BRIEF.md",
+    "name": "MORNING_BRIEF.md",
+    "isDir": false,
+    "size": 2767,
+    "ext": ".md",
+    "depth": 0
+  },
+  {
+    "path": "ONBOARDING.md",
+    "name": "ONBOARDING.md",
+    "isDir": false,
+    "size": 2423,
+    "ext": ".md",
+    "depth": 0
+  },
+  {
+    "path": "outputs/research/f",
+    "name": "f",
+    "isDir": false,
+    "size": 13991,
+    "ext": "",
+    "depth": 2
+  },
+  {
+    "path": "outputs/research/french-needs-ai-agents-deep-2026-02-16.md",
+    "name": "french-needs-ai-agents-deep-2026-02-16.md",
+    "isDir": false,
+    "size": 13815,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "pizza-landing/index.html",
+    "name": "index.html",
+    "isDir": false,
+    "size": 16662,
+    "ext": ".html",
+    "depth": 1
+  },
+  {
+    "path": "projects/andy-setup.md",
+    "name": "andy-setup.md",
+    "isDir": false,
+    "size": 753,
+    "ext": ".md",
+    "depth": 1
+  },
+  {
+    "path": "projects/factures/facture-071-essec.html",
+    "name": "facture-071-essec.html",
+    "isDir": false,
+    "size": 7946,
+    "ext": ".html",
+    "depth": 2
+  },
+  {
+    "path": "projects/factures/facture-071-essec.pdf",
+    "name": "facture-071-essec.pdf",
+    "isDir": false,
+    "size": 25032,
+    "ext": ".pdf",
+    "depth": 2
+  },
+  {
+    "path": "projects/factures/facture-072-ept.html",
+    "name": "facture-072-ept.html",
+    "isDir": false,
+    "size": 7662,
+    "ext": ".html",
+    "depth": 2
+  },
+  {
+    "path": "projects/factures/facture-072-ept.pdf",
+    "name": "facture-072-ept.pdf",
+    "isDir": false,
+    "size": 25044,
+    "ext": ".pdf",
+    "depth": 2
+  },
+  {
+    "path": "projects/sip/index.html",
+    "name": "index.html",
+    "isDir": false,
+    "size": 15270,
+    "ext": ".html",
+    "depth": 2
+  },
+  {
+    "path": "recherche-xc90-parking.md",
+    "name": "recherche-xc90-parking.md",
+    "isDir": false,
+    "size": 2625,
+    "ext": ".md",
+    "depth": 0
+  },
+  {
+    "path": "scripts/organize-downloads.sh",
+    "name": "organize-downloads.sh",
+    "isDir": false,
+    "size": 3758,
+    "ext": ".sh",
+    "depth": 1
+  },
+  {
+    "path": "security-audit-20260216.md",
+    "name": "security-audit-20260216.md",
+    "isDir": false,
+    "size": 3780,
+    "ext": ".md",
+    "depth": 0
+  },
+  {
+    "path": "skills/gog/_meta.json",
+    "name": "_meta.json",
+    "isDir": false,
+    "size": 122,
+    "ext": ".json",
+    "depth": 2
+  },
+  {
+    "path": "skills/gog/SKILL.md",
+    "name": "SKILL.md",
+    "isDir": false,
+    "size": 1748,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/linkedin/SKILL.md",
+    "name": "SKILL.md",
+    "isDir": false,
+    "size": 2362,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/llmrouter/_meta.json",
+    "name": "_meta.json",
+    "isDir": false,
+    "size": 128,
+    "ext": ".json",
+    "depth": 2
+  },
+  {
+    "path": "skills/llmrouter/SKILL.md",
+    "name": "SKILL.md",
+    "isDir": false,
+    "size": 9474,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/mission-control/_meta.json",
+    "name": "_meta.json",
+    "isDir": false,
+    "size": 134,
+    "ext": ".json",
+    "depth": 2
+  },
+  {
+    "path": "skills/mission-control/CHANGELOG.md",
+    "name": "CHANGELOG.md",
+    "isDir": false,
+    "size": 6821,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/mission-control/README.md",
+    "name": "README.md",
+    "isDir": false,
+    "size": 3003,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/mission-control/SKILL.md",
+    "name": "SKILL.md",
+    "isDir": false,
+    "size": 6966,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/proactive-agent/_meta.json",
+    "name": "_meta.json",
+    "isDir": false,
+    "size": 134,
+    "ext": ".json",
+    "depth": 2
+  },
+  {
+    "path": "skills/proactive-agent/SKILL-v2.3-backup.md",
+    "name": "SKILL-v2.3-backup.md",
+    "isDir": false,
+    "size": 20156,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/proactive-agent/SKILL-v3-draft.md",
+    "name": "SKILL-v3-draft.md",
+    "isDir": false,
+    "size": 16960,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/proactive-agent/SKILL.md",
+    "name": "SKILL.md",
+    "isDir": false,
+    "size": 20883,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/security-sentinel-skill/_meta.json",
+    "name": "_meta.json",
+    "isDir": false,
+    "size": 142,
+    "ext": ".json",
+    "depth": 2
+  },
+  {
+    "path": "skills/security-sentinel-skill/advanced-jailbreak-techniques.md",
+    "name": "advanced-jailbreak-techniques.md",
+    "isDir": false,
+    "size": 24582,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/security-sentinel-skill/advanced-threats-2026.md",
+    "name": "advanced-threats-2026.md",
+    "isDir": false,
+    "size": 27861,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/security-sentinel-skill/ANNOUNCEMENT.md",
+    "name": "ANNOUNCEMENT.md",
+    "isDir": false,
+    "size": 10080,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/security-sentinel-skill/blacklist-patterns.md",
+    "name": "blacklist-patterns.md",
+    "isDir": false,
+    "size": 20774,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/security-sentinel-skill/CLAWHUB_GUIDE.md",
+    "name": "CLAWHUB_GUIDE.md",
+    "isDir": false,
+    "size": 11114,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/security-sentinel-skill/CONFIGURATION.md",
+    "name": "CONFIGURATION.md",
+    "isDir": false,
+    "size": 8284,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/security-sentinel-skill/credential-exfiltration-defense.md",
+    "name": "credential-exfiltration-defense.md",
+    "isDir": false,
+    "size": 20568,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/security-sentinel-skill/install.sh",
+    "name": "install.sh",
+    "isDir": false,
+    "size": 10147,
+    "ext": ".sh",
+    "depth": 2
+  },
+  {
+    "path": "skills/security-sentinel-skill/LICENSE.md",
+    "name": "LICENSE.md",
+    "isDir": false,
+    "size": 1092,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/security-sentinel-skill/memory-persistence-attacks.md",
+    "name": "memory-persistence-attacks.md",
+    "isDir": false,
+    "size": 22888,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/security-sentinel-skill/multilingual-evasion.md",
+    "name": "multilingual-evasion.md",
+    "isDir": false,
+    "size": 21572,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/security-sentinel-skill/README.md",
+    "name": "README.md",
+    "isDir": false,
+    "size": 12950,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/security-sentinel-skill/SECURITY.md",
+    "name": "SECURITY.md",
+    "isDir": false,
+    "size": 14127,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/security-sentinel-skill/semantic-scoring.md",
+    "name": "semantic-scoring.md",
+    "isDir": false,
+    "size": 20838,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/security-sentinel-skill/SKILL.md",
+    "name": "SKILL.md",
+    "isDir": false,
+    "size": 27087,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/self-improving-agent/_meta.json",
+    "name": "_meta.json",
+    "isDir": false,
+    "size": 140,
+    "ext": ".json",
+    "depth": 2
+  },
+  {
+    "path": "skills/self-improving-agent/SKILL.md",
+    "name": "SKILL.md",
+    "isDir": false,
+    "size": 19704,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/sonoscli/_meta.json",
+    "name": "_meta.json",
+    "isDir": false,
+    "size": 127,
+    "ext": ".json",
+    "depth": 2
+  },
+  {
+    "path": "skills/sonoscli/SKILL.md",
+    "name": "SKILL.md",
+    "isDir": false,
+    "size": 940,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "skills/tavily-search/_meta.json",
+    "name": "_meta.json",
+    "isDir": false,
+    "size": 132,
+    "ext": ".json",
+    "depth": 2
+  },
+  {
+    "path": "skills/tavily-search/SKILL.md",
+    "name": "SKILL.md",
+    "isDir": false,
+    "size": 1195,
+    "ext": ".md",
+    "depth": 2
+  },
+  {
+    "path": "SOUL.md",
+    "name": "SOUL.md",
+    "isDir": false,
+    "size": 2693,
+    "ext": ".md",
+    "depth": 0
+  },
+  {
+    "path": "TOOLS.md",
+    "name": "TOOLS.md",
+    "isDir": false,
+    "size": 1058,
+    "ext": ".md",
+    "depth": 0
+  },
+  {
+    "path": "USER.md",
+    "name": "USER.md",
+    "isDir": false,
+    "size": 2180,
+    "ext": ".md",
+    "depth": 0
+  },
+  {
+    "path": "verify_cars.sh",
+    "name": "verify_cars.sh",
+    "isDir": false,
+    "size": 2828,
+    "ext": ".sh",
+    "depth": 0
+  },
+  {
+    "path": "verify_cars_v2.sh",
+    "name": "verify_cars_v2.sh",
+    "isDir": false,
+    "size": 3725,
+    "ext": ".sh",
+    "depth": 0
+  },
+  {
+    "path": "whatsapp-qr.png",
+    "name": "whatsapp-qr.png",
+    "isDir": false,
+    "size": 9177,
+    "ext": ".png",
+    "depth": 0
+  }
+]

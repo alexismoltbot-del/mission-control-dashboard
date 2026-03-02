@@ -1,0 +1,10 @@
+[
+  {"id": "fiscalgpt-001", "fact": "Assistant fiscal francais avec RAG sur 14000 articles", "category": "status", "timestamp": "2025-01-27", "status": "active"},
+  {"id": "fiscalgpt-002", "fact": "1000+ questions posees via LinkedIn", "category": "milestone", "timestamp": "2025-01-27", "status": "active"},
+  {"id": "fiscalgpt-003", "fact": "Pas encore de paywall", "category": "status", "timestamp": "2025-01-27", "status": "active"},
+  {"id": "fiscalgpt-004", "fact": "Bug identifie: jurisprudence mal integree (melange sources, embedding tronque, patterns citation non reconnus)", "category": "status", "timestamp": "2026-01-27", "status": "superseded", "supersededBy": "fiscalgpt-005"},
+  {"id": "fiscalgpt-005", "fact": "Refonte v2 jurisprudence implementee: table separee, ingestion intelligente via Claude, recherche duale articles+juris, patterns citation adaptes", "category": "milestone", "timestamp": "2026-01-27", "status": "active"},
+  {"id": "fiscalgpt-006", "fact": "FiscalGPT v2 tourne en local sur Mac Alexis - test API reussi (TVA 20%)", "category": "milestone", "timestamp": "2026-01-28", "status": "active"},
+  {"id": "fiscalgpt-007", "fact": "Credentials PISTE verifies fonctionnels", "category": "status", "timestamp": "2026-01-28", "status": "active"},
+  {"id": "fiscalgpt-008", "fact": "Ingestion jurisprudence bloquee: mismatch schema (articles_cites vs articles_vises) - en attente fix", "category": "status", "timestamp": "2026-01-28", "status": "active"}
+]

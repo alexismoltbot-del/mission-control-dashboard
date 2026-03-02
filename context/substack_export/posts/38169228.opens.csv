@@ -1,0 +1,5 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+38169228,2021-07-05T17:24:31.393Z,alexis@qiet.fr,,,true,US,,,,,,Superhuman
+38169228,2021-07-05T18:25:17.180Z,fred@qiet.fr,,,true,FR,,,,,,"Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+38169228,2021-07-05T20:43:57.923Z,alexis.bidinot@gmail.com,,,false,US,,,,,,Superhuman
+38169228,2021-07-05T21:22:28.887Z,fred@qiet.fr,,,true,FR,,,,,,"Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"

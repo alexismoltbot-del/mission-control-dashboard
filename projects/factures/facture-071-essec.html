@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Facture 071 - ESSEC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #333;
+            padding: 40px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .logo-section h1 {
+            font-size: 24pt;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+        .logo-section p {
+            color: #666;
+            font-size: 9pt;
+        }
+        .invoice-info {
+            text-align: right;
+        }
+        .invoice-info h2 {
+            font-size: 14pt;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+        .invoice-info p {
+            font-size: 9pt;
+            color: #666;
+        }
+        .corrective-notice {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 10px 15px;
+            margin-bottom: 30px;
+            font-size: 9pt;
+            color: #856404;
+        }
+        .parties {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .party {
+            width: 45%;
+        }
+        .party h3 {
+            font-size: 8pt;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .party p {
+            font-size: 9pt;
+            line-height: 1.6;
+        }
+        .party strong {
+            font-size: 10pt;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        thead {
+            background: #f8f9fa;
+        }
+        th {
+            text-align: left;
+            padding: 12px 10px;
+            font-size: 8pt;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #666;
+            border-bottom: 2px solid #dee2e6;
+        }
+        th:last-child, td:last-child {
+            text-align: right;
+        }
+        td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #eee;
+            font-size: 9pt;
+        }
+        .totals {
+            width: 300px;
+            margin-left: auto;
+        }
+        .totals table {
+            margin-bottom: 0;
+        }
+        .totals td {
+            border: none;
+            padding: 8px 10px;
+        }
+        .totals tr:last-child {
+            background: #1a1a1a;
+            color: white;
+        }
+        .totals tr:last-child td {
+            font-weight: 700;
+            font-size: 11pt;
+            padding: 12px 10px;
+        }
+        .payment-info {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        .payment-info h3 {
+            font-size: 9pt;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+            margin-bottom: 15px;
+        }
+        .payment-grid {
+            display: flex;
+            gap: 40px;
+        }
+        .payment-grid div {
+            font-size: 9pt;
+        }
+        .payment-grid strong {
+            display: block;
+            font-size: 8pt;
+            color: #999;
+            margin-bottom: 3px;
+            text-transform: uppercase;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 8pt;
+            color: #999;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-section">
+            <h1>SARL AMB</h1>
+            <p>132 avenue Achille Peretti<br>92200 Neuilly-sur-Seine</p>
+        </div>
+        <div class="invoice-info">
+            <h2>FACTURE N° 071</h2>
+            <p>Date : 29 janvier 2026</p>
+            <p>Facture corrective (annule et remplace la facture 070)</p>
+        </div>
+    </div>
+
+    <div class="corrective-notice">
+        ⚠️ <strong>Facture corrective</strong> — Cette facture annule et remplace la facture n° 070 du mois de novembre 2025.
+    </div>
+
+    <div class="parties">
+        <div class="party">
+            <h3>Émetteur</h3>
+            <p>
+                <strong>SARL AMB</strong><br>
+                132 avenue Achille Peretti<br>
+                92200 Neuilly-sur-Seine<br><br>
+                SIRET : 884 458 043 00012<br>
+                TVA : FR 93 884458043
+            </p>
+        </div>
+        <div class="party">
+            <h3>Client</h3>
+            <p>
+                <strong>GROUPE ESSEC</strong><br>
+                Campus du CNIT<br>
+                2 place de la Défense, BP 230<br>
+                92053 Paris La Défense Cedex
+            </p>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Référence</th>
+                <th>Description</th>
+                <th>Quantité</th>
+                <th>Prix unitaire</th>
+                <th>Total HT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>344MGIN231</td>
+                <td>Jury soutenance (Forfait)</td>
+                <td>8</td>
+                <td>143,00 €</td>
+                <td>1 144,00 €</td>
+            </tr>
+            <tr>
+                <td>344MGIN232</td>
+                <td>Entreprenariat (3,5h)</td>
+                <td>3,5</td>
+                <td>189,00 €</td>
+                <td>661,50 €</td>
+            </tr>
+            <tr>
+                <td>344MGIN232</td>
+                <td>Jury soutenance (Forfait)</td>
+                <td>6</td>
+                <td>143,00 €</td>
+                <td>858,00 €</td>
+            </tr>
+            <tr>
+                <td>344MGIN241</td>
+                <td>Intraprendre (3,5h)</td>
+                <td>3,5</td>
+                <td>189,00 €</td>
+                <td>661,50 €</td>
+            </tr>
+            <tr>
+                <td>344MGIN241</td>
+                <td>Jury soutenance (Forfait)</td>
+                <td>6</td>
+                <td>143,00 €</td>
+                <td>858,00 €</td>
+            </tr>
+            <tr>
+                <td>344MGIN242</td>
+                <td>Entreprenariat (3,5h)</td>
+                <td>3,5</td>
+                <td>189,00 €</td>
+                <td>661,50 €</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Total HT</td>
+                <td>4 844,50 €</td>
+            </tr>
+            <tr>
+                <td>TVA 20%</td>
+                <td>968,90 €</td>
+            </tr>
+            <tr>
+                <td>Total TTC</td>
+                <td>5 813,40 €</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="payment-info">
+        <h3>Informations de paiement</h3>
+        <div class="payment-grid">
+            <div>
+                <strong>Banque</strong>
+                Crédit Agricole
+            </div>
+            <div>
+                <strong>IBAN</strong>
+                FR76 1820 6002 8565 0704 0444 892
+            </div>
+            <div>
+                <strong>BIC</strong>
+                AGRIFRPP882
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>SARL AMB — Capital 100 € — RCS Nanterre 884 458 043 — TVA FR 93 884458043</p>
+        <p>Pénalités de retard : 3× le taux d'intérêt légal — Indemnité forfaitaire de recouvrement : 40 €</p>
+    </div>
+</body>
+</html>
