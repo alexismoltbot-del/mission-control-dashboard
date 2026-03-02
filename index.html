@@ -3758,7 +3758,7 @@
 
         // === RENDER FUNCTIONS ===
         function renderTasks(animate = false) {
-            const columns = ['permanent', 'backlog', 'in_progress', 'review', 'done'];
+            const columns = ['backlog', 'in_progress', 'review', 'done', 'permanent'];
             const data = STATE.data || FALLBACK_DATA;
             const priorityOrder = { high: 0, medium: 1, low: 2 };
 
@@ -7195,6 +7195,15 @@
         
         // Start auto-refresh after page loads
         setTimeout(startCronAutoRefresh, 10000); // Start 10s after load
+
+        // Auto-scroll kanban to Backlog column on load (skip empty recurring/scheduled/templates)
+        setTimeout(() => {
+            const kanban = document.querySelector('.kanban');
+            const backlogCol = document.getElementById('tasks-backlog');
+            if (kanban && backlogCol) {
+                kanban.scrollLeft = Math.max(0, backlogCol.offsetLeft - 32);
+            }
+        }, 800);
 
         // === VERSION CHECK FUNCTIONS ===
         async function checkForUpdates() {
