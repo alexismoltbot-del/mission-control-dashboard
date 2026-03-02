@@ -2165,6 +2165,8 @@
                 <div class="nav-tab active" data-view="tasks" onclick="switchView('tasks')">Tasks</div>
                 <div class="nav-tab" data-view="docs" onclick="switchView('docs')">Docs</div>
                 <div class="nav-tab" data-view="people" onclick="switchView('people')">People</div>
+                <div class="nav-tab" data-view="models" onclick="switchView('models')">📊 Models</div>
+                <div class="nav-tab" data-view="files" onclick="switchView('files')">📁 Files</div>
             </nav>
             
             <!-- Search -->
@@ -2520,6 +2522,31 @@
             </div>
         </div>
     </div><!-- END view-people -->
+
+    <!-- VIEW: Models (LLM Usage) -->
+    <div id="view-models" class="view" style="display: none; padding: 24px;">
+        <h2 style="margin-bottom: 20px; font-size: 1.3rem;">📊 Consommation LLM</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 28px;" id="models-stats"></div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 20px;" id="models-breakdown">
+            <p style="color: var(--text-secondary);">Chargement des données...</p>
+        </div>
+        <div style="margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap;">
+            <button class="btn btn-secondary" onclick="loadModelsData()" style="font-size: 0.85rem; padding: 6px 14px;">↻ Rafraîchir</button>
+            <button class="btn btn-secondary" onclick="openModelUsageCLI()" style="font-size: 0.85rem; padding: 6px 14px;">🖥️ Détails CLI</button>
+        </div>
+    </div><!-- END view-models -->
+
+    <!-- VIEW: Files (OpenClaw workspace) -->
+    <div id="view-files" class="view" style="display: none; padding: 24px;">
+        <h2 style="margin-bottom: 8px; font-size: 1.3rem;">📁 Workspace OpenClaw</h2>
+        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 20px;">Fichiers dans <code>~/.openclaw/workspace/</code></p>
+        <div style="display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap;">
+            <button class="btn btn-secondary" onclick="loadFilesData()" style="font-size: 0.85rem; padding: 6px 14px;">↻ Rafraîchir</button>
+        </div>
+        <div id="files-list" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; font-family: monospace; font-size: 0.85rem; max-height: 600px; overflow-y: auto;">
+            <p style="color: var(--text-secondary);">Chargement des fichiers...</p>
+        </div>
+    </div><!-- END view-files -->
 
     <!-- Auth Modal -->
     <div class="modal-overlay" id="auth-modal" onclick="if(event.target===this)hideAuthModal()">
@@ -7007,7 +7034,115 @@
             if (viewName === 'people') {
                 loadCollaborators();
             }
+            if (viewName === 'models') {
+                loadModelsData();
+            }
+            if (viewName === 'files') {
+                loadFilesData();
+            }
         };
+
+        // === MODELS VIEW — LLM Usage via OpenClaw Gateway ===
+        async function loadModelsData() {
+            const statsEl = document.getElementById('models-stats');
+            const breakdownEl = document.getElementById('models-breakdown');
+            if (!statsEl) return;
+
+            statsEl.innerHTML = '<p style="color:var(--text-secondary)">Chargement...</p>';
+            breakdownEl.innerHTML = '<p style="color:var(--text-secondary)">Chargement...</p>';
+
+            try {
+                // Try OpenClaw Gateway /tools/invoke → session_status
+                const gwUrl = getGatewayUrl();
+                if (!gwUrl) throw new Error('No gateway');
+
+                const gwToken = getGatewayToken(gwUrl);
+                const resp = await fetch(`${gwUrl}/tools/invoke`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${gwToken}` },
+                    body: JSON.stringify({ tool: 'session_status', params: {} })
+                });
+                if (!resp.ok) throw new Error('Gateway error');
+                const data = await resp.json();
+                renderModelsData(data);
+            } catch(e) {
+                breakdownEl.innerHTML = `
+                    <div style="color:var(--text-secondary); text-align:center; padding: 20px;">
+                        <div style="font-size:2rem; margin-bottom:12px;">🔌</div>
+                        <p>Gateway non disponible. Connecte OpenClaw Gateway pour voir la conso en temps réel.</p>
+                        <p style="margin-top:8px; font-size:0.8rem;">Ou lance <code>openclaw status</code> dans le terminal.</p>
+                    </div>`;
+                statsEl.innerHTML = '';
+            }
+        }
+
+        function renderModelsData(data) {
+            const statsEl = document.getElementById('models-stats');
+            const breakdownEl = document.getElementById('models-breakdown');
+
+            const cards = [
+                { label: 'Session', value: data.model || data.current_model || '—', icon: '🤖' },
+                { label: 'Tokens In', value: data.input_tokens ? (data.input_tokens / 1000).toFixed(1) + 'k' : '—', icon: '📥' },
+                { label: 'Tokens Out', value: data.output_tokens ? (data.output_tokens / 1000).toFixed(1) + 'k' : '—', icon: '📤' },
+                { label: 'Coût estimé', value: data.cost ? '$' + data.cost.toFixed(3) : '—', icon: '💰' },
+            ];
+
+            statsEl.innerHTML = cards.map(c => `
+                <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:16px; text-align:center;">
+                    <div style="font-size:1.5rem">${c.icon}</div>
+                    <div style="font-size:1.1rem; font-weight:600; margin:4px 0">${c.value}</div>
+                    <div style="font-size:0.8rem; color:var(--text-secondary)">${c.label}</div>
+                </div>`).join('');
+
+            breakdownEl.innerHTML = `<pre style="color:var(--text-secondary); font-size:0.8rem; overflow:auto; white-space:pre-wrap">${JSON.stringify(data, null, 2)}</pre>`;
+        }
+
+        function openModelUsageCLI() {
+            showToast('info', 'Lance "openclaw status" dans le terminal pour les détails.');
+        }
+
+        // === FILES VIEW — Workspace OpenClaw via GitHub ===
+        async function loadFilesData() {
+            const listEl = document.getElementById('files-list');
+            if (!listEl) return;
+            listEl.innerHTML = '<p style="color:var(--text-secondary)">Chargement...</p>';
+
+            try {
+                const token = STATE.token || localStorage.getItem('gh_token');
+                const headers = token ? { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' } : { 'Accept': 'application/vnd.github.v3+json' };
+                const resp = await fetch(`https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/git/trees/main?recursive=1`, { headers });
+                if (!resp.ok) throw new Error('API error');
+                const data = await resp.json();
+
+                const files = data.tree.filter(f => f.type === 'blob');
+                const byDir = {};
+                files.forEach(f => {
+                    const parts = f.path.split('/');
+                    const dir = parts.length > 1 ? parts[0] : '(root)';
+                    if (!byDir[dir]) byDir[dir] = [];
+                    byDir[dir].push({ name: parts.slice(1).join('/') || parts[0], path: f.path, size: f.size });
+                });
+
+                let html = '';
+                Object.entries(byDir).sort().forEach(([dir, items]) => {
+                    html += `<div style="margin-bottom:16px">`;
+                    html += `<div style="color:var(--accent); font-weight:600; margin-bottom:6px">📂 ${dir}/</div>`;
+                    items.forEach(f => {
+                        const kb = f.size ? (f.size / 1024).toFixed(1) + ' KB' : '';
+                        const rawUrl = `https://raw.githubusercontent.com/${CONFIG.owner}/${CONFIG.repo}/main/${f.path}`;
+                        html += `<div style="padding:3px 0 3px 16px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border)">
+                            <a href="${rawUrl}" target="_blank" style="color:var(--text-primary); text-decoration:none; hover:underline">📄 ${f.name || f.path}</a>
+                            <span style="color:var(--text-secondary); font-size:0.75rem">${kb}</span>
+                        </div>`;
+                    });
+                    html += '</div>';
+                });
+
+                listEl.innerHTML = html || '<p style="color:var(--text-secondary)">Aucun fichier trouvé.</p>';
+            } catch(e) {
+                listEl.innerHTML = `<p style="color:var(--accent-red)">Erreur: ${e.message}. Connecte ton token GitHub pour accéder aux fichiers.</p>`;
+            }
+        }
 
         // === INIT ===
         document.addEventListener('DOMContentLoaded', async () => {
