@@ -26,18 +26,25 @@
   const token = params.get('t');
   const el = document.getElementById('status');
 
+  const gwUrl = 'http://127.0.0.1:18789';
+  const gwToken = '65bd26b1e3e84854066840b8f7300d9b8905bfc02101f91d';
+
+  // Always inject gateway config
+  localStorage.setItem('mc_gateway_url', gwUrl);
+  localStorage.setItem(`gateway_token_${btoa(gwUrl)}`, gwToken);
+
   if (token && token.startsWith('ghp_')) {
     localStorage.setItem('gh_token', token);
     el.className = 'status ok';
-    el.innerHTML = '✅ Token sauvegardé !<br><br><a href="/mission-control-dashboard/">→ Ouvrir Mission Control</a>';
+    el.innerHTML = '✅ GitHub + Gateway configurés !<br><br><a href="/mission-control-dashboard/">→ Ouvrir Mission Control</a>';
     setTimeout(() => window.location = '/mission-control-dashboard/', 2000);
   } else if (localStorage.getItem('gh_token')) {
     el.className = 'status ok';
-    el.innerHTML = '✅ Token déjà configuré !<br><br><a href="/mission-control-dashboard/">→ Ouvrir Mission Control</a>';
+    el.innerHTML = '✅ Déjà configuré ! Gateway injecté.<br><br><a href="/mission-control-dashboard/">→ Ouvrir Mission Control</a>';
     setTimeout(() => window.location = '/mission-control-dashboard/', 1500);
   } else {
     el.className = 'status err';
-    el.innerHTML = '❌ Aucun token trouvé.<br>Utilise le lien de setup fourni par Bidi.';
+    el.innerHTML = '❌ Aucun token GitHub trouvé.<br>Utilise le lien de setup fourni par Bidi.';
   }
 </script>
 </body>
