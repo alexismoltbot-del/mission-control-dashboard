@@ -3181,7 +3181,7 @@
                     let data = await rawResponse.json();
                     // Normalize: if raw array, wrap in expected structure
                     if (Array.isArray(data)) {
-                        data = { tasks: data, activities: [], projects: {} };
+                        data = { tasks: data, activities: [], projects: [] };
                     }
                     STATE.data = data;
                     STATE.originalData = JSON.parse(JSON.stringify(data));
