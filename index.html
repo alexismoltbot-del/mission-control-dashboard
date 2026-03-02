@@ -7137,40 +7137,40 @@
             if (!token) {
                 const oldToken = localStorage.getItem('github_token');
                 if (oldToken) {
-                    // Migrate old token to new key
                     localStorage.setItem('gh_token', oldToken);
                     localStorage.removeItem('github_token');
-                    localStorage.removeItem('github_user'); // Clean up old user data
+                    localStorage.removeItem('github_user');
                     token = oldToken;
                     console.log('Migrated token from github_token to gh_token');
                 }
             }
 
-            if (!token) {
-                showLoginScreen();
-                return;
-            }
+            // Always show dashboard immediately — repo is public, no token needed for reads
+            showDashboard();
+            await loadTasksFromGitHub();
+            if (!(await loadCronsFromGateway())) await loadCronsFromGitHub();
 
-            // Validate token
-            try {
-                const response = await fetch('https://api.github.com/user', {
-                    headers: { 'Authorization': `token ${token}` }
-                });
-
-                if (response.ok) {
-                    const user = await response.json();
-                    STATE.token = token;
-                    STATE.user = user;
-                    showDashboard();
-                    await loadTasksFromGitHub();
-                    if (!(await loadCronsFromGateway())) await loadCronsFromGitHub();
-                } else {
-                    localStorage.removeItem('gh_token');
-                    showLoginScreen();
+            // If token present, validate and enrich UI (avatar, write access)
+            if (token) {
+                try {
+                    const response = await fetch('https://api.github.com/user', {
+                        headers: { 'Authorization': `token ${token}` }
+                    });
+                    if (response.ok) {
+                        const user = await response.json();
+                        STATE.token = token;
+                        STATE.user = user;
+                        // Update UI with user info
+                        document.getElementById('btn-connect').style.display = 'none';
+                        document.getElementById('user-profile').style.display = 'flex';
+                        document.getElementById('user-avatar').src = user.avatar_url;
+                        document.getElementById('user-name').textContent = user.login;
+                    } else {
+                        localStorage.removeItem('gh_token');
+                    }
+                } catch (e) {
+                    console.warn('Token validation failed (read-only mode):', e);
                 }
-            } catch (e) {
-                console.error('Auth check failed:', e);
-                showLoginScreen();
             }
         }
 
