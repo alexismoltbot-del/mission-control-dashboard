@@ -424,7 +424,7 @@
   {
     "id": "FIA-001",
     "title": "Landing page finale Forge IA",
-    "status": "in-progress",
+    "status": "backlog",
     "priority": "high",
     "assignee": "anna",
     "project": "forge-ia",
@@ -452,13 +452,15 @@
     ],
     "dod": "Copy final validé par Alexis, brief visuel prêt pour Jimmy",
     "dueDate": "2026-03-03",
-    "comments": [],
+    "comments": [
+      "[09/03] Mis en pause — Forge IA non prioritaire. Reprendre quand Forge IA réactivée."
+    ],
     "createdAt": "2026-03-01T23:07:00Z"
   },
   {
     "id": "FIA-002",
     "title": "Go-to-Market plan Forge IA",
-    "status": "in-progress",
+    "status": "backlog",
     "priority": "high",
     "assignee": "anna",
     "project": "forge-ia",
@@ -486,13 +488,15 @@
     ],
     "dod": "Google Slides 10-15 slides + PDF dans shared/outputs/anna/",
     "dueDate": "2026-03-04",
-    "comments": [],
+    "comments": [
+      "[09/03] Mis en pause — Forge IA non prioritaire. Reprendre quand Forge IA réactivée."
+    ],
     "createdAt": "2026-03-01T23:07:00Z"
   },
   {
     "id": "FIA-003",
     "title": "Business Plan final 3 ans Forge IA",
-    "status": "in-progress",
+    "status": "backlog",
     "priority": "high",
     "assignee": "franck",
     "project": "forge-ia",
@@ -520,13 +524,15 @@
     ],
     "dod": "Spreadsheet 36 mois + PDF synthèse dans shared/outputs/franck/",
     "dueDate": "2026-03-04",
-    "comments": [],
+    "comments": [
+      "[09/03] Mis en pause — Forge IA non prioritaire. Reprendre quand Forge IA réactivée."
+    ],
     "createdAt": "2026-03-01T23:07:00Z"
   },
   {
     "id": "FIA-004",
     "title": "Pitch Deck final 12 slides Forge IA",
-    "status": "in-progress",
+    "status": "backlog",
     "priority": "high",
     "assignee": "anna",
     "project": "forge-ia",
@@ -549,7 +555,9 @@
     ],
     "dod": "Google Slides + PDF dans shared/outputs/anna/",
     "dueDate": "2026-03-04",
-    "comments": [],
+    "comments": [
+      "[09/03] Mis en pause — Forge IA non prioritaire. Reprendre quand Forge IA réactivée."
+    ],
     "createdAt": "2026-03-01T23:07:00Z"
   },
   {
@@ -667,5 +675,112 @@
     "dueDate": "2026-03-04",
     "comments": [],
     "createdAt": "2026-03-01T23:07:00Z"
+  },
+  {
+    "id": "USINE-001",
+    "title": "FiscalGPT — Activer le paywall",
+    "status": "in-progress",
+    "priority": "critical",
+    "assignee": "bidi",
+    "project": "fiscalgpt",
+    "subtasks": [
+      {
+        "id": "u001-1",
+        "title": "Analyser l'état actuel du code FiscalGPT",
+        "done": false
+      },
+      {
+        "id": "u001-2",
+        "title": "Définir le modèle freemium (X questions gratuites, puis payant)",
+        "done": false
+      },
+      {
+        "id": "u001-3",
+        "title": "Intégrer Stripe ou LemonSqueezy",
+        "done": false
+      },
+      {
+        "id": "u001-4",
+        "title": "Déployer la version payante",
+        "done": false
+      }
+    ],
+    "dod": "Un utilisateur peut payer en ligne et accéder au service premium",
+    "comments": [
+      "Priorité #1 selon HEARTBEAT mars 2026"
+    ],
+    "createdAt": "2026-03-09T15:00:00Z",
+    "tags": [
+      "fiscalgpt",
+      "monetisation"
+    ]
+  },
+  {
+    "id": "USINE-002",
+    "title": "Usine à Business — Synthèse analyse Polsia",
+    "status": "review",
+    "priority": "high",
+    "assignee": "bidi",
+    "project": "usine",
+    "subtasks": [
+      {
+        "id": "u002-1",
+        "title": "Analyse Polsia.com complète",
+        "done": true
+      },
+      {
+        "id": "u002-2",
+        "title": "Identifier 3 opportunités différenciatrices",
+        "done": false
+      },
+      {
+        "id": "u002-3",
+        "title": "Définir la V1 de l'Usine à Business",
+        "done": false
+      }
+    ],
+    "dod": "Roadmap V1 Usine à Business validée par Alexis",
+    "comments": [
+      "Analyse Polsia terminée — voir shared/outputs/usine/competitive/polsia/"
+    ],
+    "createdAt": "2026-03-09T15:00:00Z",
+    "tags": [
+      "usine",
+      "strategy"
+    ]
+  },
+  {
+    "id": "VOITURE-001",
+    "title": "Vendre Fiat 500X — Prendre RDV Autobiz",
+    "status": "in-progress",
+    "priority": "high",
+    "assignee": "jade",
+    "project": "voiture",
+    "subtasks": [
+      {
+        "id": "v001-1",
+        "title": "Offre Autobiz confirmée : 10 050€",
+        "done": true
+      },
+      {
+        "id": "v001-2",
+        "title": "Prendre RDV Autobiz avant le 15/03",
+        "done": false
+      },
+      {
+        "id": "v001-3",
+        "title": "Confirmer état carrosserie (réparation Sevran faite ?)",
+        "done": false
+      }
+    ],
+    "dod": "RDV pris et Fiat 500X vendue",
+    "comments": [
+      "Offre valable jusqu'au 15/03 — URGENT"
+    ],
+    "createdAt": "2026-03-09T15:00:00Z",
+    "tags": [
+      "voiture",
+      "vente"
+    ]
   }
 ]
