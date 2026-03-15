@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forge IA — Explorez les variantes</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --bg: #08080A;
+            --surface: #111114;
+            --border: #1E1E24;
+            --text: #E8E8EC;
+            --text-dim: #8A8A96;
+            --accent-nuit: #B8FF57;
+            --accent-zen: #E8564C;
+            --accent-conv: #25D366;
+            --accent-edit: #FFE500;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ===== GRAIN OVERLAY ===== */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            text-align: center;
+            padding: 80px 24px 40px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, var(--accent-nuit), var(--accent-conv));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            max-width: 480px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .tagline {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 6px 16px;
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        /* ===== GRID ===== */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 24px;
+        }
+
+        /* ===== CARDS ===== */
+        .card {
+            position: relative;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px 32px 32px;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 260px;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: transparent;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+
+        .card:hover::before { opacity: 1; }
+
+        /* Accent per card */
+        .card--nuit::before { background: var(--accent-nuit); }
+        .card--nuit:hover { border-color: rgba(184,255,87,0.2); }
+        .card--nuit .card__number { color: var(--accent-nuit); }
+
+        .card--zen::before { background: var(--accent-zen); }
+        .card--zen:hover { border-color: rgba(232,86,76,0.2); }
+        .card--zen .card__number { color: var(--accent-zen); }
+
+        .card--conv::before { background: var(--accent-conv); }
+        .card--conv:hover { border-color: rgba(37,211,102,0.2); }
+        .card--conv .card__number { color: var(--accent-conv); }
+
+        .card--edit::before { background: var(--accent-edit); }
+        .card--edit:hover { border-color: rgba(255,229,0,0.2); }
+        .card--edit .card__number { color: var(--accent-edit); }
+
+        .card__number {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .card__title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 900;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .card__desc {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        .card__arrow {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            opacity: 0;
+            transform: translateX(-8px);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover .card__arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 60px 24px 40px;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            header { padding: 60px 20px 30px; }
+            .logo { font-size: 1.6rem; }
+            header p { font-size: 1rem; }
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+                margin: 40px auto;
+                padding: 0 16px;
+            }
+            .card {
+                padding: 28px 24px 24px;
+                min-height: auto;
+            }
+            .card__title { font-size: 1.3rem; }
+        }
+
+        /* ===== LOAD ANIMATION ===== */
+        .card {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        .card.visible {
+            animation: cardIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes cardIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><span>Forge IA</span></div>
+        <div class="tagline">Votre équipe de nuit</div>
+        <p style="margin-top: 24px;">
+            Quatre visions pour un même produit. Explorez chaque direction créative et trouvez celle qui parle le mieux à vos futurs clients.
+        </p>
+    </header>
+
+    <div class="grid">
+        <a href="v1-nuit.html" class="card card--nuit">
+            <div class="card__number">V1 — Variante</div>
+            <h2 class="card__title">La Nuit</h2>
+            <p class="card__desc">Dark, premium, sophistiqué. Inspiré de Notion AI. L'élégance du fond noir, la puissance du vert acide.</p>
+            <div class="card__arrow">→</div>
+        </a>
+
+        <a href="v2-zen.html" class="card card--zen">
+            <div class="card__number">V2 — Variante</div>
+            <h2 class="card__title">Zen</h2>
+            <p class="card__desc">Minimaliste, aéré, respirant. Inspiré d'enso.bot. Beaucoup de blanc, typographie raffinée, sérénité.</p>
+            <div class="card__arrow">→</div>
+        </a>
+
+        <a href="v3-conversation.html" class="card card--conv">
+            <div class="card__number">V3 — Variante</div>
+            <h2 class="card__title">Conversation</h2>
+            <p class="card__desc">Chaleureux, conversationnel, proche. Inspiré de Lindy AI. L'accent WhatsApp, les bulles de chat, l'humain.</p>
+            <div class="card__arrow">→</div>
+        </a>
+
+        <a href="v4-editorial.html" class="card card--edit">
+            <div class="card__number">V4 — Variante</div>
+            <h2 class="card__title">Editorial</h2>
+            <p class="card__desc">Brutalist, impactant, sans compromis. Typographie massive, jaune électrique, zéro décoration superflue.</p>
+            <div class="card__arrow">→</div>
+        </a>
+    </div>
+
+    <footer>
+        <p>Forge IA — Prototype landing pages · 2026</p>
+    </footer>
+
+    <script>
+        // Staggered card entrance
+        document.querySelectorAll('.card').forEach((card, i) => {
+            setTimeout(() => card.classList.add('visible'), 200 + i * 150);
+        });
+    </script>
+</body>
+</html>

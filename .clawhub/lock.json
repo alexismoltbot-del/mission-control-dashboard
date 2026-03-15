@@ -96,6 +96,38 @@
     "self-improving": {
       "version": "1.1.3",
       "installedAt": 1772486367752
+    },
+    "x-twitter": {
+      "version": "2.3.1",
+      "installedAt": 1772533279336
+    },
+    "crawl-for-ai": {
+      "version": "1.0.1",
+      "installedAt": 1772993465064
+    },
+    "skill-vetter": {
+      "version": "1.0.0",
+      "installedAt": 1773074236118
+    },
+    "whatsapp-business": {
+      "version": "1.0.3",
+      "installedAt": 1773074236271
+    },
+    "calendly-api": {
+      "version": "1.0.3",
+      "installedAt": 1773074236366
+    },
+    "typeform": {
+      "version": "1.0.4",
+      "installedAt": 1773074236490
+    },
+    "stripe-api": {
+      "version": "1.0.8",
+      "installedAt": 1773074238313
+    },
+    "api-gateway": {
+      "version": "1.0.62",
+      "installedAt": 1773074246827
     }
   }
 }

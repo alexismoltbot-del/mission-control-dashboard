@@ -1,0 +1,5 @@
+Peux-tu me trouver les meilleurs contenus sur les workflows pour rendre les agents autonomes ?
+Est-ce qu'il y a des gens sur Twitter qui postent leur implémentation ?
+Comment ils nous font précisément pour que l'agent soit productif et autonome,
+qu'il travaille entre eux et qu'ils avancent sur des tâches sans me solliciter ?
+Et avec un bon niveau de qualité.

@@ -1,4 +1,4 @@
-# Agent Fleet — ALMAVI / Alexis Bidinot
+# Agent Fleet — Alexis Bidinot
 
 Structure inspirée de Vadim @VadimStrizheus — "a company is now a folder"
 
@@ -9,7 +9,7 @@ Structure inspirée de Vadim @VadimStrizheus — "a company is now a folder"
 | Anna | anna.md | Marketing, LinkedIn, Substack, PMF |
 | Franck | franck.md | Finance, dépenses, revenus, factures |
 | John | john.md | Opérations, clients, admin, process |
-| Jimmy | jimmy.md | Dev — Forge IA, FiscalGPT, ExpliqueMaCompta |
+| Jimmy | jimmy.md | Dev |
 
 ## Comment spawner un agent
 ```

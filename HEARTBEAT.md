@@ -1,27 +1,41 @@
 # HEARTBEAT.md
 
-## Règles
-- Proactif mais pas intrusif
-- Nuit (23h-7h) : travaille en silence, pas de messages
-- Drafts only : je prépare, Alexis publie/envoie
-- Si rien d'urgent : réponds juste HEARTBEAT_OK (pas de contexte)
+## Regles
 
-## Priorités (mars 2026)
-1. Clawdbot PME — 10 clients payants
-2. Forge IA — lancer proprement et convertir les premiers clients
-3. Contenu — 4 LinkedIn + 1 Substack/semaine
-4. Discipline perso — protéger créneaux famille + sommeil
+- Proactif mais pas intrusif
+- Nuit (23h-7h) : travaille en silence, pas de message
+- Si rien de prioritaire : reponds juste `HEARTBEAT_OK`
+- Ne remonte jamais du bruit operationnel
+- Le heartbeat surveille, il n'est pas cense faire le travail des workers
+
+## Priorites actives - mars 2026
+
+1. **Usine a Business** : construire la machine de lancement et d'exploitation
+2. **GEO Agency** : rendre l'offre client-ready, design haut niveau, pricing, auth, support, launch
+3. **FiscalGPT** : premier business test a rendre self-serve et payant
+4. **Voiture** : vente Fiat 500X + achat familiale + parking
+5. **Contenu** : 2 LinkedIn + 1 Substack par semaine
 
 ## Check heartbeat (ordre)
-1. Messages Alexis non lus / urgents
-2. Tâches IN REVIEW à remonter
-3. Tâches bloquées > 24h
-4. Opportunités business actionnables (< 10 min pour agir)
-5. Rappels urgents du jour (factures, clients, RDV, admin)
 
-## Format de remontée (si alerte)
+1. Messages Alexis non lus ou urgents
+2. `shared/system/views/approvals.md` : une decision attend Alexis ?
+3. `shared/system/views/board.md` : une tache `waiting_human` ou `failed` devient critique ?
+4. Blocages critiques sur `businesses/geo-agency/`
+5. Blocages critiques sur `businesses/fiscalgpt/`
+6. Offre voiture / proposition concrete / parking interessant
+7. Nouvelles demandes dans `queue/launch-requests.md`
+
+## Politique de remontée
+
+- Remonte seulement si cela change une decision, un timing ou un risque
+- Utilise des chemins de fichiers explicites quand un livrable existe
+- Si une action peut etre preparee sans Alexis, prepare-la en silence
+- Si une approbation existe deja et n'a pas change materiellement, ne repete pas la meme alerte
+
+## Format
+
 - 1 phrase contexte
-- 3 bullets max : impact / action proposée / ETA
-- Ton direct, concret, sans blabla
+- 3 bullets max : impact / action proposee / ETA
 
-Si rien → HEARTBEAT_OK
+Si rien -> `HEARTBEAT_OK`

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jade Dashboard</title>
+    <style>
+      :root {
+        --bg: #f4ede4;
+        --bg-accent: #efe0cc;
+        --panel: rgba(255, 252, 247, 0.85);
+        --panel-strong: rgba(255, 248, 240, 0.95);
+        --ink: #13202a;
+        --muted: #5b6872;
+        --line: rgba(19, 32, 42, 0.12);
+        --accent: #b4471d;
+        --accent-soft: rgba(180, 71, 29, 0.12);
+        --success: #1c7d68;
+        --warning: #b76b1a;
+        --danger: #9b2d30;
+        --shadow: 0 24px 70px rgba(20, 31, 38, 0.10);
+        --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        --sans: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+        --mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--sans);
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(180, 71, 29, 0.12), transparent 28%),
+          radial-gradient(circle at top right, rgba(28, 125, 104, 0.10), transparent 24%),
+          linear-gradient(180deg, var(--bg) 0%, #f8f4ee 100%);
+      }
+
+      .shell {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 28px 20px 56px;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background:
+          linear-gradient(135deg, rgba(255, 252, 247, 0.96), rgba(239, 224, 204, 0.88)),
+          var(--panel-strong);
+        box-shadow: var(--shadow);
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto -10% -40% 40%;
+        height: 280px;
+        background: radial-gradient(circle, rgba(180, 71, 29, 0.12), transparent 65%);
+        pointer-events: none;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(180, 71, 29, 0.18);
+        background: rgba(255, 255, 255, 0.55);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      h1 {
+        margin: 18px 0 10px;
+        font-family: var(--serif);
+        font-size: clamp(2.4rem, 4vw, 4.4rem);
+        line-height: 0.95;
+        max-width: 900px;
+      }
+
+      .hero p {
+        margin: 0;
+        max-width: 760px;
+        color: var(--muted);
+        font-size: 1.05rem;
+        line-height: 1.65;
+      }
+
+      .hero-grid,
+      .stats-grid,
+      .lane-grid,
+      .ops-grid {
+        display: grid;
+        gap: 16px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1.35fr 0.85fr;
+        align-items: end;
+        margin-top: 26px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-top: 24px;
+      }
+
+      .lane-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 22px;
+      }
+
+      .ops-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        margin-top: 22px;
+      }
+
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+
+      .panel.pad {
+        padding: 20px;
+      }
+
+      .stat {
+        padding: 18px;
+      }
+
+      .stat .label {
+        display: block;
+        color: var(--muted);
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .stat .value {
+        margin-top: 10px;
+        font-family: var(--serif);
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      .stat .hint {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .lane {
+        padding: 20px;
+      }
+
+      .lane-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 14px;
+      }
+
+      .lane-title {
+        font-family: var(--serif);
+        font-size: 1.45rem;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        background: rgba(19, 32, 42, 0.06);
+        color: var(--muted);
+      }
+
+      .badge.ok {
+        background: rgba(28, 125, 104, 0.12);
+        color: var(--success);
+      }
+
+      .badge.warn {
+        background: rgba(183, 107, 26, 0.14);
+        color: var(--warning);
+      }
+
+      .badge.alert {
+        background: rgba(155, 45, 48, 0.12);
+        color: var(--danger);
+      }
+
+      .card-list,
+      .activity-list,
+      .bullet-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .card-list li,
+      .activity-list li,
+      .bullet-list li {
+        padding: 12px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .card-list li:first-child,
+      .activity-list li:first-child,
+      .bullet-list li:first-child {
+        border-top: none;
+        padding-top: 0;
+      }
+
+      .mono {
+        font-family: var(--mono);
+      }
+
+      .table-wrap {
+        overflow: auto;
+        margin-top: 10px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 720px;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 11px 12px;
+        border-top: 1px solid var(--line);
+        vertical-align: top;
+      }
+
+      th {
+        font-size: 0.76rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        background: rgba(19, 32, 42, 0.03);
+      }
+
+      .section-title {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 14px;
+      }
+
+      .section-title h2 {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: 1.7rem;
+      }
+
+      .section-title p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .pill {
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(19, 32, 42, 0.06);
+        color: var(--ink);
+        font-size: 0.88rem;
+      }
+
+      .footer-note {
+        margin-top: 22px;
+        padding: 14px 16px;
+        border-radius: 18px;
+        background: rgba(19, 32, 42, 0.05);
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .fade {
+        opacity: 0;
+        transform: translateY(16px);
+        animation: fadeUp 0.7s ease forwards;
+      }
+
+      .fade:nth-child(2) { animation-delay: 0.06s; }
+      .fade:nth-child(3) { animation-delay: 0.12s; }
+      .fade:nth-child(4) { animation-delay: 0.18s; }
+      .fade:nth-child(5) { animation-delay: 0.24s; }
+
+      @keyframes fadeUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 1100px) {
+        .hero-grid,
+        .stats-grid,
+        .lane-grid,
+        .ops-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .shell {
+          padding: 16px 14px 36px;
+        }
+
+        .hero,
+        .panel.pad,
+        .lane,
+        .stat {
+          border-radius: 22px;
+          padding: 16px;
+        }
+
+        .hero-grid,
+        .stats-grid,
+        .lane-grid,
+        .ops-grid {
+          grid-template-columns: 1fr;
+        }
+
+        h1 {
+          line-height: 1.02;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell" id="app"></div>
+    <script src="./data.js"></script>
+    <script>
+      const data = window.JADE_DASHBOARD_DATA || {};
+
+      function safe(value, fallback = 'A completer') {
+        return value && String(value).trim() ? value : fallback;
+      }
+
+      function formatDate(msOrIso) {
+        if (!msOrIso) return 'n/a';
+        const date = typeof msOrIso === 'number' ? new Date(msOrIso) : new Date(msOrIso);
+        if (Number.isNaN(date.getTime())) return 'n/a';
+        return new Intl.DateTimeFormat('fr-FR', {
+          dateStyle: 'short',
+          timeStyle: 'short',
+          timeZone: 'Europe/Paris',
+        }).format(date);
+      }
+
+      function badgeClass(status) {
+        if (status === 'ok') return 'ok';
+        if (status === 'running') return 'warn';
+        if (status === 'error') return 'alert';
+        return '';
+      }
+
+      function list(items) {
+        if (!items || !items.length) return '<li>Aucun element.</li>';
+        return items.map((item) => `<li>${item}</li>`).join('');
+      }
+
+      function table(rows) {
+        if (!rows || !rows.length) return '<p class="footer-note">Aucune ligne structuree pour le moment.</p>';
+        const headers = Object.keys(rows[0]);
+        return `
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>${headers.map((header) => `<th>${header}</th>`).join('')}</tr>
+              </thead>
+              <tbody>
+                ${rows
+                  .map(
+                    (row) =>
+                      `<tr>${headers.map((header) => `<td>${safe(row[header], '-')}</td>`).join('')}</tr>`
+                  )
+                  .join('')}
+              </tbody>
+            </table>
+          </div>
+        `;
+      }
+
+      const cronJobs = data.cronJobs || [];
+      const nextDigest = cronJobs.find((job) => /Digest/i.test(job.name || ''));
+      const nextScan = cronJobs.find((job) => /Scan/i.test(job.name || ''));
+      const nextRelance = cronJobs.find((job) => /Relances/i.test(job.name || ''));
+
+      const html = `
+        <section class="hero fade">
+          <div class="eyebrow">Jade / Voiture / Mission Control</div>
+          <div class="hero-grid">
+            <div>
+              <h1>Un cockpit pour suivre ce que Jade fait sans lire tous les fichiers.</h1>
+              <p>
+                Vente Fiat, achat familiale, parking Neuilly. Le dashboard synthétise les
+                contextes, le board, l'activite recente et les boucles cron qui pilotent la mission.
+              </p>
+            </div>
+            <div class="pill-row">
+              <div class="pill">Genere le ${formatDate(data.generatedAt)}</div>
+              <div class="pill">Workspace ${safe(data.root, '~/.openclaw/workspace/factory/jade')}</div>
+              <div class="pill">Sources ${((data.sources || []).length)} fichiers</div>
+            </div>
+          </div>
+
+          <div class="stats-grid">
+            <div class="panel stat fade">
+              <span class="label">Offres voiture retenues</span>
+              <div class="value">${safe(data.counts?.topCars, 0)}</div>
+              <div class="hint">Lignes remplies dans le comparatif familial.</div>
+            </div>
+            <div class="panel stat fade">
+              <span class="label">Parkings qualifies</span>
+              <div class="value">${safe(data.counts?.parkingOptions, 0)}</div>
+              <div class="hint">Options structurees dans le suivi Neuilly.</div>
+            </div>
+            <div class="panel stat fade">
+              <span class="label">Prochain scan</span>
+              <div class="value mono">${nextScan ? formatDate(nextScan.nextRunAtMs) : 'n/a'}</div>
+              <div class="hint">${nextScan ? nextScan.name : 'scan non configure'}</div>
+            </div>
+            <div class="panel stat fade">
+              <span class="label">Prochain digest</span>
+              <div class="value mono">${nextDigest ? formatDate(nextDigest.nextRunAtMs) : 'n/a'}</div>
+              <div class="hint">${nextDigest ? 'notification WhatsApp' : 'digest non configure'}</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lane-grid">
+          <article class="panel lane fade">
+            <div class="lane-head">
+              <div class="lane-title">Vente Fiat</div>
+              <div class="badge ${data.summary?.alerts?.length ? 'warn' : 'ok'}">
+                ${data.summary?.alerts?.length ? 'A surveiller' : 'Stable'}
+              </div>
+            </div>
+            <ul class="bullet-list">
+              ${list(data.summary?.snapshot?.filter((item) => item.toLowerCase().includes('fiat')))}
+            </ul>
+            <div class="footer-note">
+              Objectif: ${safe((data.fiat?.objective || [])[0], 'Vendre au-dessus de 10 000 EUR')}
+            </div>
+          </article>
+
+          <article class="panel lane fade">
+            <div class="lane-head">
+              <div class="lane-title">Achat Familiale</div>
+              <div class="badge ${data.counts?.topCars > 0 ? 'ok' : 'warn'}">
+                ${data.counts?.topCars > 0 ? 'Shortlist active' : 'Pipeline vide'}
+              </div>
+            </div>
+            <ul class="bullet-list">
+              ${list(data.summary?.snapshot?.filter((item) => item.toLowerCase().includes('achat')))}
+            </ul>
+            <div class="footer-note">
+              Modeles surveilles: Volvo XC90, Tesla Model Y, Audi Q7, BMW X5, Peugeot 5008,
+              Renault Espace, Skoda Kodiaq, VW Touareg, Tesla Model X, VW Tayron.
+            </div>
+          </article>
+
+          <article class="panel lane fade">
+            <div class="lane-head">
+              <div class="lane-title">Parking Neuilly</div>
+              <div class="badge ${data.counts?.parkingOptions > 0 ? 'ok' : 'warn'}">
+                ${data.counts?.parkingOptions > 0 ? 'Options identifiees' : 'A alimenter'}
+              </div>
+            </div>
+            <ul class="bullet-list">
+              ${list(data.summary?.snapshot?.filter((item) => item.toLowerCase().includes('parking')))}
+            </ul>
+            <div class="footer-note">
+              Cible: box ou couvert, compatible SUV, 100-200 EUR / mois, proche Achille Peretti.
+            </div>
+          </article>
+        </section>
+
+        <section class="ops-grid">
+          <article class="panel pad fade">
+            <div class="section-title">
+              <h2>Radar Offre Familiale</h2>
+              <p>Top offres structurees dans le fichier de comparaison.</p>
+            </div>
+            ${table(data.topCars || [])}
+          </article>
+
+          <article class="panel pad fade">
+            <div class="section-title">
+              <h2>Radar Parking</h2>
+              <p>Options suivies sur Neuilly.</p>
+            </div>
+            ${table(data.parkingOptions || [])}
+          </article>
+        </section>
+
+        <section class="ops-grid">
+          <article class="panel pad fade">
+            <div class="section-title">
+              <h2>Board Jade</h2>
+              <p>Ce que Jade doit faire maintenant, ensuite, puis remettre en revue.</p>
+            </div>
+            <div class="lane-grid" style="margin-top: 0;">
+              <div>
+                <div class="badge ok">NOW</div>
+                <ul class="card-list">${list(data.tasks?.NOW || [])}</ul>
+              </div>
+              <div>
+                <div class="badge">IN REVIEW</div>
+                <ul class="card-list">${list(data.tasks?.['IN REVIEW'] || [])}</ul>
+              </div>
+              <div>
+                <div class="badge">NEXT</div>
+                <ul class="card-list">${list(data.tasks?.NEXT || [])}</ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel pad fade">
+            <div class="section-title">
+              <h2>Digest & Activite</h2>
+              <p>Le résumé opérationnel et les dernières traces utiles.</p>
+            </div>
+            <div class="badge ${data.summary?.alerts?.length ? 'alert' : 'ok'}" style="margin-bottom: 12px;">
+              ${data.summary?.alerts?.length ? data.summary.alerts.length + ' alertes ouvertes' : 'Aucune alerte critique'}
+            </div>
+            <ul class="card-list">${list(data.summary?.alerts || ['Aucun signal critique actif.'])}</ul>
+            <div style="height: 18px;"></div>
+            <ul class="activity-list">${list(data.activity || [])}</ul>
+          </article>
+        </section>
+
+        <section class="ops-grid">
+          <article class="panel pad fade">
+            <div class="section-title">
+              <h2>Cadence Cron</h2>
+              <p>Les boucles qui rendent Jade proactive sans te spammer.</p>
+            </div>
+            <ul class="card-list">
+              ${(cronJobs || [])
+                .map(
+                  (job) => `
+                    <li>
+                      <div style="display:flex; justify-content:space-between; gap:12px; align-items:flex-start;">
+                        <div>
+                          <strong>${job.name}</strong><br />
+                          <span class="mono" style="color:var(--muted);">${job.schedule}</span>
+                        </div>
+                        <span class="badge ${badgeClass(job.lastStatus)}">${job.lastStatus}</span>
+                      </div>
+                      <div style="margin-top:8px; color:var(--muted);">
+                        Prochain run: ${formatDate(job.nextRunAtMs)}<br />
+                        Delivery: ${safe(job.delivery, 'none')} ${job.channel ? '/ ' + job.channel : ''}
+                      </div>
+                    </li>
+                  `
+                )
+                .join('')}
+            </ul>
+          </article>
+
+          <article class="panel pad fade">
+            <div class="section-title">
+              <h2>Regles de Decision</h2>
+              <p>Ce que Jade a le droit de te remonter et ce qu'elle ignore.</p>
+            </div>
+            <ul class="card-list">
+              ${list(data.summary?.nextActions || [])}
+            </ul>
+            <div class="footer-note">
+              Politique: scans et relances silencieux, digests WhatsApp 2x/jour, pas d'engagement
+              sans validation Alexis.
+            </div>
+          </article>
+        </section>
+
+        <div class="footer-note fade">
+          Pour rafraichir le dashboard: <span class="mono">node scripts/build-jade-dashboard.js</span>
+        </div>
+      `;
+
+      document.getElementById('app').innerHTML = html;
+    </script>
+  </body>
+</html>

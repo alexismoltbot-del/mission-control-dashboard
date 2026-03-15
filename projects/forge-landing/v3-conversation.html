@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forge IA — Votre équipe de nuit</title>
+    <meta name="description" content="Forge IA travaille pendant que vous dormez. Relances, veille, LinkedIn, synthèses — envoyez un message WhatsApp, on s'occupe du reste.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & VARIABLES ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #FAF7F2;
+            --bg-warm: #F5F0E8;
+            --surface: #FFFFFF;
+            --charcoal: #2C2C2C;
+            --charcoal-light: #555555;
+            --charcoal-muted: #888888;
+            --whatsapp: #25D366;
+            --whatsapp-dark: #1DA851;
+            --whatsapp-teal: #075E54;
+            --whatsapp-light: #DCF8C6;
+            --whatsapp-bg: #E5DDD5;
+            --whatsapp-chat-bg: #ECE5DD;
+            --bubble-out: #DCF8C6;
+            --bubble-in: #FFFFFF;
+            --radius: 12px;
+            --radius-lg: 20px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+            --shadow-xl: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== UTILITY ===== */
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--whatsapp-dark);
+            background: rgba(37, 211, 102, 0.1);
+            padding: 6px 14px;
+            border-radius: 100px;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--charcoal);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--charcoal-light);
+            line-height: 1.7;
+            max-width: 560px;
+        }
+
+        /* ===== NAV ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(250, 247, 242, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(44, 44, 44, 0.06);
+            transition: box-shadow 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+        }
+
+        .nav-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--charcoal);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-logo span {
+            color: var(--whatsapp);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--charcoal-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--charcoal);
+        }
+
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--whatsapp);
+            color: #fff !important;
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .nav-cta:hover {
+            background: var(--whatsapp-dark);
+            transform: translateY(-1px);
+        }
+
+        .nav-cta svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .nav-back {
+            font-size: 0.875rem;
+            color: var(--charcoal-muted);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: color 0.2s;
+        }
+
+        .nav-back:hover { color: var(--charcoal); }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--charcoal);
+            margin: 5px 0;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 140px 24px 80px;
+            text-align: center;
+        }
+
+        .hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--whatsapp-dark);
+            background: rgba(37, 211, 102, 0.08);
+            padding: 8px 18px;
+            border-radius: 100px;
+            margin-bottom: 28px;
+        }
+
+        .hero-label svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--charcoal);
+            max-width: 720px;
+            margin: 0 auto 20px;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--whatsapp);
+        }
+
+        .hero-sub {
+            font-size: 1.2rem;
+            color: var(--charcoal-light);
+            max-width: 520px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 60px;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--whatsapp);
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 100px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+            font-family: inherit;
+        }
+
+        .btn-primary:hover {
+            background: var(--whatsapp-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-primary svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--charcoal);
+            padding: 16px 32px;
+            border-radius: 100px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: 2px solid rgba(44, 44, 44, 0.15);
+            transition: all 0.25s ease;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--charcoal);
+            transform: translateY(-2px);
+        }
+
+        /* ===== PHONE MOCK ===== */
+        .phone-wrapper {
+            display: flex;
+            justify-content: center;
+            perspective: 1000px;
+        }
+
+        .phone-frame {
+            width: 380px;
+            background: #fff;
+            border-radius: 40px;
+            box-shadow: var(--shadow-xl), 0 0 0 1px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transform: rotateX(2deg);
+            transition: transform 0.5s ease;
+        }
+
+        .phone-frame:hover {
+            transform: rotateX(0deg) translateY(-4px);
+        }
+
+        /* WhatsApp header */
+        .wa-header {
+            background: var(--whatsapp-teal);
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #fff;
+        }
+
+        .wa-header-back {
+            width: 20px;
+            height: 20px;
+            opacity: 0.9;
+        }
+
+        .wa-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--whatsapp), #1DA851);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .wa-header-info {
+            flex: 1;
+        }
+
+        .wa-header-name {
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        .wa-header-status {
+            font-size: 0.72rem;
+            opacity: 0.85;
+        }
+
+        .wa-header-actions {
+            display: flex;
+            gap: 18px;
+            opacity: 0.9;
+        }
+
+        .wa-header-actions svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* WhatsApp chat body */
+        .wa-chat {
+            background: var(--whatsapp-chat-bg);
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9c1b6' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            padding: 16px 12px;
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .wa-date {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .wa-date span {
+            background: rgba(225, 218, 208, 0.9);
+            color: #54656F;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        /* Message bubbles */
+        .wa-msg {
+            max-width: 82%;
+            padding: 7px 10px 4px;
+            border-radius: 8px;
+            font-size: 0.87rem;
+            line-height: 1.45;
+            position: relative;
+            opacity: 0;
+            transform: translateY(12px) scale(0.95);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            word-wrap: break-word;
+        }
+
+        .wa-msg.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .wa-msg-out {
+            align-self: flex-end;
+            background: var(--bubble-out);
+            border-top-right-radius: 0;
+        }
+
+        .wa-msg-in {
+            align-self: flex-start;
+            background: var(--bubble-in);
+            border-top-left-radius: 0;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.06);
+        }
+
+        .wa-msg-meta {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 4px;
+            margin-top: 2px;
+        }
+
+        .wa-msg-time {
+            font-size: 0.65rem;
+            color: #667781;
+        }
+
+        .wa-msg-check {
+            width: 16px;
+            height: 10px;
+            color: #53BDEB;
+        }
+
+        .wa-msg-text {
+            color: #111B21;
+        }
+
+        /* Typing indicator */
+        .wa-typing {
+            align-self: flex-start;
+            background: var(--bubble-in);
+            border-radius: 8px;
+            border-top-left-radius: 0;
+            padding: 10px 14px;
+            display: flex;
+            gap: 4px;
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .wa-typing.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .wa-typing-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #93A2AD;
+            animation: typingBounce 1.4s infinite;
+        }
+
+        .wa-typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .wa-typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typingBounce {
+            0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+            30% { transform: translateY(-4px); opacity: 1; }
+        }
+
+        /* WhatsApp input bar */
+        .wa-input-bar {
+            background: var(--whatsapp-chat-bg);
+            padding: 6px 8px 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .wa-input-field {
+            flex: 1;
+            background: #fff;
+            border-radius: 24px;
+            padding: 9px 16px;
+            font-size: 0.82rem;
+            color: #8696A0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .wa-input-field span { flex: 1; }
+
+        .wa-input-icons {
+            display: flex;
+            gap: 10px;
+            color: #54656F;
+        }
+
+        .wa-input-icons svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.6;
+        }
+
+        .wa-mic-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--whatsapp-teal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .wa-mic-btn svg {
+            width: 18px;
+            height: 18px;
+            color: #fff;
+        }
+
+        /* ===== USE CASES ===== */
+        .use-cases {
+            padding: 100px 24px;
+            background: var(--bg-warm);
+        }
+
+        .use-cases-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .use-cases-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .use-case-card {
+            background: #fff;
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(44,44,44,0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .use-case-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .use-case-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .use-case-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+        }
+
+        .use-case-card:nth-child(1) .use-case-icon { background: #FFF3E0; }
+        .use-case-card:nth-child(2) .use-case-icon { background: #E8F5E9; }
+        .use-case-card:nth-child(3) .use-case-icon { background: #E3F2FD; }
+        .use-case-card:nth-child(4) .use-case-icon { background: #F3E5F5; }
+
+        .use-case-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+            color: var(--charcoal);
+        }
+
+        .mini-chat {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .mini-bubble {
+            padding: 10px 14px;
+            border-radius: 14px;
+            font-size: 0.82rem;
+            line-height: 1.5;
+            max-width: 92%;
+        }
+
+        .mini-bubble-user {
+            align-self: flex-end;
+            background: var(--bubble-out);
+            border-bottom-right-radius: 4px;
+            color: #111B21;
+        }
+
+        .mini-bubble-bot {
+            align-self: flex-start;
+            background: #F0F0F0;
+            border-bottom-left-radius: 4px;
+            color: #111B21;
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .how-it-works {
+            padding: 100px 24px;
+        }
+
+        .how-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .how-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .steps::before {
+            content: '';
+            position: absolute;
+            top: 36px;
+            left: calc(16.67% + 24px);
+            right: calc(16.67% + 24px);
+            height: 2px;
+            background: linear-gradient(90deg, var(--whatsapp) 0%, rgba(37,211,102,0.2) 100%);
+        }
+
+        .step {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .step.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .step-number {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: var(--whatsapp);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 20px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.25);
+        }
+
+        .step-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--charcoal);
+        }
+
+        .step-desc {
+            font-size: 0.9rem;
+            color: var(--charcoal-light);
+            line-height: 1.6;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            padding: 100px 24px;
+            background: var(--bg-warm);
+        }
+
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .testimonials-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            border-radius: var(--radius-lg);
+            padding: 32px 28px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(44,44,44,0.04);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .testimonial-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .testimonial-stars {
+            color: #F59E0B;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .testimonial-card:nth-child(1) .testimonial-avatar { background: #7C3AED; }
+        .testimonial-card:nth-child(2) .testimonial-avatar { background: #2563EB; }
+        .testimonial-card:nth-child(3) .testimonial-avatar { background: #DC2626; }
+
+        .testimonial-name {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--charcoal);
+        }
+
+        .testimonial-role {
+            font-size: 0.78rem;
+            color: var(--charcoal-muted);
+        }
+
+        /* ===== PRICING ===== */
+        .pricing {
+            padding: 100px 24px;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .pricing-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            max-width: 740px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: #fff;
+            border-radius: var(--radius-lg);
+            padding: 36px 32px;
+            box-shadow: var(--shadow-sm);
+            border: 2px solid transparent;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--whatsapp);
+            box-shadow: var(--shadow-md), 0 0 0 1px rgba(37, 211, 102, 0.1);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--whatsapp);
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 4px 16px;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .pricing-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 4px;
+        }
+
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--charcoal);
+            margin-bottom: 4px;
+        }
+
+        .pricing-price span {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--charcoal-muted);
+        }
+
+        .pricing-period {
+            font-size: 0.85rem;
+            color: var(--charcoal-muted);
+            margin-bottom: 24px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 28px;
+        }
+
+        .pricing-features li {
+            font-size: 0.9rem;
+            color: var(--charcoal-light);
+            padding: 8px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            border-bottom: 1px solid rgba(44,44,44,0.04);
+        }
+
+        .pricing-features li:last-child { border-bottom: none; }
+
+        .pricing-check {
+            width: 18px;
+            height: 18px;
+            color: var(--whatsapp);
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .pricing-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 14px;
+            border-radius: 100px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+        }
+
+        .pricing-btn-outline {
+            background: transparent;
+            color: var(--charcoal);
+            border: 2px solid rgba(44,44,44,0.15);
+        }
+
+        .pricing-btn-outline:hover {
+            border-color: var(--charcoal);
+        }
+
+        .pricing-btn-filled {
+            background: var(--whatsapp);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+        }
+
+        .pricing-btn-filled:hover {
+            background: var(--whatsapp-dark);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+        }
+
+        /* ===== FINAL CTA ===== */
+        .final-cta {
+            padding: 100px 24px;
+            text-align: center;
+            background: linear-gradient(180deg, var(--bg) 0%, var(--bg-warm) 100%);
+        }
+
+        .final-cta-inner {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--charcoal);
+            margin-bottom: 16px;
+        }
+
+        .final-cta p {
+            font-size: 1.1rem;
+            color: var(--charcoal-light);
+            margin-bottom: 36px;
+            line-height: 1.7;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            padding: 48px 24px;
+            border-top: 1px solid rgba(44,44,44,0.08);
+        }
+
+        .footer-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-brand {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--charcoal);
+        }
+
+        .footer-brand span {
+            color: var(--whatsapp);
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: var(--charcoal-muted);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            font-size: 0.82rem;
+            color: var(--charcoal-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--charcoal); }
+
+        /* ===== SCROLL REVEAL ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: rgba(250, 247, 242, 0.98);
+                backdrop-filter: blur(20px);
+                padding: 20px 24px;
+                gap: 16px;
+                border-bottom: 1px solid rgba(44,44,44,0.08);
+                box-shadow: var(--shadow-md);
+            }
+            .mobile-menu-btn { display: block; }
+
+            .hero { padding: 120px 20px 60px; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-sub { font-size: 1.05rem; }
+
+            .hero-cta-group {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .phone-frame {
+                width: 100%;
+                max-width: 360px;
+                border-radius: 28px;
+            }
+
+            .use-cases-grid { grid-template-columns: 1fr; gap: 16px; }
+            .steps {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .steps::before { display: none; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; }
+
+            .section-title { font-size: 1.9rem; }
+
+            .footer-inner {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+
+            .final-cta h2 { font-size: 1.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAV ===== -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <div style="display:flex;align-items:center;gap:20px;">
+                <a href="index.html" class="nav-back">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+                    Variantes
+                </a>
+                <a href="#" class="nav-logo">Forge <span>IA</span></a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#use-cases">Cas d'usage</a></li>
+                <li><a href="#how-it-works">Comment</a></li>
+                <li><a href="#testimonials">Avis</a></li>
+                <li><a href="#pricing">Tarifs</a></li>
+                <li>
+                    <a href="#" class="nav-cta">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Démarrer
+                    </a>
+                </li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Votre équipe de nuit
+            </div>
+            <h1>Envoyez un message.<br><em>Forge IA</em> s'occupe du reste.</h1>
+            <p class="hero-sub">Relances, veille, LinkedIn, synthèses — vos agents IA travaillent pendant que vous dormez. Tout passe par WhatsApp.</p>
+            <div class="hero-cta-group">
+                <a href="#" class="btn-primary">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Démarrer sur WhatsApp
+                </a>
+                <a href="#how-it-works" class="btn-secondary">Voir comment ça marche</a>
+            </div>
+
+            <!-- Phone Mock -->
+            <div class="phone-wrapper">
+                <div class="phone-frame">
+                    <!-- WA Header -->
+                    <div class="wa-header">
+                        <svg class="wa-header-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+                        <div class="wa-avatar">F</div>
+                        <div class="wa-header-info">
+                            <div class="wa-header-name">Forge IA</div>
+                            <div class="wa-header-status">en ligne</div>
+                        </div>
+                        <div class="wa-header-actions">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                        </div>
+                    </div>
+
+                    <!-- WA Chat -->
+                    <div class="wa-chat" id="heroChat">
+                        <div class="wa-date"><span>Aujourd'hui</span></div>
+
+                        <!-- Message 1: User -->
+                        <div class="wa-msg wa-msg-out" data-delay="600">
+                            <div class="wa-msg-text">Relance les 3 devis en attente de cette semaine</div>
+                            <div class="wa-msg-meta">
+                                <span class="wa-msg-time">22:43</span>
+                                <svg class="wa-msg-check" viewBox="0 0 16 11" fill="none"><path d="M11.071.653a.457.457 0 0 0-.304-.102.493.493 0 0 0-.381.178l-6.19 7.636-2.011-2.175a.463.463 0 0 0-.336-.153.457.457 0 0 0-.336.142.34.34 0 0 0-.107.254c0 .1.04.19.107.254l2.319 2.508c.098.102.206.153.336.153.136 0 .26-.061.381-.178l6.522-8.04a.345.345 0 0 0 .09-.247.323.323 0 0 0-.09-.23z" fill="currentColor"/><path d="M14.757.653a.457.457 0 0 0-.305-.102.493.493 0 0 0-.38.178L7.882 8.365l-.637-.69-.244.3.881.955c.098.102.206.153.336.153.136 0 .26-.061.38-.178l6.523-8.04a.345.345 0 0 0 .09-.247.323.323 0 0 0-.09-.23z" fill="currentColor"/></svg>
+                            </div>
+                        </div>
+
+                        <!-- Typing indicator -->
+                        <div class="wa-typing" id="heroTyping">
+                            <div class="wa-typing-dot"></div>
+                            <div class="wa-typing-dot"></div>
+                            <div class="wa-typing-dot"></div>
+                        </div>
+
+                        <!-- Message 2: Bot -->
+                        <div class="wa-msg wa-msg-in" data-delay="2200">
+                            <div class="wa-msg-text">C'est noté ! Je relance Dupont & Fils, Atelier Moreau et Cabinet Leroy. Voulez-vous un ton formel ou amical ?</div>
+                            <div class="wa-msg-meta">
+                                <span class="wa-msg-time">22:43</span>
+                            </div>
+                        </div>
+
+                        <!-- Message 3: User -->
+                        <div class="wa-msg wa-msg-out" data-delay="3600">
+                            <div class="wa-msg-text">Amical, comme d'habitude &#x1F44D;</div>
+                            <div class="wa-msg-meta">
+                                <span class="wa-msg-time">22:44</span>
+                                <svg class="wa-msg-check" viewBox="0 0 16 11" fill="none"><path d="M11.071.653a.457.457 0 0 0-.304-.102.493.493 0 0 0-.381.178l-6.19 7.636-2.011-2.175a.463.463 0 0 0-.336-.153.457.457 0 0 0-.336.142.34.34 0 0 0-.107.254c0 .1.04.19.107.254l2.319 2.508c.098.102.206.153.336.153.136 0 .26-.061.381-.178l6.522-8.04a.345.345 0 0 0 .09-.247.323.323 0 0 0-.09-.23z" fill="currentColor"/><path d="M14.757.653a.457.457 0 0 0-.305-.102.493.493 0 0 0-.38.178L7.882 8.365l-.637-.69-.244.3.881.955c.098.102.206.153.336.153.136 0 .26-.061.38-.178l6.523-8.04a.345.345 0 0 0 .09-.247.323.323 0 0 0-.09-.23z" fill="currentColor"/></svg>
+                            </div>
+                        </div>
+
+                        <!-- Message 4: Bot -->
+                        <div class="wa-msg wa-msg-in" data-delay="5000">
+                            <div class="wa-msg-text">Parfait. Les 3 relances sont programmées pour demain 9h. Je vous envoie un résumé après envoi.</div>
+                            <div class="wa-msg-meta">
+                                <span class="wa-msg-time">22:44</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WA Input Bar -->
+                    <div class="wa-input-bar">
+                        <div class="wa-input-field">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8696A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                            <span>Message</span>
+                            <div class="wa-input-icons">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                            </div>
+                        </div>
+                        <div class="wa-mic-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== USE CASES ===== -->
+    <section class="use-cases" id="use-cases">
+        <div class="container">
+            <div class="use-cases-header reveal">
+                <span class="section-label">Cas d'usage</span>
+                <h2 class="section-title">Demandez, c'est fait.</h2>
+                <p class="section-subtitle">Chaque interaction est une conversation naturelle. Pas de menu, pas de tableau de bord — juste un message.</p>
+            </div>
+            <div class="use-cases-grid">
+                <!-- Veille -->
+                <div class="use-case-card">
+                    <div class="use-case-icon">&#x1F30D;</div>
+                    <div class="use-case-title">Veille stratégique</div>
+                    <div class="mini-chat">
+                        <div class="mini-bubble mini-bubble-user">Qu'est-ce que j'ai raté cette nuit ?</div>
+                        <div class="mini-bubble mini-bubble-bot">3 actus pour vous : votre concurrent Delvaux a levé 2M, un nouvel appel d'offres correspond à votre profil, et le décret sur la facturation électronique est publié. Détails ?</div>
+                    </div>
+                </div>
+
+                <!-- Relances -->
+                <div class="use-case-card">
+                    <div class="use-case-icon">&#x1F4E8;</div>
+                    <div class="use-case-title">Relances commerciales</div>
+                    <div class="mini-chat">
+                        <div class="mini-bubble mini-bubble-user">Où en sont mes devis ?</div>
+                        <div class="mini-bubble mini-bubble-bot">Sur 8 devis ouverts : 3 arrivent à échéance cette semaine. J'ai préparé les relances pour Garage Martin, SCI Horizon et Menuiserie Petit. On envoie ?</div>
+                    </div>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="use-case-card">
+                    <div class="use-case-icon">&#x1F4DD;</div>
+                    <div class="use-case-title">Contenu LinkedIn</div>
+                    <div class="mini-chat">
+                        <div class="mini-bubble mini-bubble-user">Prépare-moi un post LinkedIn</div>
+                        <div class="mini-bubble mini-bubble-bot">Voici un brouillon basé sur votre dernière réalisation : "Fierté d'équipe : on vient de livrer le chantier Rivoli en avance..." Vous voulez ajuster le ton ou on publie ?</div>
+                    </div>
+                </div>
+
+                <!-- Synthèse -->
+                <div class="use-case-card">
+                    <div class="use-case-icon">&#x1F4CA;</div>
+                    <div class="use-case-title">Synthèse quotidienne</div>
+                    <div class="mini-chat">
+                        <div class="mini-bubble mini-bubble-user">Résume ma journée</div>
+                        <div class="mini-bubble mini-bubble-bot">Aujourd'hui : 4 devis envoyés (12 400 €), 2 relances qui ont abouti, 1 nouveau prospect entrant via LinkedIn. Demain : RDV Moreau à 10h, deadline devis SCI.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="how-header reveal">
+                <span class="section-label">Comment ça marche</span>
+                <h2 class="section-title">Simple comme un message</h2>
+                <p class="section-subtitle">Pas de formation, pas de logiciel à installer. Vous savez envoyer un message ? Vous savez utiliser Forge IA.</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Envoyez un message</div>
+                    <div class="step-desc">Dites ce dont vous avez besoin en langage naturel, comme vous parleriez à un collaborateur.</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Forge IA comprend</div>
+                    <div class="step-desc">Nos agents IA analysent votre demande et planifient les actions nécessaires automatiquement.</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Résultat livré</div>
+                    <div class="step-desc">Recevez le résultat directement sur WhatsApp. Validez, ajustez, ou passez à autre chose.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="testimonials-header reveal">
+                <span class="section-label">Témoignages</span>
+                <h2 class="section-title">Ils ont adopté Forge IA</h2>
+                <p class="section-subtitle">Des dirigeants de PME qui ont retrouvé du temps pour ce qui compte vraiment.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"Je passais 45 minutes chaque matin à faire le point sur mes devis. Maintenant, j'envoie 'Où en sont mes devis ?' et c'est réglé en 10 secondes. On a récupéré 3 clients grâce aux relances automatiques."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">CP</div>
+                        <div>
+                            <div class="testimonial-name">Claire Perrot</div>
+                            <div class="testimonial-role">Gérante, Perrot Agencement</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"Ce qui m'a convaincu, c'est la veille. Chaque matin je reçois un résumé de ce qui s'est passé dans mon secteur. C'est comme avoir un assistant qui ne dort jamais. Et tout ça sur WhatsApp, pas un énième outil."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MR</div>
+                        <div>
+                            <div class="testimonial-name">Marc Rousseau</div>
+                            <div class="testimonial-role">Directeur, Cabinet Rousseau Conseil</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"Mes posts LinkedIn étaient inexistants avant Forge IA. Maintenant j'en publie deux par semaine sans effort. Le mois dernier, un prospect m'a contacté directement suite à un post. Le ROI est immédiat."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SB</div>
+                        <div>
+                            <div class="testimonial-name">Sophie Blanchard</div>
+                            <div class="testimonial-role">Fondatrice, Atelier Blanchard Design</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRICING ===== -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="pricing-header reveal">
+                <span class="section-label">Tarifs</span>
+                <h2 class="section-title">Un prix simple,<br>des résultats concrets</h2>
+                <p class="section-subtitle">Commencez gratuitement, passez Pro quand vous êtes convaincu. Sans engagement.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Free -->
+                <div class="pricing-card">
+                    <div class="pricing-name">Gratuit</div>
+                    <div class="pricing-price">0 €</div>
+                    <div class="pricing-period">Essai 14 jours, sans carte bancaire</div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            1 agent IA
+                        </li>
+                        <li>
+                            <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            50 actions par mois
+                        </li>
+                        <li>
+                            <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Support email
+                        </li>
+                    </ul>
+                    <a href="#" class="pricing-btn pricing-btn-outline">Essayer gratuitement</a>
+                </div>
+
+                <!-- Pro -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Populaire</div>
+                    <div class="pricing-name">Pro</div>
+                    <div class="pricing-price">29 € <span>/mois</span></div>
+                    <div class="pricing-period">Facturation mensuelle, sans engagement</div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Agents illimités
+                        </li>
+                        <li>
+                            <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Actions illimitées
+                        </li>
+                        <li>
+                            <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Intégrations avancées
+                        </li>
+                        <li>
+                            <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Support prioritaire WhatsApp
+                        </li>
+                    </ul>
+                    <a href="#" class="pricing-btn pricing-btn-filled">Démarrer avec Pro</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FINAL CTA ===== -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta-inner reveal">
+                <span class="section-label">Prêt à commencer ?</span>
+                <h2>Votre premier agent travaille<br>ce soir</h2>
+                <p>Envoyez un message sur WhatsApp et laissez Forge IA s'occuper du reste. Configuration en 2 minutes, résultats dès demain matin.</p>
+                <a href="#" class="btn-primary">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Démarrer sur WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <div class="footer-brand">Forge <span>IA</span></div>
+                <div class="footer-copy">Forge IA &copy; 2026</div>
+            </div>
+            <ul class="footer-links">
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Confidentialité</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // === Nav scroll shadow ===
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 10);
+        });
+
+        // === Mobile menu ===
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+        // Close mobile menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+
+        // === Hero chat animation ===
+        function animateHeroChat() {
+            const chat = document.getElementById('heroChat');
+            const messages = chat.querySelectorAll('.wa-msg');
+            const typing = document.getElementById('heroTyping');
+
+            let i = 0;
+            function showNext() {
+                if (i >= messages.length) {
+                    typing.classList.remove('visible');
+                    return;
+                }
+                const msg = messages[i];
+                const isBot = msg.classList.contains('wa-msg-in');
+
+                if (isBot) {
+                    // Show typing before bot message
+                    typing.classList.add('visible');
+                    // Move typing indicator before the current message
+                    chat.insertBefore(typing, msg);
+                    setTimeout(() => {
+                        typing.classList.remove('visible');
+                        setTimeout(() => {
+                            msg.classList.add('visible');
+                            i++;
+                            setTimeout(showNext, 800);
+                        }, 150);
+                    }, 1200);
+                } else {
+                    msg.classList.add('visible');
+                    i++;
+                    setTimeout(showNext, 600);
+                }
+            }
+
+            // Start after a short delay
+            setTimeout(showNext, 800);
+        }
+
+        // === Scroll reveal (Intersection Observer) ===
+        function setupScrollReveal() {
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: '0px 0px -40px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Reveal generic .reveal elements
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // Reveal use-case cards with stagger
+            document.querySelectorAll('.use-case-card').forEach((card, idx) => {
+                card.style.transitionDelay = (idx * 0.12) + 's';
+                observer.observe(card);
+            });
+
+            // Reveal steps with stagger
+            document.querySelectorAll('.step').forEach((step, idx) => {
+                step.style.transitionDelay = (idx * 0.15) + 's';
+                observer.observe(step);
+            });
+
+            // Reveal testimonial cards with stagger
+            document.querySelectorAll('.testimonial-card').forEach((card, idx) => {
+                card.style.transitionDelay = (idx * 0.12) + 's';
+                observer.observe(card);
+            });
+        }
+
+        // === Smooth scroll for anchor links ===
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const navHeight = navbar.offsetHeight;
+                    const targetPos = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+                    window.scrollTo({ top: targetPos, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // === Init ===
+        document.addEventListener('DOMContentLoaded', () => {
+            animateHeroChat();
+            setupScrollReveal();
+        });
+    </script>
+</body>
+</html>

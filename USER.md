@@ -13,14 +13,14 @@
 - Build solo avec **Cursor + Claude**
 - Runway de 4 ans — pas pressé mais veut trouver le bon produit
 
-## Société actuelle : ALMAVI
-Développe des outils IA pour dirigeants de PME françaises.
+## Activité actuelle
+Développe plusieurs outils IA pour dirigeants de PME françaises.
 
-**Produits existants :**
+**Produits actifs :**
 - **FiscalGPT** — Assistant fiscal français (RAG sur 14 000+ articles). 1 000 questions posées via LinkedIn. Pas encore de paywall.
 - **ExpliqueMaCompta** — Analyse de documents comptables pour dirigeants. Peu de traction pour l'instant.
 
-**Phase actuelle :** Exploration — teste plusieurs idées sur 2 mois pour trouver celle qui accroche.
+**Phase actuelle :** Exploration structuree avec plusieurs pistes produit.
 
 ## Projet Clawdbot
 Proposer Clawdbot comme service aux dirigeants de PME débordés.

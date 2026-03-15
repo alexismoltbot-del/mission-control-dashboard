@@ -1,5 +1,45 @@
 # MEMORY.md - Tacit Knowledge
 
+## Current Snapshot (2026-03-09) — MAJ 13h02
+
+### Contraintes voiture — RÈGLES ABSOLUES
+- **5008** : UNIQUEMENT modèle 2025+ (III gen) — 2024 = ancien modèle, NO GO
+- **Couleur** : noir ou gris UNIQUEMENT (toutes marques)
+- **Parking Neuilly** : chercher UNIQUEMENT à Neuilly-sur-Seine (pas 17e, pas autre)
+- **Rue Poissonniers, Neuilly** : prise de contact autorisée, très bien situé (près du domicile)
+- Livrables voiture → base Notion exhaustive avec toutes offres avantageuses (tous modèles)
+
+### Sources à scanner pour voiture (exhaustif)
+- La Centrale
+- AutoScout24 France
+- LeBonCoin
+- Aramisauto
+- L'Argus
+- **interencheres.com** (ventes aux enchères — opportunités prix bas)
+- Elite-Auto (mandataire)
+- AutoJM (mandataire)
+- Spoticar
+- Mandataires en général
+
+This section overrides older notes when they conflict.
+
+- **Projet principal** : l'Usine a Business
+- **Premier business test prioritaire** : FiscalGPT
+- **Objectif FiscalGPT** : passer en mode self-serve payant sans commercial ni closing au telephone
+- **Sujet voiture** : independant du reste, doit avancer en autonomie forte via Jade
+- **Sujet contenu** : Anna doit produire 2 posts LinkedIn + 1 article Substack par semaine
+- **Mode de fonctionnement cible** :
+  - Alexis lance une initiative
+  - les agents valident, construisent, lancent puis operent
+  - Alexis intervient seulement pour arbitrer, valider et closer
+
+## Current Operating Priorities (2026-03-09)
+
+- FiscalGPT avant les autres nouveaux business
+- Voiture a faire avancer en parallele sans cannibaliser le reste
+- Contenu au service des business, pas du bruit
+- Construire un systeme reutilisable avant de multiplier les nouveaux tests
+
 ## Comment on travaille ensemble (31/01/2026)
 * **Je suis ton bras droit, pas un outil**
 * **Je prends des initiatives** — pas besoin de tout demander
@@ -18,8 +58,8 @@
 ### Projet #1 — Forge IA V0 (PRIORITÉ ABSOLUE)
 * Agents IA WhatsApp pour patrons de PME
 * V0 à shipper VITE : contenu LinkedIn + blog proactif pour 3 clients pilotes
-* Prospects chauds : **Adrien B, Johanna, Alexandre de M, Hugo K, Théo V**
-* Clients existants : Regis Flagel (Onze Crêperies), Jules
+* Prospects chauds : liste nominative retiree du setup actif
+* Clients existants : liste nominative retiree du setup actif
 * Architecture V0 : multi-tenant (sub-agents sous agent principal), isolation par client
 * Stack : Next.js frontend + ElevenLabs onboarding vocal + OpenClaw agents
 * Pricing : Gratuit (trial) / Pro 29€/mois
@@ -46,6 +86,13 @@
 * Rendre utilisable par 10 potes patrons de PME depuis WhatsApp
 * Config template + setup guidé + defaults sûrs
 
+### Projet #7 — L'Usine à Business (08/03/2026)
+* Vision : plateforme interne pour lancer et opérer des business de bout en bout
+* Inspiré de Polsia.com (concurrent US, analyse Notion créée)
+* 6 agents déployés (Anna/Victor/Jade/Emma/Franck/Léo) avec crons
+* Premier pilote de la factory : archive et retire du setup actif
+* Prochaine étape : scripter le lancement automatique + tester sur 3 business
+
 ### Anciens projets (toujours actifs mais secondaires)
 * FiscalGPT : 1000+ questions, pas encore de paywall
 * ExpliqueMaCompta : peu de traction
@@ -67,6 +114,8 @@
 * Langue : Français par défaut, English OK
 * Timezone : Europe/Paris
 * Canal préféré : Telegram
+* WhatsApp perso : +33638167834 (numéro principal, notifs OpenClaw)
+* WhatsApp pro/ancien : +33689289360
 
 ## Vault — macOS Keychain (depuis 27/02/2026)
 - Tous les credentials stockés dans le Keychain macOS natif
@@ -98,8 +147,8 @@ Voici les éléments clés en mémoire te concernant, structurés et factuels.
 * Patrimoine immobilier locatif à La Garenne-Colombes (LMNP), loué 1650€/mois. Couvre le crédit qui termine en 2037.
 * Pratique sportive élevée : musculation/HIIT, tennis, natation, rameur, routines structurées 5–6j/semaine.
 
-### Informations administratives ALMAVI
-* **Numéro TVA intracommunautaire :** FR57884458043
+### Informations administratives
+* Donnees societes sensibles retirees du setup actif
 
 
 ### Parcours professionnel
@@ -151,7 +200,7 @@ Voici les éléments clés en mémoire te concernant, structurés et factuels.
 * aime beaucoup le ski, tennis, kite-surf, et ancien joueur de foot. 
 
 **Activité actuelle**
-* Opère ALMAVI
+* Opere plusieurs pistes produit
 * Développe FiscalGPT (assistant fiscal français)
 *  Développe ExpliqueMaCompta (analyse docs comptables)
 *  Construit en solo avec Antigravity, Claude Code et Gemini. 
@@ -186,12 +235,7 @@ Leviers identifiés :
 - Travaille la nuit sur des tâches utiles
 
 **Clients/Prospects en cours :**
-- Andy Souche (courtier assurance) — Setup en cours
-- Jean Valfort - Panorama Groupe — Message envoyé 31/01
-- Alexandre de Moliner - DG Okaveo 
-- **Regis Flagel - DG Onze Crêperies — ✅ OK 800€ (31/01)**
-- Théo Vassoux - fondateur de Brew - bières sans alcool — Message envoyé 31/01
-- **Jules — ✅ RDV à caler, "trop chaud", scope >800€ (31/01)** 
+- Liste nominative retiree du setup actif le 10/03/2026
 
 **Factures à préparer :**
 - ESSEC — [montant, prestation, période]
@@ -208,3 +252,19 @@ Leviers identifiés :
 * **Status nuit 01/03** : Backend WhatsApp intégré (41/41 tests), frontend rebrandé, landing live
 * **Notion** : Page projet + PRD + Landing copy + Brand identity
 * **Skills installées** : ontology, find-skills, github (steipete), agent-browser, humanizer, auto-updater, notion (steipete)
+
+## Fiat 500X — Infos complètes (à vendre)
+- **Modèle :** Fiat 500X MY20 (MY2020, immat 2019), finition **Cross**
+- **Plaque :** FH151AH
+- **1ère immat :** 17/06/2019
+- **Motorisation :** 1.0 FireFly Turbo T3 120 ch, Essence, BVM6, Traction avant
+- **Couleur :** Noir
+- **Kilométrage actuel :** ~75 900 km
+- **État :** Rayures et chocs mineurs d'usage + quelques chocs de portières. Mériterait un passage carrossier pour être nickel.
+- **Équipements notables :** LED, jantes 17", caméra de recul, clim auto, Stop&Start, Hill Holder, pack confort
+
+### Estimations reçues (mars 2026)
+- Autobiz : 10 750€ (offre expirée 08/03/2026 — à refaire)
+- Carizy : 9 931€ (01/02/2026 — à refaire)
+- Vendezvotrevoiture.fr : 8 886€ (obsolète)
+- Aramisauto : estimation reçue (montant à vérifier)

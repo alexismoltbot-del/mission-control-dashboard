@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forge IA — Votre équipe de nuit</title>
+    <meta name="description" content="Forge IA — Des agents IA qui travaillent pendant que vous dormez. Veille, relances, brouillons, synthèses. Pour les dirigeants de PME.">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ===== CUSTOM PROPERTIES ===== */
+        :root {
+            --white: #FFFFFF;
+            --ink: #1A1A1A;
+            --ink-light: #4A4A4A;
+            --ink-faint: #9A9A9A;
+            --cherry: #E8564C;
+            --cherry-soft: #E8564C1A;
+            --border: #E8E8E8;
+            --bg-warm: #FAFAF9;
+            --font-heading: 'Cormorant Garamond', 'Georgia', serif;
+            --font-body: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+        }
+
+        /* ===== BASE ===== */
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--ink);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* ===== LAYOUT ===== */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        .container--wide {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.4s ease;
+        }
+
+        nav.scrolled {
+            border-bottom-color: var(--border);
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: var(--ink);
+        }
+
+        .nav-logo span {
+            color: var(--cherry);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-link {
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: var(--ink-light);
+            letter-spacing: 0.02em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--ink);
+        }
+
+        .nav-cta {
+            font-size: 0.8125rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--white);
+            background: var(--ink);
+            padding: 10px 28px;
+            border-radius: 4px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--cherry);
+            transform: translateY(-1px);
+        }
+
+        .nav-back {
+            font-size: 0.8125rem;
+            color: var(--ink-faint);
+            transition: color 0.3s ease;
+        }
+
+        .nav-back:hover {
+            color: var(--cherry);
+        }
+
+        /* Mobile nav toggle */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 22px;
+            height: 1.5px;
+            background: var(--ink);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 32px 80px;
+        }
+
+        .hero-tagline {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--cherry);
+            margin-bottom: 48px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+            font-weight: 300;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            color: var(--ink);
+            max-width: 700px;
+            margin-bottom: 48px;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--cherry);
+        }
+
+        .hero-sub {
+            font-size: 1.125rem;
+            font-weight: 300;
+            color: var(--ink-light);
+            max-width: 480px;
+            line-height: 1.8;
+            margin-bottom: 56px;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--white);
+            background: var(--cherry);
+            padding: 16px 48px;
+            border-radius: 4px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(232, 86, 76, 0.25);
+        }
+
+        .hero-scroll {
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            color: var(--ink-faint);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .hero-scroll-line {
+            width: 1px;
+            height: 48px;
+            background: var(--border);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+            50% { opacity: 1; transform: scaleY(1); }
+        }
+
+        /* ===== SECTION SHARED ===== */
+        .section {
+            padding: 120px 0;
+        }
+
+        .section--large {
+            padding: 160px 0;
+        }
+
+        .section--warm {
+            background: var(--bg-warm);
+        }
+
+        .section-number {
+            font-family: var(--font-heading);
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: var(--ink-faint);
+            letter-spacing: 0.1em;
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 400;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            color: var(--ink);
+            margin-bottom: 32px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title .underline-draw {
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--cherry);
+            transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .section-title.drawn .underline-draw {
+            width: 100%;
+        }
+
+        .section-body {
+            font-size: 1.125rem;
+            font-weight: 300;
+            color: var(--ink-light);
+            line-height: 1.9;
+            max-width: 560px;
+        }
+
+        /* ===== USE CASE SECTIONS ===== */
+        .usecase {
+            padding: 140px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .usecase:last-of-type {
+            border-bottom: none;
+        }
+
+        .usecase .container {
+            max-width: 640px;
+        }
+
+        .usecase-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 32px;
+            opacity: 0.7;
+        }
+
+        .usecase-label {
+            font-family: var(--font-body);
+            font-size: 0.6875rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--cherry);
+            margin-bottom: 20px;
+        }
+
+        .usecase h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            font-weight: 400;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+            color: var(--ink);
+            margin-bottom: 28px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .usecase h2 .underline-draw {
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--cherry);
+            transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .usecase h2.drawn .underline-draw {
+            width: 100%;
+        }
+
+        .usecase p {
+            font-size: 1.125rem;
+            font-weight: 300;
+            color: var(--ink-light);
+            line-height: 1.9;
+        }
+
+        /* ===== DIVIDER ===== */
+        .divider {
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .divider-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--cherry);
+            opacity: 0.5;
+        }
+
+        /* ===== TESTIMONIAL ===== */
+        .testimonial {
+            padding: 160px 0;
+            text-align: center;
+            background: var(--bg-warm);
+        }
+
+        .testimonial-quote {
+            font-family: var(--font-heading);
+            font-size: clamp(1.375rem, 3vw, 1.75rem);
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.7;
+            color: var(--ink);
+            max-width: 640px;
+            margin: 0 auto 48px;
+        }
+
+        .testimonial-quote::before {
+            content: '\201C';
+            display: block;
+            font-size: 4rem;
+            line-height: 1;
+            color: var(--cherry);
+            opacity: 0.4;
+            margin-bottom: 24px;
+            font-style: normal;
+        }
+
+        .testimonial-author {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 4px;
+        }
+
+        .testimonial-role {
+            font-size: 0.8125rem;
+            font-weight: 300;
+            color: var(--ink-faint);
+            letter-spacing: 0.02em;
+        }
+
+        /* ===== FEATURES ===== */
+        .features {
+            padding: 160px 0;
+        }
+
+        .features-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .features-header h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 400;
+            color: var(--ink);
+            position: relative;
+            display: inline-block;
+        }
+
+        .features-header h2 .underline-draw {
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--cherry);
+            transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .features-header h2.drawn .underline-draw {
+            width: 100%;
+        }
+
+        .features-list {
+            list-style: none;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        .features-list li {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 1.0625rem;
+            font-weight: 400;
+            color: var(--ink);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            letter-spacing: 0.01em;
+        }
+
+        .features-list li:first-child {
+            border-top: 1px solid var(--border);
+        }
+
+        .features-list li::before {
+            content: '';
+            flex-shrink: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--cherry);
+            opacity: 0.6;
+        }
+
+        /* ===== PRICING ===== */
+        .pricing {
+            padding: 160px 0;
+            background: var(--bg-warm);
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .pricing-header h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 400;
+            color: var(--ink);
+            position: relative;
+            display: inline-block;
+        }
+
+        .pricing-header h2 .underline-draw {
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--cherry);
+            transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .pricing-header h2.drawn .underline-draw {
+            width: 100%;
+        }
+
+        .pricing-header p {
+            font-size: 1.0625rem;
+            font-weight: 300;
+            color: var(--ink-light);
+            margin-top: 16px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 48px 40px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.06);
+        }
+
+        .pricing-card--pro {
+            border-color: var(--cherry);
+            position: relative;
+        }
+
+        .pricing-card--pro::after {
+            content: 'Populaire';
+            position: absolute;
+            top: -12px;
+            right: 32px;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--white);
+            background: var(--cherry);
+            padding: 4px 16px;
+            border-radius: 3px;
+        }
+
+        .pricing-plan {
+            font-family: var(--font-heading);
+            font-size: 1.375rem;
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 8px;
+        }
+
+        .pricing-price {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 4px;
+        }
+
+        .pricing-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--ink-faint);
+        }
+
+        .pricing-period {
+            font-size: 0.8125rem;
+            color: var(--ink-faint);
+            margin-bottom: 32px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .pricing-features li {
+            font-size: 0.9375rem;
+            font-weight: 400;
+            color: var(--ink-light);
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-features li::before {
+            content: '';
+            flex-shrink: 0;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--cherry);
+            opacity: 0.5;
+        }
+
+        .pricing-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 14px 0;
+            border-radius: 4px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: var(--font-body);
+        }
+
+        .pricing-btn--outline {
+            color: var(--ink);
+            background: transparent;
+            border: 1px solid var(--ink);
+        }
+
+        .pricing-btn--outline:hover {
+            background: var(--ink);
+            color: var(--white);
+            transform: translateY(-1px);
+        }
+
+        .pricing-btn--fill {
+            color: var(--white);
+            background: var(--cherry);
+        }
+
+        .pricing-btn--fill:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 24px rgba(232, 86, 76, 0.3);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            padding: 80px 0 48px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 16px;
+        }
+
+        .footer-logo span {
+            color: var(--cherry);
+        }
+
+        .footer-tagline {
+            font-size: 0.9375rem;
+            font-weight: 300;
+            color: var(--ink-faint);
+            margin-bottom: 48px;
+            font-style: italic;
+            font-family: var(--font-heading);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+
+        .footer-links a {
+            font-size: 0.8125rem;
+            color: var(--ink-faint);
+            transition: color 0.3s ease;
+            letter-spacing: 0.02em;
+        }
+
+        .footer-links a:hover {
+            color: var(--cherry);
+        }
+
+        .footer-copy {
+            font-size: 0.75rem;
+            color: var(--ink-faint);
+            letter-spacing: 0.04em;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-in-delay-1 { transition-delay: 0.1s; }
+        .fade-in-delay-2 { transition-delay: 0.2s; }
+        .fade-in-delay-3 { transition-delay: 0.3s; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            .container, .container--wide {
+                padding: 0 24px;
+            }
+
+            .nav-inner {
+                padding: 0 24px;
+                height: 64px;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                flex-direction: column;
+                gap: 0;
+                padding: 16px 0;
+                border-bottom: 1px solid var(--border);
+                transform: translateY(-100%);
+                opacity: 0;
+                pointer-events: none;
+                transition: transform 0.4s ease, opacity 0.3s ease;
+            }
+
+            .nav-links.open {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            .nav-links .nav-link,
+            .nav-links .nav-back {
+                display: block;
+                padding: 14px 24px;
+                width: 100%;
+                text-align: left;
+            }
+
+            .nav-links .nav-cta {
+                margin: 12px 24px;
+                display: block;
+                text-align: center;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .hero {
+                min-height: 90vh;
+                padding: 100px 24px 60px;
+            }
+
+            .hero-tagline {
+                margin-bottom: 32px;
+            }
+
+            .hero h1 {
+                margin-bottom: 32px;
+            }
+
+            .hero-sub {
+                margin-bottom: 40px;
+            }
+
+            .hero-scroll {
+                margin-top: 48px;
+            }
+
+            .usecase {
+                padding: 80px 0;
+            }
+
+            .section--large {
+                padding: 100px 0;
+            }
+
+            .testimonial {
+                padding: 100px 0;
+            }
+
+            .features {
+                padding: 100px 0;
+            }
+
+            .pricing {
+                padding: 100px 0;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                max-width: 400px;
+            }
+
+            .pricing-card {
+                padding: 36px 28px;
+            }
+
+            footer {
+                padding: 60px 0 36px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">Forge <span>IA</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-back">Variantes</a>
+                <a href="#usecases" class="nav-link">Cas d&rsquo;usage</a>
+                <a href="#features" class="nav-link">Fonctions</a>
+                <a href="#pricing" class="nav-link">Tarifs</a>
+                <a href="#" class="nav-cta">Essai gratuit</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="fade-in">
+            <p class="hero-tagline">Votre &eacute;quipe de nuit</p>
+        </div>
+        <h1 class="fade-in fade-in-delay-1">
+            Votre entreprise m&eacute;rite une &eacute;quipe qui <em>ne dort jamais.</em>
+        </h1>
+        <p class="hero-sub fade-in fade-in-delay-2">
+            Des agents IA qui travaillent pendant votre sommeil.
+            Veille, relances, brouillons, synth&egrave;ses &mdash; tout est pr&ecirc;t au r&eacute;veil.
+        </p>
+        <a href="#" class="hero-cta fade-in fade-in-delay-3">D&eacute;marrer gratuitement</a>
+        <div class="hero-scroll fade-in fade-in-delay-3">
+            <div class="hero-scroll-line"></div>
+            <span>D&eacute;couvrir</span>
+        </div>
+    </section>
+
+    <!-- ===== USE CASES ===== -->
+    <div id="usecases">
+
+        <!-- Use Case 1 -->
+        <section class="usecase">
+            <div class="container">
+                <div class="fade-in">
+                    <p class="usecase-label">01 &mdash; Surveillance</p>
+                </div>
+                <h2 class="fade-in fade-in-delay-1">
+                    Veille nocturne
+                    <span class="underline-draw"></span>
+                </h2>
+                <p class="fade-in fade-in-delay-2">
+                    Chaque nuit, vos agents surveillent vos KPIs, vos mentions en ligne et vos alertes m&eacute;tier.
+                    Au r&eacute;veil, un r&eacute;sum&eacute; clair vous attend sur WhatsApp. Plus besoin de fouiller dans dix
+                    tableaux de bord &mdash; l&rsquo;essentiel est l&agrave;, tri&eacute;, hi&eacute;rarchis&eacute;, pr&ecirc;t &agrave; &ecirc;tre lu en deux minutes.
+                </p>
+            </div>
+        </section>
+
+        <!-- Use Case 2 -->
+        <section class="usecase">
+            <div class="container">
+                <div class="fade-in">
+                    <p class="usecase-label">02 &mdash; Pers&eacute;v&eacute;rance</p>
+                </div>
+                <h2 class="fade-in fade-in-delay-1">
+                    Relances automatiques
+                    <span class="underline-draw"></span>
+                </h2>
+                <p class="fade-in fade-in-delay-2">
+                    Les devis en attente, les factures impay&eacute;es, les prospects silencieux&nbsp;: Forge IA relance
+                    avec tact et pers&eacute;v&eacute;rance. Chaque message est calibr&eacute;, chaque d&eacute;lai respect&eacute;. Vous gardez
+                    la relation, sans y consacrer vos matin&eacute;es.
+                </p>
+            </div>
+        </section>
+
+        <!-- Use Case 3 -->
+        <section class="usecase">
+            <div class="container">
+                <div class="fade-in">
+                    <p class="usecase-label">03 &mdash; Cr&eacute;ation</p>
+                </div>
+                <h2 class="fade-in fade-in-delay-1">
+                    Brouillons pr&ecirc;ts &agrave; l&rsquo;emploi
+                    <span class="underline-draw"></span>
+                </h2>
+                <p class="fade-in fade-in-delay-2">
+                    Posts LinkedIn, emails de prospection, r&eacute;ponses clients &mdash; tout est r&eacute;dig&eacute; et attend votre
+                    validation le matin. Votre ton, votre style, votre intention. L&rsquo;agent apprend de vos
+                    retours et s&rsquo;am&eacute;liore avec le temps.
+                </p>
+            </div>
+        </section>
+
+        <!-- Use Case 4 -->
+        <section class="usecase" style="border-bottom: none;">
+            <div class="container">
+                <div class="fade-in">
+                    <p class="usecase-label">04 &mdash; Clart&eacute;</p>
+                </div>
+                <h2 class="fade-in fade-in-delay-1">
+                    Synth&egrave;ses intelligentes
+                    <span class="underline-draw"></span>
+                </h2>
+                <p class="fade-in fade-in-delay-2">
+                    Un r&eacute;sum&eacute; quotidien de votre activit&eacute;. Ce qui a avanc&eacute;, ce qui bloque, ce qui m&eacute;rite
+                    votre attention. Pas de jargon, pas de bruit &mdash; juste l&rsquo;information qui compte, pr&eacute;sent&eacute;e
+                    avec clart&eacute; pour commencer la journ&eacute;e avec confiance.
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ===== TESTIMONIAL ===== -->
+    <section class="testimonial">
+        <div class="container">
+            <div class="fade-in">
+                <blockquote class="testimonial-quote">
+                    Je dirige une agence de douze personnes et mes journ&eacute;es commen&ccedil;aient toujours par une heure
+                    de tri &mdash; emails, relances, chiffres de la veille. Depuis que Forge IA travaille la nuit
+                    pour nous, j&rsquo;arrive le matin avec tout d&eacute;j&agrave; synth&eacute;tis&eacute; sur WhatsApp. Mes relances clients
+                    partent &agrave; l&rsquo;heure, mes brouillons m&rsquo;attendent, et je peux enfin me concentrer sur ce qui
+                    compte vraiment&nbsp;: mon &eacute;quipe et mes clients.
+                </blockquote>
+            </div>
+            <div class="fade-in fade-in-delay-1">
+                <p class="testimonial-author">Caroline Dubois-Menant</p>
+                <p class="testimonial-role">Directrice g&eacute;n&eacute;rale &mdash; Atelier M&eacute;ridien, Lyon</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="features-header fade-in">
+                <h2>
+                    Con&ccedil;u pour simplifier
+                    <span class="underline-draw"></span>
+                </h2>
+            </div>
+            <ul class="features-list">
+                <li class="fade-in">Agents multi-t&acirc;ches</li>
+                <li class="fade-in fade-in-delay-1">Int&eacute;gration WhatsApp native</li>
+                <li class="fade-in fade-in-delay-1">Connexion CRM, email, LinkedIn</li>
+                <li class="fade-in fade-in-delay-2">Rapports automatiques</li>
+                <li class="fade-in fade-in-delay-2">Personnalisation compl&egrave;te</li>
+                <li class="fade-in fade-in-delay-3">S&eacute;curit&eacute; des donn&eacute;es</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===== PRICING ===== -->
+    <section class="pricing" id="pricing">
+        <div class="container--wide">
+            <div class="pricing-header fade-in">
+                <h2>
+                    Tarifs simples, sans surprise
+                    <span class="underline-draw"></span>
+                </h2>
+                <p>Commencez gratuitement. &Eacute;voluez quand vous &ecirc;tes pr&ecirc;t.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Gratuit -->
+                <div class="pricing-card fade-in">
+                    <p class="pricing-plan">Gratuit</p>
+                    <p class="pricing-price">0&#8239;&euro;</p>
+                    <p class="pricing-period">Essai 14 jours, sans engagement</p>
+                    <ul class="pricing-features">
+                        <li>1 agent</li>
+                        <li>50 actions par mois</li>
+                        <li>Support email</li>
+                        <li>Acc&egrave;s &agrave; toutes les fonctions de base</li>
+                    </ul>
+                    <a href="#" class="pricing-btn pricing-btn--outline">Commencer l&rsquo;essai</a>
+                </div>
+                <!-- Pro -->
+                <div class="pricing-card pricing-card--pro fade-in fade-in-delay-1">
+                    <p class="pricing-plan">Pro</p>
+                    <p class="pricing-price">29&#8239;&euro; <span>/ mois</span></p>
+                    <p class="pricing-period">Facturation mensuelle, r&eacute;siliable &agrave; tout moment</p>
+                    <ul class="pricing-features">
+                        <li>Agents illimit&eacute;s</li>
+                        <li>Actions illimit&eacute;es</li>
+                        <li>Int&eacute;grations avanc&eacute;es</li>
+                        <li>Support prioritaire WhatsApp</li>
+                    </ul>
+                    <a href="#" class="pricing-btn pricing-btn--fill">Choisir Pro</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <p class="footer-logo">Forge <span>IA</span></p>
+            <p class="footer-tagline">Votre &eacute;quipe de nuit</p>
+            <div class="footer-links">
+                <a href="index.html">Variantes</a>
+                <a href="#">Contact</a>
+                <a href="#">Mentions l&eacute;gales</a>
+                <a href="#">Confidentialit&eacute;</a>
+            </div>
+            <p class="footer-copy">Forge IA &copy; 2026. Tous droits r&eacute;serv&eacute;s.</p>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        (function() {
+            'use strict';
+
+            // --- Nav scroll effect ---
+            var nav = document.getElementById('nav');
+            var lastScroll = 0;
+
+            window.addEventListener('scroll', function() {
+                var scrollY = window.scrollY || window.pageYOffset;
+                if (scrollY > 20) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+                lastScroll = scrollY;
+            }, { passive: true });
+
+            // --- Mobile nav toggle ---
+            var navToggle = document.getElementById('navToggle');
+            var navLinks = document.getElementById('navLinks');
+
+            navToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('open');
+                var spans = navToggle.querySelectorAll('span');
+                if (navLinks.classList.contains('open')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(4px, 4px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(4px, -4px)';
+                } else {
+                    spans[0].style.transform = '';
+                    spans[1].style.opacity = '';
+                    spans[2].style.transform = '';
+                }
+            });
+
+            // Close mobile nav on link click
+            var links = navLinks.querySelectorAll('a');
+            for (var i = 0; i < links.length; i++) {
+                links[i].addEventListener('click', function() {
+                    navLinks.classList.remove('open');
+                    var spans = navToggle.querySelectorAll('span');
+                    spans[0].style.transform = '';
+                    spans[1].style.opacity = '';
+                    spans[2].style.transform = '';
+                });
+            }
+
+            // --- Intersection Observer: fade-in + underline draw ---
+            var observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -60px 0px',
+                threshold: 0.15
+            };
+
+            var fadeObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        fadeObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            var fadeElements = document.querySelectorAll('.fade-in');
+            for (var j = 0; j < fadeElements.length; j++) {
+                fadeObserver.observe(fadeElements[j]);
+            }
+
+            // Underline draw animation
+            var drawObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('drawn');
+                        drawObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px 0px -40px 0px',
+                threshold: 0.3
+            });
+
+            var drawElements = document.querySelectorAll('.section-title, .usecase h2, .features-header h2, .pricing-header h2');
+            for (var k = 0; k < drawElements.length; k++) {
+                drawObserver.observe(drawElements[k]);
+            }
+
+        })();
+    </script>
+
+</body>
+</html>
